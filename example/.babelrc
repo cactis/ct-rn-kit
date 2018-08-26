@@ -5,7 +5,8 @@
       "module-resolver",
       {
         "alias": {
-          "ct-rn-kit": ".."
+          "ct-rn-kit": "..",
+          "react-native-typography": "react-native-typography"
         }
       }
     ]

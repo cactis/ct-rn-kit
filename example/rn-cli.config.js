@@ -10,8 +10,10 @@ module.exports = {
     return [
       'react-native',
       'react',
-      // 'prop-types',
-      // 'react-native-vector-icons',
+      "lodash",
+      'react-native-typography',
+      'prop-types',
+      'react-native-vector-icons',
       // 'react-native-simple-animators',
     ];
   },

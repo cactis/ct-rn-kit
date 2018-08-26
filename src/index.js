@@ -1,11 +1,16 @@
-// export { default as RoundButton } from './elements/Buttons.js'
-import RoundButton from './elements/Buttons.js'
-import { Grid, Col } from './elements/Layouts.js'
+// export * from './src/';
 
+export { RoundButton } from './elements/Buttons'
+export { Grid, Col, Padding, Card, Row, View, SafeArea, Center, Screen, Page, Scroll } from './elements/Layouts'
+export { Photo, Avatar, Square } from './elements/Images.js'
+
+export { Setting } from './elements/Setting'
+export { Touch } from './elements/Events'
+
+export { Text, H1, H2, H3, P } from './elements/Texts'
 // import { Grid, Col } from './elements/Layouts.js'
 //
-module.exports = {
-  RoundButton: RoundButton,
-  Grid: Grid,
-  Col: Col,
-};
+// module.exports = {
+//   RoundButton, View, SafeArea
+//   // Col: Col,
+// };
