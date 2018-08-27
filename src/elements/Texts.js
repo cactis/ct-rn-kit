@@ -37,11 +37,11 @@ export class Text extends Component {
         children = faker.lorem.sentence(),
         ...props } = this.props
       return <Text numberOfLines={1}
-        style={material.display1}
-        // style={{
-        //   ...style,
-        //   ...styles.font
-        // }}
+        style={{
+          ...styles.font,
+          ...material.display1,
+          ...style
+        }}
         {...props}>{children}</Text>
     }
   }

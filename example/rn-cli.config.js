@@ -12,8 +12,8 @@ module.exports = {
       'react',
       "lodash",
       'react-native-typography',
-      'prop-types',
-      'react-native-vector-icons',
+      // 'prop-types',
+      // 'react-native-vector-icons',
       // 'react-native-simple-animators',
     ];
   },
