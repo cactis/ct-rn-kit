@@ -3,7 +3,7 @@ import { Text as RNText } from 'react-native'
 import { View } from './Layouts'
 // import faker from 'faker'
 
-// import { material } from 'react-native-typography'
+import { material } from 'react-native-typography'
 
 
 import faker from "../../vendors/faker.min.js"
@@ -37,8 +37,11 @@ export class Text extends Component {
         children = faker.lorem.sentence(),
         ...props } = this.props
       return <Text numberOfLines={1}
-        // style={material.display1}
-        style={{...style, ...styles.font}}
+        style={material.display1}
+        // style={{
+        //   ...style,
+        //   ...styles.font
+        // }}
         {...props}>{children}</Text>
     }
   }

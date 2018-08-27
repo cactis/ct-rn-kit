@@ -1,0 +1,6 @@
+example
+docs
+node_modules
+android/build
+ios/build
+*.iml

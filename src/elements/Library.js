@@ -1,5 +1,6 @@
 import React from 'react'
-// import _ from 'lodash'
+import _ from 'lodash'
+
 import { AsyncStorage } from "react-native"
 
 class Storage {
@@ -31,9 +32,9 @@ class Storage {
 
 window.Storage = Storage
 
-// window.randId = () => {
-//   return String(_.random(99999999, 999999999))
-// }
+window.randId = () => {
+  return String(_.random(99999999, 999999999))
+}
 
 window.asNumber = function(str) {
   str = str.replace(',', '')
