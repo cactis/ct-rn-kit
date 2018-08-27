@@ -80,11 +80,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#efefef"
   },
   shadow: {
-    // elevation: 1,
-    shadowColor: '#5E5958',
+    elevation: 3,
+    shadowColor: '#2E2C2B',
     shadowOpacity: 0.3,
     shadowOffset: {
-      width: 0,
+      width: 1,
       height: 1
     },
     shadowRadius: 5,
@@ -99,8 +99,8 @@ const styles = StyleSheet.create({
   bordered: {
     borderStyle: 'solid',
     borderWidth: 0.5,
-    borderColor: "rgba(170,188,190,.8)",
-    shadowColor: "rgba(98,83,83,.7)",
+    borderColor: "rgba(143,149,149,.32)",
+    // shadowColor: "rgba(98,85,83,1)",
   },
   container: {
     flex: 1,
@@ -124,7 +124,11 @@ const styles = StyleSheet.create({
           // color: 'red'
         },
         android: {
-          fontFamily: 'monospace, Roboto, Noto Sans',
+          fontFamily: 'monospace',
+          fontFamily: 'Roboto',
+          fontFamily: 'Pacifico',
+          fontFamily: 'Serif Regular',
+          // fontFamily: 'Noto Sans',
           // color: 'blue'
         },
       }),
