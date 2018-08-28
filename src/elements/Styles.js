@@ -4,6 +4,10 @@ import { size, color } from './Constants.js'
 let normalSize = size.normalSize
 
 const styles = StyleSheet.create({
+  text: {
+    color: '#333',
+    fontSize: 16
+  },
   title: {
     color: '#373535',
     fontSize: normalSize * 1.4,
@@ -88,6 +92,16 @@ const styles = StyleSheet.create({
       height: 1
     },
     shadowRadius: 5,
+  },
+  textShadow: {
+    elevation: 1,
+    shadowColor: '#FAF4F0',
+    shadowOpacity: 1,
+    shadowOffset: {
+      width: 0.5,
+      height: 0.5
+    },
+    shadowRadius: 0.5,
   },
   full: {
     width: '100%',

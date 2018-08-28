@@ -1,5 +1,6 @@
 import React, { PureComponent as Component } from 'react';
 import { ScrollView, TouchableOpacity, AsyncStorage, StatusBar, SafeAreaView, View as RNView} from 'react-native';
+import { Text, H1, H2, H3 } from './Texts'
 
 import styles from './Styles'
 
@@ -25,8 +26,17 @@ export class View extends Component {
 
 export class Center extends Component {
   render() {
-    return <View {...this.props} style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}
+    let {
+      style
+    } = this.props
+    return <View {...this.props} style={{flex: 1, justifyContent: 'center', alignItems: 'center', ...style}}
     />
+  }
+}
+
+export class Example extends Component {
+  render() {
+    return <Center padding={20}><H1/></Center>
   }
 }
 
@@ -51,13 +61,14 @@ export class Grid extends Component {
     let {
       flex = 1,
       style,
+      children = <Example/>,
       ...props
     } = this.props
     return <View
       style={{flex: flex, ...style}}
       flexDirection={this.direction()}
       {...props}
-    />
+    >{children}</View>
   }
 
   direction() {
@@ -72,7 +83,7 @@ export class Grid extends Component {
 export class Col extends Component {
   render() {
     let {
-      flex = 0,
+      flex = 1,
       style,
       ...props
     } = this.props
@@ -80,6 +91,9 @@ export class Col extends Component {
   }
 }
 export class Row extends Col {}
+export class Header extends Row {}
+export class Body extends Row {}
+export class Footer extends Row {}
 
 export class Screen extends Component {
   render() {

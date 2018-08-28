@@ -1,9 +1,17 @@
 import React, { PureComponent as Component } from 'react'
 import { ScrollView, AsyncStorage, StatusBar, SafeAreaView, Image as RNImage} from 'react-native'
-import { View } from './Layouts'
+import { View, Center } from './Layouts'
 
 import { Setting } from './Constants'
 
+export class Circle extends Component {
+  render() {
+    let {
+      size
+    } = this.props
+    return <Center style={{flex: 0, padding: size * 0, width: size, height: size, borderWidth: 3, borderRadius: size / 2}} {...this.props}/>
+  }
+}
 
 export class Avatar extends Component {
   state = {}
@@ -50,7 +58,7 @@ const SAMPLE_IMAGE = 'https://picsum.photos/1500/1500/?random'
 export class Photo extends Component {
   render() {
     let {
-      uri = SAMPLE_IMAGE,
+      uri = `${SAMPLE_IMAGE}&${randId()}`,
       width = '150%',
       aspectRatio = 1
     } = this.props
