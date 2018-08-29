@@ -1,8 +1,17 @@
 import React, { PureComponent as Component } from 'react'
-import { ScrollView, AsyncStorage, StatusBar, SafeAreaView, Image as RNImage} from 'react-native'
+import { ScrollView, ImageBackground as RNImageBackground, AsyncStorage, StatusBar, SafeAreaView, Image as RNImage} from 'react-native'
 import { View, Center } from './Layouts'
 
 import { Setting } from './Constants'
+
+export class ImageBackground extends Component {
+  render() {
+    let {
+      uri = 'https://picsum.photos/1000/1000/?random',
+    } = this.props
+    return <RNImageBackground style={{flex: 1}} {...this.props} source={{uri: uri}} />
+  }
+}
 
 export class Circle extends Component {
   render() {
