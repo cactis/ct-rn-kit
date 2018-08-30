@@ -5,7 +5,7 @@ let normalSize = size.normalSize
 
 const styles = StyleSheet.create({
   text: {
-    color: '#333',
+    color: '#393737',
     fontSize: 16
   },
   title: {

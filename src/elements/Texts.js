@@ -5,7 +5,6 @@ import { View } from './Layouts'
 
 import { material } from 'react-native-typography'
 
-
 import faker from "../../vendors/faker.min.js"
 
 import styles from './Styles'
@@ -27,16 +26,16 @@ export class Text extends Component {
       children = faker.lorem.sentence(),
       ...rest
     } = this.props
-    let {
-      lineHeight = fontSize * 1.5
-      , ...props
-    } = rest
-    return <RNText flex={1} {...props}
+    // let {
+    //   // lineHeight = fontSize * 1.5s
+    //   , ...props
+    // } = rest
+    return <RNText flex={1} {...rest}
       style={{
         ...styles.text,
         fontSize: fontSize,
-        lineHeight: lineHeight,
-        paddingVertical: fontSize * 0.5,
+        // lineHeight: lineHeight,
+        // paddingVertical: fontSize * 0.5,
         ...style,
       }}>
       {children}

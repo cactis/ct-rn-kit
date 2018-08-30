@@ -8,10 +8,15 @@ import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
 
 export class Icon extends Component {
   render() {
-    return <FontAwesomeIcon name='500px' size={50} />
+    let {
+      name = 'twitter',
+      size = 20,
+      color = '#fff',
+      ...props
+    } = this.props
+    return <FontAwesomeIcon name={name} style={{color: color}}  size={size} {...props} />
   }
 }
-
 
 export class ImageBackground extends Component {
   render() {

@@ -72,67 +72,64 @@ export class Grid extends Component {
       style,
       ...props
     } = this.props
-    return <View
-      style={{flex: flex, ...style}}
-      flexDirection={this.direction()}
-      {...props} />
-    }
-
-    direction() {
-      var row = true;
-      React.Children.forEach(this.props.children, function (child) {
-        if(child && child.type == Col)
-        row = false;
-      })
-      return !row ? 'row' : 'column';
-    }
-  }
-  export class Col extends Component {
-    render() {
-      let {
-        flex = 1,
-        style,
-        ...props
-      } = this.props
-      return <Grid style={{flex: flex, ...style}}  {...props} />
-    }
-  }
-  export class Row extends Col {}
-  export class Header extends Row {}
-  export class Body extends Row {}
-  export class Footer extends Row {}
-
-  export class Screen extends Component {
-    render() {
-      let {
-        safeAreaDisabled = false
-      } = this.props
-      const content = <View flex={1} {...this.props} />
-      const body = safeAreaDisabled ? content : <SafeArea flex={1}>{content}</SafeArea>
-      return body
-    }
+    return <View style={{flex: flex, flexDirection: this.direction(), ...style}} {...props} />
   }
 
-  export class Page extends Component {
-    static navigationOptions = ({ navigation, header }) => {
-      // const params = navigation.state.params || {}
-      return {
-        ...navigation,
-        ...header,
-        headerStyle: Styles.header,
-        headerTitle: "(defalut)",
-      }
-    }
+  direction() {
+    var row = true;
+    React.Children.forEach(this.props.children, function (child) {
+      if(child && child.type == Col)
+      row = false;
+    })
+    return !row ? 'row' : 'column';
+  }
+}
+export class Col extends Component {
+  render() {
+    let {
+      flex = 1,
+      style,
+      ...props
+    } = this.props
+    return <Grid style={{flex: flex, ...style}}  {...props} />
+  }
+}
+export class Row extends Col {}
+export class Header extends Row {}
+export class Body extends Row {}
+export class Footer extends Row {}
 
-    render() {
-      return <SafeArea><ScrollView {...this.props} /></SafeArea>
+export class Screen extends Component {
+  render() {
+    let {
+      safeAreaDisabled = false
+    } = this.props
+    const content = <View flex={1} {...this.props} />
+    const body = safeAreaDisabled ? content : <SafeArea flex={1}>{content}</SafeArea>
+    return body
+  }
+}
+
+export class Page extends Component {
+  static navigationOptions = ({ navigation, header }) => {
+    // const params = navigation.state.params || {}
+    return {
+      ...navigation,
+      ...header,
+      headerStyle: Styles.header,
+      headerTitle: "(defalut)",
     }
   }
 
-  // export default Grid
-  // export default Col
-  // module.exports = {
-  //   // RoundButton: RoundButton,
-  //   Grid, Col, View, SafeArea
-  //
-  // };
+  render() {
+    return <SafeArea><ScrollView {...this.props} /></SafeArea>
+  }
+}
+
+// export default Grid
+// export default Col
+// module.exports = {
+//   // RoundButton: RoundButton,
+//   Grid, Col, View, SafeArea
+//
+// };
