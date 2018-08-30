@@ -1,8 +1,8 @@
 // export * from './src/';
 
-export { RoundButton } from './elements/Buttons'
+export { RoundButton, PillButton } from './elements/Buttons'
 export { Grid, Col, Padding, Card, Row, Header, Body, Footer, Example, View, SafeArea, Center, Screen, Page, Scroll } from './elements/Layouts'
-export { Photo, Avatar, Square, Circle, ImageBackground } from './elements/Images.js'
+export { Photo, Avatar, Square, Circle, ImageBackground, Icon } from './elements/Images.js'
 
 export { Setting } from './elements/Setting'
 export { Touch } from './elements/Events'

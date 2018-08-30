@@ -4,6 +4,15 @@ import { View, Center } from './Layouts'
 
 import { Setting } from './Constants'
 
+import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
+
+export class Icon extends Component {
+  render() {
+    return <FontAwesomeIcon name='500px' size={50} />
+  }
+}
+
+
 export class ImageBackground extends Component {
   render() {
     let {
@@ -30,9 +39,10 @@ export class Avatar extends Component {
   }
 
   render() {
+    let { size = '100%' } = this.props
     return <Image onLayout={this._onLayout}
       style={{
-        height: '100%',
+        height: size,
         aspectRatio: 1,
         borderRadius: this.state.radius
         , ...this.props.style

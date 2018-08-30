@@ -1,6 +1,6 @@
 import React, { PureComponent as Component } from 'react';
 import { ScrollView, TouchableOpacity, AsyncStorage, StatusBar, SafeAreaView, View as RNView} from 'react-native';
-import { Text, H1, H2, H3 } from './Texts'
+import { Label, Text, H1, H2, H3 } from './Texts'
 
 import styles from './Styles'
 
@@ -14,13 +14,22 @@ export class  Scroll extends Component {
 
 export class SafeArea extends Component {
   render() {
-    return <SafeAreaView style={{flex: 1, backgroundColor: 'transparent'}} flex={1} {...this.props} />
+    let {
+      backgroundColor = 'transparent'
+    } = this.props
+    return <SafeAreaView style={{flex: 1, backgroundColor: backgroundColor}} flex={1} {...this.props} />
   }
 }
 
 export class View extends Component {
   render() {
-    return <RNView {...this.props}>{drawBorders(this)}</RNView>
+    let {
+      children = <Example/>,
+    } = this.props
+    this.props.children = children
+    // return <RNView {...this.props}>{drawBorders(this)}</RNView>
+    return <RNView {...this.props}>{children}</RNView>
+    // return <RNView {...this.props}>{drawBorders(this)}</RNView>
   }
 }
 
@@ -36,7 +45,7 @@ export class Center extends Component {
 
 export class Example extends Component {
   render() {
-    return <Center padding={20}><H1/></Center>
+    return <Center padding={20}><Label/></Center>
   }
 }
 
@@ -61,71 +70,69 @@ export class Grid extends Component {
     let {
       flex = 1,
       style,
-      children = <Example/>,
       ...props
     } = this.props
     return <View
       style={{flex: flex, ...style}}
       flexDirection={this.direction()}
-      {...props}
-    >{children}</View>
-  }
+      {...props} />
+    }
 
-  direction() {
-    var row = true;
-    React.Children.forEach(this.props.children, function (child) {
-      if(child && child.type == Col)
-      row = false;
-    })
-    return !row ? 'row' : 'column';
+    direction() {
+      var row = true;
+      React.Children.forEach(this.props.children, function (child) {
+        if(child && child.type == Col)
+        row = false;
+      })
+      return !row ? 'row' : 'column';
+    }
   }
-}
-export class Col extends Component {
-  render() {
-    let {
-      flex = 1,
-      style,
-      ...props
-    } = this.props
-    return <Grid style={{flex: flex, ...style}}  {...props} />
+  export class Col extends Component {
+    render() {
+      let {
+        flex = 1,
+        style,
+        ...props
+      } = this.props
+      return <Grid style={{flex: flex, ...style}}  {...props} />
+    }
   }
-}
-export class Row extends Col {}
-export class Header extends Row {}
-export class Body extends Row {}
-export class Footer extends Row {}
+  export class Row extends Col {}
+  export class Header extends Row {}
+  export class Body extends Row {}
+  export class Footer extends Row {}
 
-export class Screen extends Component {
-  render() {
-    let {
-      safeAreaDisabled = false
-    } = this.props
-    const content = <View flex={1} {...this.props} />
-    const body = safeAreaDisabled ? content : <SafeArea flex={1}>{content}</SafeArea>
-    return body
-  }
-}
-
-export class Page extends Component {
-  static navigationOptions = ({ navigation, header }) => {
-    // const params = navigation.state.params || {}
-    return {
-      ...navigation,
-      ...header,
-      headerStyle: Styles.header,
-      headerTitle: "(defalut)",
+  export class Screen extends Component {
+    render() {
+      let {
+        safeAreaDisabled = false
+      } = this.props
+      const content = <View flex={1} {...this.props} />
+      const body = safeAreaDisabled ? content : <SafeArea flex={1}>{content}</SafeArea>
+      return body
     }
   }
 
-  render() {
-    return <SafeArea><ScrollView {...this.props} /></SafeArea>
-  }
-}
+  export class Page extends Component {
+    static navigationOptions = ({ navigation, header }) => {
+      // const params = navigation.state.params || {}
+      return {
+        ...navigation,
+        ...header,
+        headerStyle: Styles.header,
+        headerTitle: "(defalut)",
+      }
+    }
 
-// export default Grid
-// export default Col
-// module.exports = {
-//   // RoundButton: RoundButton,
-//   Grid, Col, View, SafeArea
-//
-// };
+    render() {
+      return <SafeArea><ScrollView {...this.props} /></SafeArea>
+    }
+  }
+
+  // export default Grid
+  // export default Col
+  // module.exports = {
+  //   // RoundButton: RoundButton,
+  //   Grid, Col, View, SafeArea
+  //
+  // };

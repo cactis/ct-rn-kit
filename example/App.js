@@ -10,7 +10,7 @@ type Props = {};
 export default class App extends Component<Props> {
 
   render() {
-    return <Screens.Screen3 />
+    return <Screens.Screen4 />
   }
 
 }
