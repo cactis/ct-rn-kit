@@ -1,6 +1,7 @@
 import React, { PureComponent as Component } from 'react';
 
 import * as Screens from './src/screens'
+import Library  from '..'
 // global._debug = true
 
 console.disableYellowBox = true

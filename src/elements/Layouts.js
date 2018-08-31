@@ -36,9 +36,10 @@ export class View extends Component {
 export class Center extends Component {
   render() {
     let {
+      flex = 1,
       style
     } = this.props
-    return <View {...this.props} style={{flex: 1, justifyContent: 'center', alignItems: 'center', ...style}}
+    return <View {...this.props} style={{flex: flex, justifyContent: 'center', alignItems: 'center', ...style}}
     />
   }
 }
@@ -102,15 +103,18 @@ export class Footer extends Row {}
 export class Screen extends Component {
   render() {
     let {
-      safeAreaDisabled = false
+      safeAreaDisabled = false,
+      scrollable = true
     } = this.props
-    const content = <View flex={1} {...this.props} />
+    const content = scrollable ? <Scroll><View flex={1} {...this.props} /></Scroll> : <View flex={1} {...this.props} />
     const body = safeAreaDisabled ? content : <SafeArea flex={1}>{content}</SafeArea>
     return body
   }
 }
 
-export class Page extends Component {
+class Page extends Screen {}
+
+export class Page1 extends Component {
   static navigationOptions = ({ navigation, header }) => {
     // const params = navigation.state.params || {}
     return {
@@ -120,7 +124,6 @@ export class Page extends Component {
       headerTitle: "(defalut)",
     }
   }
-
   render() {
     return <SafeArea><ScrollView {...this.props} /></SafeArea>
   }

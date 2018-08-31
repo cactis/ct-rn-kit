@@ -32,9 +32,23 @@ class Storage {
 
 window.Storage = Storage
 
-window.randId = () => {
-  return String(_.random(99999999, 999999999))
+window.randId = (min=99999999, max=999999999) => {
+  return String(_.random(min, max))
 }
+
+export class Library {
+  static sampleImages = (num = 10) => {
+    return Array(num).join().split(',').map(() => {
+      let size = parseInt(randId() / 1000000) * 2
+      // console.log(size, 'size')
+      let url = `https://picsum.photos/${size}/${size}/?random&${randId()}`
+      // console.log(url, 'url')s
+      return url
+    }
+  )
+}
+}
+
 
 window.asNumber = function(str) {
   str = str.replace(',', '')

@@ -3,6 +3,7 @@ import { ScrollView, ImageBackground as RNImageBackground, AsyncStorage, StatusB
 import { View, Center } from './Layouts'
 
 import { Setting } from './Constants'
+import { Library } from './Library'
 
 import FontAwesomeIcon from 'react-native-vector-icons/FontAwesome'
 
@@ -60,12 +61,19 @@ export class Image extends Component {
 
   render() {
     let {
+      size = 300,
       uri = 'https://picsum.photos/1000/1000/?random',
+      style,
+      ...props
     } = this.props
-    return <RNImage {...this.props} source={{uri: uri}}
-      // style={{...this.props.style}}
-    />
-  }
+    return <RNImage {...props} style={{
+      width: size,
+      height: size,
+      ...style,
+    }}
+    source={{uri: uri}}
+  />
+}
 
 }
 
@@ -78,11 +86,11 @@ export class Square extends Component {
   }
 }
 
-const SAMPLE_IMAGE = 'https://picsum.photos/1500/1500/?random'
+const SAMPLE_IMAGES = Library.sampleImages()
 export class Photo extends Component {
   render() {
     let {
-      uri = `${SAMPLE_IMAGE}&${randId()}`,
+      uri = `${SAMPLE_IMAGES[0]}&${randId()}`,
       width = '150%',
       aspectRatio = 1
     } = this.props

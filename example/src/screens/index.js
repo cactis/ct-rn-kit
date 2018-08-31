@@ -11,7 +11,10 @@ let styles = Setting.styles
 
 export class BaseScreen extends Component {
   render() {
-    let {safeAreaDisabled = true} = this.props
+    let {
+      safeAreaDisabled = true,
+      scrollable = false
+    } = this.props
     return <Screen safeAreaDisabled={safeAreaDisabled} {...this.props}>
       <Text style={{color: 'rgba(154,141,141,.86)', padding: 3, fontSize: 14, position: 'absolute', right: 30, bottom: 0, zIndex: 1000}}>#CT-tutorial {this.props.number}</Text>{this.props.children}
     </Screen>
