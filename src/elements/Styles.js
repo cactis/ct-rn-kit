@@ -134,7 +134,7 @@ const styles = StyleSheet.create({
           fontFamily: 'Palatino-Bold',
           fontFamily: 'GillSans-Bold',
           fontFamily: 'KohinoorBangla-Semibold',
-          fontFamily: 'Georgia',
+          // fontFamily: 'Georgia',
           // color: 'red'
         },
         android: {

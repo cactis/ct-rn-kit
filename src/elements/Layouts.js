@@ -97,8 +97,10 @@ export class Col extends Component {
 }
 export class Row extends Col {}
 export class Header extends Row {}
+export class Mid extends Row {}
 export class Body extends Row {}
 export class Footer extends Row {}
+export class Block extends Row {}
 
 export class Screen extends Component {
   render() {

@@ -16,7 +16,7 @@ export class Button extends Component {
       style,
       titleColor,
       fontSize,
-      backgroundColor,
+      backgroundColor = 'white',
       ...props
     } = this.props
     let { borderColor = titleColor } = props
@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
     borderWidth: 0.5,
     padding: 4,
     paddingHorizontal: 20,
+    // backgroundColor: 'white'
     // ...Styles.shadow,
   }
 })

@@ -29,3 +29,8 @@ export const color = {
   tabColor: mainColor,
   tabInactiveColor: '#98939D',
 }
+
+export const Const = {
+  color: color,
+  size: size
+}

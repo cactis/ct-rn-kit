@@ -70,9 +70,9 @@ window.__warning__ = (message) => {
 
 window.log = (...message) => {
   console.log(message)
-  if (console.trace()) {
-    console.log(console.trace())
-  }
+  // if (console.trace()) {
+  //   console.log(console.trace())
+  // }
 }
 
 window.error = (...message) => {
