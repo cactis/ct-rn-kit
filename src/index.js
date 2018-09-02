@@ -14,7 +14,7 @@ export { Library } from './elements/Library'
 export { Const } from './elements/Constants'
 
 
-export { List, Space, Texts, Names, Author, IconLabel } from './elements/Components'
+export { Stars, List, Space, Texts, Names, Author, IconLabel } from './elements/Components'
 // import { Grid, Col } from './elements/Layouts.js'
 //
 // module.exports = {

@@ -54,7 +54,7 @@ class Headline extends Component {
     } = this.props
     return <Text numberOfLines={numberOfLines}
       style={{
-        ...styles.font,
+        // ...styles.font,
         ...style,
         color: color,
       }}

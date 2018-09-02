@@ -58,8 +58,10 @@ export class Icon extends Component {
   export class ImageBackground extends Component {
     render() {
       let {
-        uri = 'https://picsum.photos/1000/1000/?random',
+        uri = 'https://picsum.photos/1000/1400/?random',
       } = this.props
+      log(uri, 'uri')
+      console.log(uri)
       return <RNImageBackground style={{flex: 1}} {...this.props} source={{uri: uri}} />
     }
   }

@@ -5,20 +5,45 @@ import { Name, Label } from './Texts'
 import { Div, Row, Grid, Col } from './Layouts'
 import { Avatar, Icon } from './Images'
 
+export const Stars = (props) => {
+  let {
+    value = 1.5,
+    size,
+    fontSize = size * 0.8
+  } = props
+
+  let floor = Math.floor(value)
+  let full = Array(floor).join().split(',').map(i => <Icon key={i} iconSet='FontAwesome' name='star' color='#E8D20C' size={size} />)
+  log(full, 'full')
+  let half = value - floor > 0 ? <Icon iconSet='FontAwesome' name='star-half-full' color='#E8D20C' size={size} /> : null
+  return <Div flex={0} flexDirection='row' alignItems='center'>
+    {full}
+    {half}
+    <Label theme='Head7' fontSize={fontSize} color='white'>{value}</Label>
+  </Div>
+}
+
 export const IconLabel = (props) => {
-  return <TwoCols col1={props.icon} col2={props.label} {...props} />
+  let {
+    icon = <Icon color='white' />,
+    label = <Label theme='Head8' color='white' />
+  } = props
+  return <TwoCols col1={icon} col2={label} {...props} />
 }
 
 const TwoCols = (props) => {
   let {
     height = 32
   } = props
+  let {
+    padding = height * 0.2
+  } = props
   return <Div flex={0} {...props}>
     <Col flex={0}>
       {props.col1}
     </Col>
     {props.children}
-    <Space size={height * 0.2} />
+    <Space size={padding} />
     <Col flex={0} justifyContent='center'>
       {props.col2}
     </Col>
