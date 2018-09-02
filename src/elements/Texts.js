@@ -64,20 +64,20 @@ class Headline extends Component {
 }
 
 
-
-
 H = (color, fontWeight, fontSize, props) => {
   return <Headline fontSize={fontSize} style={{fontWeight: fontWeight, color: color}} {...props} />
 }
 
 
-export const Head1 = (props) => H('rgba(0,0,0,1)', '900', 25, props)
-export const Head2 = (props) => H('rgba(0,0,0,0.9)', '800', 22, props)
-export const Head3 = (props) => H('rgba(0,0,0,0.8)', '700', 20, props)
-export const Head4 = (props) => H('rgba(0,0,0,0.7)', '600', 18, props)
-export const Head5 = (props) => H('rgba(0,0,0,0.6)', '500', 16, props)
-export const Head6 = (props) => H('rgba(0,0,0,0.5)', '400', 14, props)
-export const Head7 = (props) => H('rgba(0,0,0,0.4)', '300', 12, props)
+export const Head1 = (props) => H('rgba(0,0,0,1)', 'bold', 28, props)
+export const Head2 = (props) => H('rgba(0,0,0,0.9)', '900', 24, props)
+export const Head3 = (props) => H('rgba(0,0,0,0.8)', '800', 22, props)
+export const Head4 = (props) => H('rgba(0,0,0,0.7)', '700', 20, props)
+export const Head5 = (props) => H('rgba(0,0,0,0.6)', '600', 18, props)
+export const Head6 = (props) => H('rgba(0,0,0,0.5)', '500', 16, props)
+export const Head7 = (props) => H('rgba(0,0,0,0.4)', '400', 14, props)
+export const Head8 = (props) => H('rgba(0,0,0,0.4)', '300', 12, props)
+export const Head9 = (props) => H('rgba(0,0,0,0.4)', '200', 10, props)
 
 export const Time = (props) => <Head7 {...props} />
 
@@ -101,6 +101,8 @@ export class  Name extends Component {
     Head5: Head5,
     Head6: Head6,
     Head7: Head7,
+    Head8: Head8,
+    Head9: Head9,
   }
 
   render() {
