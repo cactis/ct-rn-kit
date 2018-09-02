@@ -9,14 +9,15 @@ import faker from "../../vendors/faker.min.js"
 
 import styles from './Styles'
 
-export class Label extends Component {
-  render() {
-    let {
-      children = faker.company.companyName(),
-    } = this.props
-    return <Text {...this.props}>{children}</Text>
-  }
-}
+// export class Label extends Component {
+//   render() {
+//     let {
+//       children = faker.company.companyName(),
+//       ...props
+//     } = this.props
+//     return <Text {...props}>{children}</Text>
+//   }
+// }
 
 export class Text extends Component {
   render() {
@@ -80,6 +81,8 @@ export const Head7 = (props) => H('rgba(0,0,0,0.4)', '300', 12, props)
 
 export const Time = (props) => <Head7 {...props} />
 
+export const Label = (props) => <Name {...props} />
+
 export class P extends Component {
   render() {
     return <Text {...this.props}>{faker.lorem.paragraphs()}</Text>
@@ -89,8 +92,6 @@ export class P extends Component {
 
 
 export class  Name extends Component {
-
-
   // log(props, '----------')
   components = {
     Head1: Head1,

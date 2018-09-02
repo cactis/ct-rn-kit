@@ -1,12 +1,13 @@
 import React, { PureComponent as Component } from 'react'
-import { StyleSheet, StatusBar, Platform } from 'react-native'
+import { StyleSheet } from 'react-native'
 import { Grid, Col, Row, Header, Body, Mid, Block, Footer, Screen, Page, Square, Padding,  RoundButton, View, SafeArea, Scroll, Center, Photo, Icon as IIcon, Text, Label, Setting, Avatar, Circle, Card, Head1, Head2, Head3, Head4, Head5, Head6, Head7, P, Button, List, Library, Image, Space, Const, Time, Name } from '../../..'
 import { BaseScreen } from './index'
+
+const styles = Setting.styles
 
 import { material, materialDense } from 'react-native-typography'
 import { human, systemWeights } from "react-native-typography";
 
-const styles = Setting.styles
 
 const Icon = (props) =>  <IIcon {...props} size={props.size || 26} color={props.color || 'white'} />
 
@@ -106,7 +107,7 @@ const style = StyleSheet.create({
   },
   header: {
     backgroundColor: bg,
-    paddingTop: Platform.OS == 'ios' ? 30 : 0
+    paddingTop: Const.iOS ? 30 : 0
   },
   tButtons: {
     height: 40,
