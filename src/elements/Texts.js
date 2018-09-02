@@ -78,7 +78,7 @@ export const Head5 = (props) => H('rgba(0,0,0,0.6)', '500', 16, props)
 export const Head6 = (props) => H('rgba(0,0,0,0.5)', '400', 14, props)
 export const Head7 = (props) => H('rgba(0,0,0,0.4)', '300', 12, props)
 
-export const Time = (props) => <Head7 {...props}>2.hours.ago</Head7>
+export const Time = (props) => <Head7 {...props} />
 
 export class P extends Component {
   render() {

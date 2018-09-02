@@ -53,32 +53,35 @@ export class Screen4 extends Component {
         <Button titleColor='black' title='Pins' theme='pill' style={style.tButtons} />
         <Button titleColor='black' title='Tried' theme='pill' style={style.tButtons} />
       </Mid>
-      <Body height={240} style={style.body}>
-        <Row flex={0} paddingVertical={10}>
-          <Col>
-            <Head3>Food & Movies</Head3>
-            <Time/>
-          </Col>
-          <Col alignItems='flex-end'>
-            <Icon iconSet='Entypo' color='white' backgroundColor={bg} size={14} />
-          </Col>
-        </Row>
-        <Row>
-          <Col justifyContent='center' alignItems='flex-end'>
-            <Image style={{...style.listImage, ...style.bigImage}} />
-          </Col>
-          <Col flexDirection='row' flexWrap='wrap' justifyContent='space-between'>
-            <Image style={style.listImage} />
-            <Image style={style.listImage} />
-            <Image style={style.listImage} />
-            <Image style={style.listImage} />
-          </Col>
-        </Row>
+      <Body style={style.body}>
+        <Section style={style} title='Food & Movies' subTitle='3.hours.ago' />
+        <Section style={style} title='Tennis & Streetball' subTitle='5.hours.ago'/>
       </Body>
       <Space size={100}/>
     </BaseScreen>
   }
 }
+
+const Section = (props) =>  <Block height={220} marginTop={10}><Row flex={0} paddingVertical={10}>
+  <Col>
+    <Head3>{props.title}</Head3>
+    <Time>{props.subTitle}</Time>
+  </Col>
+  <Col flex={0} alignItems='flex-end'>
+    <Icon iconSet='Entypo' color='white' backgroundColor={bg} size={14} />
+  </Col>
+</Row>
+<Row>
+  <Col justifyContent='center' alignItems='flex-end'>
+    <Image style={{...props.style.listImage, ...props.style.bigImage}} />
+  </Col>
+  <Col flexDirection='row' flexWrap='wrap' justifyContent='space-between'>
+    <Image style={props.style.listImage} />
+    <Image style={props.style.listImage} />
+    <Image style={props.style.listImage} />
+    <Image style={props.style.listImage} />
+  </Col>
+</Row></Block>
 
 const bg = 'rgb(253,88,114)'
 const style = StyleSheet.create({
