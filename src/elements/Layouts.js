@@ -65,7 +65,6 @@ export class Card extends Component {
   }
 }
 
-
 export class Grid extends Component {
   render() {
     let {
@@ -96,6 +95,7 @@ export class Col extends Component {
   }
 }
 export class Row extends Col {}
+export const RowLine = (props) => <Row flexDirection='row' alignItems='center' {...props} />
 export class Header extends Row {}
 export class Mid extends Row {}
 export class Body extends Row {}

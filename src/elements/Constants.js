@@ -19,7 +19,7 @@ export const size = {
   viewPadding: 15,
   defaultSpacer: 10,
   screenHeight: screenWidth,
-  screenWidth: Dimensions.get('window').width,
+  screenWidth: screenWidth,
   helfScreenWidth: screenWidth / 2,
   // divider: {backgroundColor: colors.smoke},
   baseImageStyle: {flex: 1, width: undefined, height: undefined}

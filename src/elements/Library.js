@@ -36,6 +36,10 @@ window.randId = (min=99999999, max=999999999) => {
   return String(_.random(min, max))
 }
 
+window.randKey = () => {
+  return String(randId())
+}
+
 export class Library {
   static sampleImages = (num = 10) => {
     return Array(num).join().split(',').map(() => {

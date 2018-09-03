@@ -1,5 +1,5 @@
 import React, { PureComponent as Component } from 'react'
-import { Grid, Col, Row, Screen, Page, Square, Padding,  RoundButton, View, SafeArea, Scroll, Center, Photo, Setting, Avatar, Card, H1, H2, H3, P } from '../../..'
+import { Grid, Col, Row, Screen, Page, Square, Padding,  RoundButton, View, SafeArea, Scroll, Center, Photo, Setting, Avatar, Card, Head1, Head2, Head3, P } from '../../..'
 import { BaseScreen } from './index'
 
 const styles = Setting.styles
@@ -22,11 +22,11 @@ export class Screen2 extends Component {
               style={{backgroundColor: 'white', borderRadius: 5, ...styles.shadow, ...styles.bordered}}
               >
                 <Row style={{flex: 0}}>
-                  <Col flex={1} alignItems='center'><H1>LHR</H1></Col>
-                  <Col flex={1} alignItems='center'><H1>JFK</H1></Col>
+                  <Col flex={1} alignItems='center'><Head1>LHR</Head1></Col>
+                  <Col flex={1} alignItems='center'><Head1>JFK</Head1></Col>
                 </Row>
-                <Row style={{flex: 0}}><H2/></Row>
-                <Row style={{flex: 0}}><H3/></Row>
+                <Row style={{flex: 0}}><Head2/></Row>
+                <Row style={{flex: 0}}><Head3/></Row>
                 <Row style={{flex: 1}}>
                   <Scroll>
                     <P/>

@@ -65,7 +65,11 @@ class Headline extends Component {
 
 
 H = (color, fontWeight, fontSize, props) => {
-  return <Headline fontSize={fontSize} style={{fontWeight: fontWeight, color: color}} {...props} />
+  let {
+    style,
+    ..._props
+  } = props
+  return <Headline fontSize={fontSize} style={{fontWeight: fontWeight, color: color, lineHeight: fontSize * 1.5, ...style}} {..._props} />
 }
 
 

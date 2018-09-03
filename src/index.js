@@ -1,7 +1,7 @@
 // export * from './src/';
 
 export { RoundButton, Button } from './elements/Buttons'
-export { Grid, Col, Padding, Card, Row, Header, Body, Footer, Example, View, SafeArea, Center, Screen, Page, Scroll, Mid, Block, Div } from './elements/Layouts'
+export { Grid, Col, Padding, Card, Row, RowLine, Header, Body, Footer, Example, View, SafeArea, Center, Screen, Page, Scroll, Mid, Block, Div } from './elements/Layouts'
 export { Photo, Image, Avatar, Square, Circle, ImageBackground, Icon } from './elements/Images.js'
 
 export { Setting } from './elements/Setting'
