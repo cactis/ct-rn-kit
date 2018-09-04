@@ -27,8 +27,8 @@ export const Stars = (props) => {
 
 export const IconLabel = (props) => {
   let {
-    icon = <Icon color='white' />,
-    label = <Label theme='Head8' color='white' />
+    icon = <Icon color='#333' />,
+    label = <Label theme='Head8' color='#333' />
   } = props
   return <TwoCols col1={icon} col2={label} {...props} />
 }
@@ -69,7 +69,7 @@ export class Texts extends Component {
       justifyContent = 'center',
       ...props
     } = this.props
-    return <Div justifyContent={justifyContent}>
+    return <Div justifyContent={justifyContent} >
       <Name theme={themes[0]} {...props}/>
       <Name theme={themes[1]} {...props}/>
     </Div>

@@ -16,7 +16,7 @@ export class Screen1 extends Component {
             flex: flex,
             marginTop: -300,
             ...styles.shadow }}>
-            <Center><Avatar style={{...styles.shadow, ...styles.bordered}}/></Center>
+            <Center><Avatar style={{}}/></Center>
           </Row>
           <Row flex={1} >
             <Grid margin={30} marginHorizontal={20} padding={20} marginTop={-120}

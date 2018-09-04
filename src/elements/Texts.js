@@ -49,20 +49,20 @@ class Headline extends Component {
       style,
       numberOfLines = 1,
       children = faker.lorem.sentence(),
-      color = this.props.style.color,
+      color = style.color,
       ...props
     } = this.props
+    style.color = color
     return <Text numberOfLines={numberOfLines}
       style={{
         // ...styles.font,
         ...style,
-        color: color,
+        // color: color,
       }}
       {...props}>{children}
     </Text>
   }
 }
-
 
 H = (color, fontWeight, fontSize, props) => {
   let {
@@ -92,8 +92,6 @@ export class P extends Component {
     return <Text {...this.props}>{faker.lorem.paragraphs()}</Text>
   }
 }
-
-
 
 export class  Name extends Component {
   // log(props, '----------')
