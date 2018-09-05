@@ -1,0 +1,6 @@
+export * from './Headline'
+export * from './Label'
+export * from './Text'
+export * from './Time'
+export * from './Name'
+export * from './P'

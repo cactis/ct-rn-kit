@@ -1,6 +1,6 @@
 import React, { PureComponent as Component } from 'react'
 import { StyleSheet } from 'react-native'
-import { Grid, Col, Row, Header, Body, Mid, Block, Footer, Screen, Page, Square, Padding,  RoundButton, View, SafeArea, Scroll, Center, Photo, Icon as IIcon, Text, Label, Setting, Avatar, Circle, Card, Head1, Head2, Head3, Head4, Head5, Head6, Head7, P, Button, List, Library, Image, Space, Const, Time, Name } from '../../..'
+import { Grid, Col, Row, Header, Body, Mid, Block, Footer, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Icon as IIcon, Text, Label, Setting, Avatar, Circle, Card, Head1, Head2, Head3, Head4, Head5, Head6, Head7, P, Button, List, Library, Image, Space, Const, Time, Name } from '../../..'
 import { BaseScreen } from './index'
 
 const styles = Setting.styles

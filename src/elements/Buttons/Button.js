@@ -1,12 +1,11 @@
 import React, { PureComponent as Component } from 'react'
 import { StyleSheet } from 'react-native'
 
-// import { Button } from 'react-native'
-import { Touch } from './Events'
-import { View, Center } from './Layouts'
-import { Label } from './Texts'
+import { Touch } from '../Events'
+import { View, Center } from '../Layouts'
+import { Label } from '../Texts'
 
-import Styles from './Styles'
+import Styles from '../Styles'
 
 export class Button extends Component {
   render() {
@@ -32,12 +31,6 @@ export class Button extends Component {
         </Label>
       </Center>
     </Touch>
-  }
-}
-
-export class RoundButton extends Component {
-  render() {
-    return <View><Button title='自訂按鍵'/></View>
   }
 }
 

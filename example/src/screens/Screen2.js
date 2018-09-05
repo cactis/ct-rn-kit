@@ -1,5 +1,5 @@
 import React, { PureComponent as Component } from 'react'
-import { Grid, Col, Row, Screen, Page, Square, Padding,  RoundButton, View, SafeArea, Scroll, Center, Photo, Setting, Avatar, Card, Head1, Head2, Head3, P } from '../../..'
+import { Grid, Col, Row, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Setting, Avatar, Card, Head1, Head2, Head3, P } from '../../..'
 import { BaseScreen } from './index'
 
 const styles = Setting.styles
