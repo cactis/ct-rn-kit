@@ -13,7 +13,7 @@ export class Screen5 extends Component {
           <CT.Label theme='Head7' color='white'>BOOK</CT.Label>
         </CT.Row>
         <CT.Row flex={4}>
-          <CT.Names color='white' themes={['Head1', 'Head8']} justifyContent='flex-start' />
+          <CT.Names color='white' themes={['Head1', 'Head2']} justifyContent='flex-start' />
         </CT.Row>
         <CT.Row>
           <CT.Author height={60} />

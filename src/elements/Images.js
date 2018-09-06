@@ -13,9 +13,6 @@ import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityI
 import Material from 'react-native-vector-icons/MaterialIcons'
 import Entypo from 'react-native-vector-icons/Entypo'
 import Ionicons from 'react-native-vector-icons/Ionicons'
-// import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
-// import Octicons from 'react-native-vector-icons/Octicons'
-
 
 export class Icon extends Component {
 
@@ -60,8 +57,8 @@ export class Icon extends Component {
       let {
         uri = 'https://picsum.photos/1000/1400/?random',
       } = this.props
-      log(uri, 'uri')
-      console.log(uri)
+      // log(uri, 'uri')
+      // console.log(uri)
       return <RNImageBackground style={{flex: 1}} {...this.props} source={{uri: uri}} />
     }
   }
@@ -76,24 +73,8 @@ export class Icon extends Component {
   }
 
   export class Avatar extends Component {
-    state = {}
-    _onLayout = (e) => {
-      if (this.state.radius) return
-      this.setState({radius: e.nativeEvent.layout.height / 2})
-    }
-
     render() {
-      let {
-        size = '100%',
-      } = this.props
-      return <Image onLayout={this._onLayout}
-        style={{
-          height: size,
-          aspectRatio: 1,
-          borderRadius: this.state.radius
-          , ...this.props.style
-        }}
-      />
+      return <Image circled={true} {...this.props}/>
     }
   }
 
@@ -114,19 +95,42 @@ export class Icon extends Component {
 
   const SAMPLE_IMAGES = Library.sampleImages()
   export class Image extends Component {
+    state = {
+      size: null,
+      radius: null
+    }
+
+    _onLayout = (e) => {
+      // if (this.state.size) return
+      let { layout } = e.nativeEvent
+      log(layout, 'layout')
+      log(layout.width < layout.height, 'layout.width < layout.height')
+      this.setState({
+        size: layout.width < layout.height ? {width: layout.width} :  {height: layout.height},
+        radius: e.nativeEvent.layout.height / 2
+      })
+    }
+
     render() {
+      log(this.state.size, 'this.state.size')
       let {
-        size = 300,
         uri = SAMPLE_IMAGES[0],
         style,
+        circled = false,
+        radius = circled ? this.state.radius : 0,
+        // height = 50,
         ...props
       } = this.props
-      log(style, 'style')
       return <RNImage {...props}
+        onLayout={this._onLayout}
         style={{
-          width: size,
-          height: size,
-          ...style,
+          width: '100%',
+          height: '100%',
+          ...this.state.size,
+          borderRadius: radius,
+          // height: height,
+          aspectRatio: 1,
+          ...this.props.style
         }}
         source={{uri: uri}}
       />
