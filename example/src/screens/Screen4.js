@@ -1,6 +1,6 @@
 import React, { PureComponent as Component } from 'react'
 import { StyleSheet } from 'react-native'
-import { Grid, Col, Row, Header, Body, Mid, Block, Footer, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Icon as IIcon, Text, Label, Setting, Avatar, Circle, Card, Head1, Head2, Head3, Head4, Head5, Head6, Head7, P, Button, List, Library, Image, Space, Const, Time, Name } from '../../..'
+import { Grid, Col, Row, Header, Body, Mid, Block, Footer, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Icon as IIcon, Text, Label, Setting, Avatar, Circle, Card, P, Button, List, Library, Image, Space, Const } from '../../..'
 import { BaseScreen } from './index'
 
 const styles = Setting.styles
@@ -22,11 +22,11 @@ export class Screen4 extends Component {
         <Row flex={0} style={{alignItems: 'flex-end'}}>
           <Button titleColor='white' backgroundColor='transparent' title='Follow' theme='pill' style={style.follow} />
         </Row>
-        <Row>
-          <Center>
-            <Avatar size={100} style={{...style.avatar}}/>
-            <Name theme='Head3' color='white' />
-            <Name theme='Head7' color='white' />
+        <Row flex={0}>
+          <Center padding={20}>
+            <Avatar size={80} style={{...style.avatar}}/>
+            <Label theme='H3' color='white' />
+            <Label theme='H7' color='white' />
           </Center>
         </Row>
         <Row height={50} style={style.icons}>
@@ -37,14 +37,14 @@ export class Screen4 extends Component {
         <Row height={80}>
           <Col>
             <Center>
-              <Head6 color='white'>Followers</Head6>
-              <Head2 color='white'>3,345</Head2>
+              <Label theme='H8' color='white'>Followers</Label>
+              <Label theme='H2' color='white'>3,345</Label>
             </Center>
           </Col>
           <Col>
             <Center>
-              <Head6 color='white'>Following</Head6>
-              <Head1 color='white'>400</Head1>
+              <Label theme='H8' color='white'>Following</Label>
+              <Label theme='H3' color='white'>400</Label>
             </Center>
           </Col>
         </Row>
@@ -65,8 +65,8 @@ export class Screen4 extends Component {
 
 const Section = (props) =>  <Block height={220} marginTop={10}><Row flex={0} paddingVertical={10}>
   <Col>
-    <Head3>{props.title}</Head3>
-    <Time>{props.subTitle}</Time>
+    <Label theme='H5'>{props.title}</Label>
+    <Label theme='H8'>{props.subTitle}</Label>
   </Col>
   <Col flex={0} alignItems='flex-end'>
     <Icon iconSet='Entypo' color='white' backgroundColor={bg} size={14} />
@@ -76,7 +76,7 @@ const Section = (props) =>  <Block height={220} marginTop={10}><Row flex={0} pad
   <Col justifyContent='center' alignItems='flex-end'>
     <Image style={{...props.style.listImage, ...props.style.bigImage}} />
   </Col>
-  <Col flexDirection='row' flexWrap='wrap' justifyContent='space-between'>
+  <Col flexDirection='row' flexWrap='wrap'>
     <Image style={props.style.listImage} />
     <Image style={props.style.listImage} />
     <Image style={props.style.listImage} />
@@ -94,9 +94,10 @@ const style = StyleSheet.create({
     height: '99%',
   },
   listImage: {
-    margin: '1.15%',
-    width: '47.62%',
-    height: '47.62%',
+    margin: '1.2%',
+    width: '44.7%',
+    // height: '47.62%',
+    aspectRatio: 1,
     borderRadius: 10
   },
   icons: {
@@ -114,7 +115,7 @@ const style = StyleSheet.create({
     ...styles.shadow
   },
   avatar: {
-    borderWidth: 3,
+    borderWidth: 1,
     borderColor: 'white',
     marginBottom: 10
   },

@@ -1,5 +1,5 @@
 import React, { PureComponent as Component } from 'react'
-import { Grid, Col, Row, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Setting, Avatar, Label, Card, Head1, Head2, Head3, P } from '../../..'
+import { Grid, Col, Row, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Setting, Avatar, Label, Card, P } from '../../..'
 
 import { BaseScreen } from './index'
 
@@ -23,14 +23,14 @@ export class Screen1 extends Component {
               style={{backgroundColor: 'white', borderRadius: 5, ...styles.shadow, ...styles.bordered}}
               >
                 <Row style={{flex: 0}}>
-                  <Col flex={1} alignItems='center'><Head1>LHR</Head1></Col>
-                  <Col flex={1} alignItems='center'><Head1>JFK</Head1></Col>
+                  <Col flex={1} alignItems='center'><Label>LHR</Label></Col>
+                  <Col flex={1} alignItems='center'><Label>JFK</Label></Col>
                 </Row>
                 <Row style={{flex: 0}}><Label theme='Head2'/></Row>
                 <Row style={{flex: 0}}><Label theme='Head3'/></Row>
                 <Row style={{flex: 1}}>
                   <Scroll>
-                    <P/>
+                    {/* <P/> */}
                   </Scroll>
                 </Row>
               </Grid>

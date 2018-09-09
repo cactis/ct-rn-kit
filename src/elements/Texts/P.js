@@ -1,17 +1,16 @@
 import React, { PureComponent as Component } from 'react'
-import { Text as RNText } from 'react-native'
 import { View } from '../Layouts'
 
 import { material } from 'react-native-typography'
 
 import faker from "../../../vendors/faker.min.js"
 
-import styles from './../Styles'
+import styles from '../Styles.js'
 
-import * as Texts from './'
+import Text from './Text'
 
 export class P extends Component {
   render() {
-    return <Texts.Text {...this.props}>{faker.lorem.paragraphs()}</Texts.Text>
+    return <Text {...this.props}>{faker.lorem.paragraphs()}</Text>
   }
 }

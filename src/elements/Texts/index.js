@@ -1,6 +1,4 @@
-export * from './Headline'
 export * from './Label'
+export * from './Labels'
 export * from './Text'
-export * from './Time'
-export * from './Name'
 export * from './P'

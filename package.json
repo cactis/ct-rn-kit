@@ -26,9 +26,9 @@
     "eslint-plugin-react-native": "^3.2.1",
     "jest": "23.5.0",
     "jest-react-native": "^18.0.0",
-    "react": "16.4.1",
+    "react": "^16.5.0",
     "react-native": "0.56.0",
-    "react-test-renderer": "16.4.1"
+    "react-test-renderer": "^16.5.0"
   },
   "jest": {
     "preset": "jest-react-native",

@@ -8,5 +8,5 @@ import faker from "../../../vendors/faker.min.js"
 
 import styles from '../Styles.js'
 
-import  * as Texts  from './'
-export const Label = (props) => <Texts.Name {...props} />
+import  {Text}   from './Text'
+export const Label = (props) => <Text numberOfLines={1} {...props} />
