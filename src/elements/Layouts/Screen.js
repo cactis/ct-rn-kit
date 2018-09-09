@@ -5,7 +5,7 @@ export class Screen extends Component {
   render() {
     let {
       safeAreaDisabled = false,
-      scrollable = true
+      scrollable = false
     } = this.props
     const content = scrollable ? <Scroll><Grid {...this.props} /></Scroll> : <Grid {...this.props} />
     const body = safeAreaDisabled ? content : <SafeArea flex={1}>{content}</SafeArea>

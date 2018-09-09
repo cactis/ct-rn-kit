@@ -5,6 +5,7 @@ import Library  from '..'
 // global._debug = true
 
 console.disableYellowBox = true
+// console.reportErrorsAsExceptions = false;
 
 export default class App extends Component<Props> {
   render() {
