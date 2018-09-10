@@ -33,7 +33,7 @@ class Storage {
 window.Storage = Storage
 
 window.randId = (min=99999999, max=999999999) => {
-  return String(_.random(min, max))
+  return _.random(min, max)
 }
 
 window.randKey = () => {
@@ -43,10 +43,11 @@ window.randKey = () => {
 export class Library {
   static sampleImages = (num = 10) => {
     return Array(num).join().split(',').map(() => {
-      let size = parseInt(randId() / 1000000) * 2
+      let size = randId(1000, 1200)
       // console.log(size, 'size')
+      // let url = `https://source.unsplash.com/${size}x${size}`
       let url = `https://picsum.photos/${size}/${size}/?random&${randId()}`
-      // console.log(url, 'url')s
+      console.log(url, 'url')
       return url
     }
   )

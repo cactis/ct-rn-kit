@@ -13,10 +13,10 @@ const Icon = (props) =>  <IIcon {...props} size={props.size || 26} color={props.
 
 export class Screen4 extends Component {
   state = {
-    images: Library.sampleImages(4)
+    // images: Library.sampleImages(4)
   }
   render() {
-    console.log(this.state.images, 'images')
+    // console.log(this.state.images, 'images')
     return  <BaseScreen scrollable={true}  safeAreaDisabled={true} number='4' backgroundColor='rgba(#F1EFF6,.32)'>
       <Header flexGrow={1} style={style.header}>
         <Row flex={0} style={{alignItems: 'flex-end'}}>

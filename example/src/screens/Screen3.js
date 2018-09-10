@@ -9,10 +9,10 @@ export class Screen3 extends Component {
     return <BaseScreen number='3'>
       <ImageBackground>
         <Header style={{flex: 4.5, alignItems: 'center', justifyContent: 'flex-end'}}>
-          <Circle size={80}><Label style={{fontSize: 40}}>Q</Label></Circle>
+          <Circle size={80} color='white'><Label color='white' style={{fontSize: 40}}>Q</Label></Circle>
         </Header>
-        <Body style={{flex: 0, padding: 20, margin: 30, backgroundColor: 'rgba(255,255,255,.41)'}}>
-          <Label numberOfLines={4} style={{textAlign: 'center', fontWeight: '200', color: '#000', ...styles.textShadow1}}/>
+        <Body style={{flex: 0, padding: 20, margin: 30}}>
+          <Label numberOfLines={4} theme='H1' color='white' style={{textAlign: 'center', color: '#fff', ...styles.textShadow}}/>
         </Body>
         <Footer style={{flex: 9, justifyContent: 'flex-start', alignItems: 'center', paddingHorizontal: 20}}>
           <Row style={{flex: 0, backgroundColor: 'rgba(25,26,27,1)', borderRadius: 1}}>

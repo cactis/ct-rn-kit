@@ -25,9 +25,10 @@ export * from './ImageBackground'
   export class Circle extends Component {
     render() {
       let {
-        size
+        size,
+        color = 'white',
       } = this.props
-      return <Center style={{flex: 0, padding: size * 0, width: size, height: size, borderWidth: 3, borderRadius: size / 2}} {...this.props}/>
+      return <Center style={{flex: 0, padding: size * 0, width: size, height: size, borderColor: color, borderWidth: 3, borderRadius: size / 2}} {...this.props}/>
     }
   }
 

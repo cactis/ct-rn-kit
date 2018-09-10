@@ -6,10 +6,10 @@ import { BaseScreen } from './'
 export class Screen6 extends Component {
   render() {
     return <BaseScreen number={6}>
-      <CT.ImageBackground uri='https://picsum.photos/1000/1400/?image=1019'>
+      <CT.ImageBackground uri='https://images.pexels.com/photos/1298684/pexels-photo-1298684.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'>
       <CT.Row><CT.Space/></CT.Row>
       <CT.Row padding={20}>
-        <CT.Text theme='H1' color='white' numberOfLines={2} fontSize={42}>{"Out of \nthe Wild Ocean"}</CT.Text>
+        <CT.Text theme='H1' color='white' numberOfLines={2} size={40}>{"Out of \nthe Wild Ocean"}</CT.Text>
         <CT.Row>
           <CT.Stars value={4.5} size={18} />
         </CT.Row>

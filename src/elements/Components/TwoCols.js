@@ -14,15 +14,12 @@ export const TwoCols = (props) => {
   } = props
 
   let {
-    padding = height * 0.2
+    padding = height * 0.1
   } = props
 
   return <Grid flex={0} {...props}>
-    <Col flex={0}>
-      {props.col1}
-    </Col>
+    <Col flex={0}>{props.col1}</Col>
     {props.children}
-    <Space size={padding} />
     <Col flex={0} justifyContent='center'>
       {props.col2}
     </Col>
