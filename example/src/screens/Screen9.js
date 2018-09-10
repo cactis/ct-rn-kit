@@ -13,7 +13,7 @@ export class Screen9 extends Component {
         <CT.Row padding={30} borderWidth={1}>
           <CT.Row>
             <CT.Row flex={4} xAlign='flex-end'>
-              <CT.Label theme='H5' size={56} numberOfLines={2} color='white'>{`Eggs\nBenedict`}</CT.Label>
+              <CT.Label theme='H1' size={56} numberOfLines={2} color='white'>{`Eggs\nBenedict`}</CT.Label>
             </CT.Row>
             <CT.Row>
               <CT.Text color='white' theme='H8'>Egg salad is often used as a sandwich filling, typically made of chopped hard-boiled eggs, mayonnaise, mustard, minced celery, onion, salt, pepper, and paprika. </CT.Text>

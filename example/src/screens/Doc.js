@@ -1,6 +1,6 @@
 import React, { PureComponent as Component } from 'react'
 import { StyleSheet, StatusBar, Platform, Text as RNText, View as RNView } from 'react-native'
-import { Stars, Grid, Col, Row, Div, Header, Body, Mid, Block as CTBlock, Footer, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Icon, Text, Label, Setting, Avatar, Circle, Card, Head1, Head2, Head3, Head4, Head5, Head6, Head7, Head8, Head9, P, Button, List, Library, Image, Space, Const, Time, Name as CTName, ImageBackground, Texts, Names, Author, IconLabel, RowLine } from '../../..'
+import { Stars, Grid, Col, Row, Div, Header, Body, Mid, Block as CTBlock, Footer, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Icon, Text, Label, Setting, Avatar, Circle, Card, Head1, Head2, Head3, Head4, Head5, Head6, Head7, Head8, Head9, P, Button, List, Library, Image, Space, Const, Time, Name as CTName, ImageBackground, FontList, Texts, Names, Author, IconLabel, RowLine } from '../../..'
 
 import * as components from '../../..'
 
@@ -9,9 +9,14 @@ import { BaseScreen } from './index'
 const styles = Setting.styles
 
 export class DocScreen extends Component {
+
   render() {
+    log(FontList, 'FontList')
     return <BaseScreen scrollable={true} safeAreaDisabled={false}>
-      <Unit component='Text' theme='H1' />
+      {
+        Object.values(FontList).map((font, i) => <Unit key={randKey()} component='Text' style={{fontFamily: font}}>{font}</Unit>)
+      }
+      {/* <Unit component='Text' theme='H1' />
       <Unit component='Text' theme='H2' />
       <Unit component='Text' theme='H3' />
       <Unit component='Text' theme='H4' />
@@ -19,7 +24,7 @@ export class DocScreen extends Component {
       <Unit component='Text' theme='H6' />
       <Unit component='Text' theme='H7' />
       <Unit component='Text' theme='H8' />
-      <Unit component='Text' theme='H9' />
+      <Unit component='Text' theme='H9' /> */}
     </BaseScreen>
 
   }
