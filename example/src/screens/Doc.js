@@ -14,7 +14,7 @@ export class DocScreen extends Component {
     log(FontList, 'FontList')
     return <BaseScreen scrollable={true} safeAreaDisabled={false}>
       {
-        Object.values(FontList).map((font, i) => <Unit key={randKey()} component='Text' style={{fontFamily: font}}>{font}</Unit>)
+        Object.values(FontList).map((font, i) => <Unit key={randKey()} component='Text' style={{fontFamily: font}}>{font} 123456789 ABC abc</Unit>)
       }
       {/* <Unit component='Text' theme='H1' />
       <Unit component='Text' theme='H2' />

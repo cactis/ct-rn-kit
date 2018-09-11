@@ -1,5 +1,4 @@
 import React, { PureComponent as Component } from 'react'
-import { Text } from 'react-native'
 import * as CT from '../../..'
 import { BaseScreen } from './'
 import Styles from '../../../src/elements/Styles.js'
@@ -8,7 +7,7 @@ const uri = 'https://images.pexels.com/photos/54455/cook-food-kitchen-eat-54455.
 // let uri = 'https://images.pexels.com/photos/2326/fashion-person-woman-taking-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 export class Screen9 extends Component {
   render() {
-    return <BaseScreen number={8}>
+    return <BaseScreen number={9}>
       <CT.ImageBackground uri={uri}>
         <CT.Row padding={30} borderWidth={1}>
           <CT.Row>
