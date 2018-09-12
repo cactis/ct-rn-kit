@@ -16,7 +16,7 @@ export class Labels extends Component {
     } = this.props
     let children = texts.map( (text, i) => <Text key={randKey()} theme={themes[i]} {...props}>{text}</Text> )
 
-    return <Div>{children}</Div>
+    return <Div {...props}>{children}</Div>
   }
 
 }

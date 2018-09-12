@@ -7,17 +7,13 @@ import { Col } from './Col'
 export class Grid extends Component {
   render() {
     let {
-      align,
-      yAlign,
-      xAlign,
+
       layout = this.direction(),
       flex = 1,
       style,
       ...props
     } = this.props
-    align && (yAlign = align) && (xAlign = align)
-    yAlign && (style.alignItems = yAlign)
-    xAlign && (style.justifyContent = xAlign)
+
     return <View style={{flex: flex, flexDirection: layout, ...style}} {...props} />
   }
 

@@ -18,13 +18,16 @@ export class Screen5 extends Component {
         </CT.Row>
         <CT.Row>
           <CT.IconLabel height={50} icon={<CT.Avatar />} label={<CT.Labels
+            padding={10}
             color='white'
-            themes={['H6', 'H8']} />} />
+            themes={['H6', 'H8']} />}
+          />
         </CT.Row>
       </Block>
       <Block backgroundColor='#373839'>
         <CT.Row>
           <CT.IconLabel height={50} icon={<CT.Avatar />} label={<CT.Labels
+            padding={10}
             color='white'
             themes={['H6', 'H8']} />} />
         </CT.Row>
