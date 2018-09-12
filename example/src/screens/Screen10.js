@@ -16,15 +16,18 @@ export class Screen10 extends Component {
         <CT.Row flex={0} height={h}  xAlign='flex-end'>
           <CT.ImageBackground uri={uri} blurRadius={ Platform.OS == 'ios' ? 5 : 3 } >
             <CT.Row backgroundColor='rgba(36,159,134,.76)'>
-              <Label theme='H1' style={{position: 'absolute', left: 120, width: 240, bottom: 5}}>Jasmine C.</Label>
+              <CT.Row style={{position: 'absolute', left: 120, width: 240, bottom: 5}} layout='row'>
+                <Label theme='H1' >Jasmine C. <Label theme='H4'>, 52</Label></Label>
+                <CT.Icon size={10} name='star' color='rgb(246,177,43)'/>
+              </CT.Row>
             </CT.Row>
           </CT.ImageBackground>
         </CT.Row>
         <CT.Row flex={1} backgroundColor='rgb(61,73,108)'>
-          <Label theme='H7s' style={{position: 'absolute', left: 120, width: 240, top: 5}} />
+          <Label theme='H7' style={{position: 'absolute', left: 120, width: 240, top: 5}} />
           <CT.Row marginTop={50}>
-            <List name='heart' color='rgba(219,29,69,.87)' text='59'/>
-            <List name='calendar' color='rgb(33,193,228)' text='8'/>
+            <List name='heart' color='rgba(228,68,131,1)' text='59'/>
+            <List name='calendar' color='rgb(178,116,232)' text='8'/>
             <List name='trophy' color='rgb(237,194,12)' text='1,764'/>
             <List name='bar-chart' color='rgb(25,226,190)' text='7h43m' borderBottom={false}/>
           </CT.Row>
