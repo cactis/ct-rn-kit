@@ -14,6 +14,7 @@ export class Text extends Component {
       theme = 'H3',
       align = 'left',
       size,
+      font = 'Helvetica',
       color,
       children = faker.commerce.productName(),
       ...props
@@ -27,6 +28,7 @@ export class Text extends Component {
       style={{
         // alignSelf: 'flex-start',
         // textAlign: align,
+        fontFamily: font,
         textAlignVertical: 'bottom',
         // borderWidth: 1,
         ...textShadow,

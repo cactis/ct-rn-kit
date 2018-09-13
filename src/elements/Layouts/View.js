@@ -8,7 +8,7 @@ export class View extends Component {
       align,
       yAlign,
       xAlign,
-      style,
+      style = {},
       children,
       ...props
     } = this.props

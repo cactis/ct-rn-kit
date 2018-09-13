@@ -31,15 +31,12 @@ export class Icon extends Component {
       name = 'plus',
       size = 20,
       color = '#333',
+      width = size * 3,
+      height = size * 3,
       backgroundColor = 'transparent',
-      ..._props
+      ...props
     } = this.props
 
-    let {
-      width = size * 1.5,
-      height = size * 1.5,
-      ...props
-    } = _props
 
     const TagName = this.iconSets[this.props.iconSet || 'FontAwesome']
     return <Center flex={0} backgroundColor={backgroundColor}
