@@ -1,6 +1,6 @@
 import React, { PureComponent as Component } from 'react'
 import { StyleSheet } from 'react-native'
-import { Grid, Col, Row, Header, Body, Mid, Block, Footer, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Icon as IIcon, Text, Label, Setting, Avatar, Circle, Card, P, Button, List, Library, Image, Space, Const } from '../../..'
+import { Grid, Col, Row, Header, Body, Mid, Block, Footer, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Icon, Text, Label, Setting, Avatar, Circle, Card, P, Button, List, Library, Image, Space, Const } from '../../..'
 import { BaseScreen } from './index'
 
 const styles = Setting.styles
@@ -9,7 +9,7 @@ import { material, materialDense } from 'react-native-typography'
 import { human, systemWeights } from "react-native-typography";
 
 
-const Icon = (props) =>  <IIcon {...props} size={props.size || 26} color={props.color || 'white'} />
+const TheIcon = (props) =>  <Icon {...props} size={props.size || 26} color={props.color || 'white'} />
 
 export class Screen4 extends Component {
   state = {
@@ -30,9 +30,9 @@ export class Screen4 extends Component {
           </Center>
         </Row>
         <Row height={50} style={style.icons}>
-          <Icon name='twitter'/>
-          <Icon name='phone' />
-          <Icon name='facebook'/>
+          <TheIcon name='twitter'/>
+          <TheIcon name='phone' />
+          <TheIcon name='facebook'/>
         </Row>
         <Row height={80}>
           <Col>
@@ -69,7 +69,7 @@ const Section = (props) =>  <Block height={220} marginTop={10}><Row flex={0} pad
     <Label theme='H8'>{props.subTitle}</Label>
   </Col>
   <Col flex={0} alignItems='flex-end'>
-    <Icon iconSet='Entypo' color='white' backgroundColor={bg} size={14} />
+    <TheIcon iconSet='Entypo' color='white' backgroundColor={bg} size={14} />
   </Col>
 </Row>
 <Row>

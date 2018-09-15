@@ -1,6 +1,6 @@
 import React, { PureComponent as Component } from 'react';
 import { View as RNView} from 'react-native';
-import { Example } from './'
+// import { Example } from './'
 
 export class View extends Component {
   render() {
@@ -18,7 +18,7 @@ export class View extends Component {
     let emptyStyle = !children ? {borderWidth: 1, margin: 5} : {}
     return <RNView
       // borderWidth={0.5}
-      style={{...emptyStyle, ...style}} {...props}>{children}
+      style={{...emptyStyle, ...style}} {...props}>{drawBorders(this)}
       </RNView>
   }
 }

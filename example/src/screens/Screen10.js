@@ -17,14 +17,14 @@ export class Screen10 extends Component {
           <CT.ImageBackground uri={uri} blurRadius={ Platform.OS == 'ios' ? 5 : 3 } >
             <CT.Row backgroundColor='rgba(36,159,134,.76)'>
               <CT.Row style={{position: 'absolute', left: 120, width: 240, bottom: 5}} layout='row'>
-                <Label theme='H1' >Jasmine C. <Label theme='H4'>, 52</Label></Label>
+                <TheLabel theme='H1' >Jasmine C. <TheLabel theme='H4'>, 52</TheLabel></TheLabel>
                 <CT.Icon size={10} name='star' color='rgb(246,177,43)'/>
               </CT.Row>
             </CT.Row>
           </CT.ImageBackground>
         </CT.Row>
         <CT.Row flex={1} backgroundColor='rgb(61,73,108)'>
-          <Label theme='H7' style={{position: 'absolute', left: 120, width: 240, top: 5}} />
+          <TheLabel theme='H7' style={{position: 'absolute', left: 120, width: 240, top: 5}} />
           <CT.Row marginTop={50}>
             <List name='heart' color='rgba(228,68,131,1)' text='59'/>
             <List name='calendar' color='rgb(178,116,232)' text='8'/>
@@ -38,12 +38,12 @@ export class Screen10 extends Component {
           </CT.Col>
         </CT.Row>
       </CT.Row>
-      <Label color='rgba(255,255,255,.5)' theme='H1' style={{position: 'absolute', right: -70, top: 120, transform: [{ rotate: '90deg'}] }} >JacobLauritzen</Label>
+      <TheLabel color='rgba(255,255,255,.5)' theme='H1' style={{position: 'absolute', right: -70, top: 120, transform: [{ rotate: '90deg'}] }} >JacobLauritzen</TheLabel>
     </BaseScreen>
   }
 }
 
-const Label = (props) => <CT.Label color='white' {...props} />
+const TheLabel = (props) => <CT.Label color='white' {...props} />
 
 const List = (props) => {
   let { borderBottom = true } = props
@@ -54,10 +54,10 @@ const List = (props) => {
     </CT.Col>
     <CT.Col flex={6} borderColor='rgba(192,187,226,.75)' borderBottomWidth={borderBottomWidth}>
       <CT.Col flex={2} xAlign='center'>
-        <CT.Labels color='white' themes={['H5', 'H9']} />
+        <CT.Labels color='white' themes={['H5', 'H8']} />
       </CT.Col>
       <CT.Col xAlign='center' yAlign='flex-end' borderColor='rgba(192,187,226,.75)' borderBottomWidth={borderBottomWidth}>
-        <Label theme='H5' style={{fontFamily: 'GillSans'}} color='white'>{props.text}</Label>
+        <TheLabel theme='H5' style={{fontFamily: 'GillSans'}} color='white'>{props.text}</TheLabel>
       </CT.Col>
     </CT.Col>
   </CT.Row>

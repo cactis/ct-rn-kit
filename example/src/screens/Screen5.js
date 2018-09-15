@@ -20,7 +20,7 @@ export class Screen5 extends Component {
           <CT.IconLabel height={50} icon={<CT.Avatar />} label={<CT.Labels
             padding={10}
             color='white'
-            themes={['H6', 'H8']} />}
+            themes={['H5', 'H8']} />}
           />
         </CT.Row>
       </Block>
@@ -29,14 +29,14 @@ export class Screen5 extends Component {
           <CT.IconLabel height={50} icon={<CT.Avatar />} label={<CT.Labels
             padding={10}
             color='white'
-            themes={['H6', 'H8']} />} />
+            themes={['H5', 'H8']} />} />
         </CT.Row>
         <CT.Row flex={3} justifyContent='flex-end'>
           <CT.Row flex={0} height={80}>
             <CT.IconLabel icon={<CT.Icon iconSet='Octicons' name='comment' color='white' size={40} width={40} />}
-            label={<CT.Label color='white' theme='H9'>Book Comments</CT.Label>}
+            label={<CT.Label color='white' theme='H7'>Book Comments</CT.Label>}
             >
-              <CT.Label style={{position: 'absolute', textAlign: 'center', width: 40, color: '#FB6969', top: 18}} theme='H9'>1,335</CT.Label>
+              <CT.Label style={{position: 'absolute', textAlign: 'center', width: 40, color: '#FF4545', top: 9}} theme='H9'>1,335</CT.Label>
             </CT.IconLabel>
           </CT.Row>
         </CT.Row>

@@ -1,2 +1,8 @@
-import { Col } from './Col'
-export class Row extends Col {}
+import React, { PureComponent as Component } from 'react'
+import { Grid } from './Grid'
+
+export class Row extends Component {
+  render() {
+    return <Grid {...this.props} />
+  }
+}

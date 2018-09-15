@@ -20,7 +20,8 @@ export const TwoCols = (props) => {
   return <Grid flex={0} {...props}>
     <Col flex={0}>{props.col1}</Col>
     {props.children}
-    <Col flex={0} justifyContent='center'>
+    <Space />
+    <Col flex={0} xAlign='center'>
       {props.col2}
     </Col>
   </Grid>

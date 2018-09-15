@@ -27,16 +27,16 @@ export class Icon extends Component {
     // SimpleLine: SimpleLineIcons,
   }
   render() {
+    let ratio = (this.props.backgroundColor || this.props.style?.backgroundColor) ? 3 : 1
     let {
       name = 'plus',
       size = 20,
       color = '#333',
-      width = size * 3,
-      height = size * 3,
+      width = size * ratio,
+      height = size * ratio,
       backgroundColor = 'transparent',
       ...props
     } = this.props
-
 
     const TagName = this.iconSets[this.props.iconSet || 'FontAwesome']
     return <Center flex={0} backgroundColor={backgroundColor}

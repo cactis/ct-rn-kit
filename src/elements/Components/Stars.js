@@ -2,7 +2,7 @@ import React, { PureComponent as Component } from 'react';
 import { FlatList, View} from 'react-native';
 
 import { Name, Label } from '../Texts'
-import { Div, Row, Grid, Col, RowLine } from '../Layouts'
+import { Div, Row, Grid, Col, RowLine, Space } from '../Layouts'
 import { Avatar, Icon } from '../Images'
 
 export const Stars = (props) => {
@@ -21,6 +21,7 @@ export const Stars = (props) => {
   return <RowLine flex={0}>
     {full}
     {half}
-    <Label theme='Head7' fontSize={fontSize} color={fontColor}>{value}</Label>
+    <Space />
+    <Label eme='Head7'style={{fontSize: fontSize}} color={fontColor}>{value}</Label>
   </RowLine>
 }

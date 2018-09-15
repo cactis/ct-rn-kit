@@ -13,9 +13,16 @@ export class Screen6 extends Component {
         uri={this.state.uri}>
         <CT.Row><CT.Space/></CT.Row>
         <CT.Row padding={20}>
-          <CT.Text theme='H1' color='white' style={{fontWeight: '900', fontFamily: 'HoeflerText-Regular'}} numberOfLines={2} size={40}>{"Out of \nthe Wild Forest"}</CT.Text>
+          <CT.Text
+            theme='H1'
+            color='white'
+            font='MarkerFelt-Thin'
+            style={{fontWeight: '900'}}
+            numberOfLines={2}
+            size={45}>{"Out of \nthe Wild Forest"}
+          </CT.Text>
           <CT.Row>
-            <CT.Stars value={4.5} size={12} />
+            <CT.Stars value={4.5} size={16} />
           </CT.Row>
           <CT.Row height={100} justifyContent='space-evenly' layout='row'>
             <Info key={1} text='2h' label='Tourtime' icon='clock-o' />
@@ -24,7 +31,7 @@ export class Screen6 extends Component {
             <Info key={4} text='15h' label='Close' icon='bell-sleep' iconSet='MaterialCommunityIcons' />
           </CT.Row>
           <CT.Row justifyContent='flex-end' marginBottom={20}>
-            <CT.Button theme='pill' backgroundColor='rgba(139,179,215,.4)'  color='white' title='See Details' />
+            <CT.Button theme='pill' backgroundColor='rgba(223,232,241,.9)'  color='white' title='See Details' />
           </CT.Row>
         </CT.Row>
       </CT.ImageBackground>

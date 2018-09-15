@@ -8,27 +8,31 @@ import { Icon } from '../Images'
 
 import Styles from '../Styles'
 
+import tinycolor from '../../../vendors/tinycolor-min.js'
+
 export class Button extends Component {
   render() {
     let {
       theme,
       title = 'Button',
       style,
-      titleColor,
-      fontSize,
+      titleColor = color = '#111',
       rightIcon,
       titleStyle,
+      fontSize = titleStyle?.fontSize || 18,
+      padding = fontSize * 0.5,
       backgroundColor = 'white',
       ...props
     } = this.props
-    let { borderColor = titleColor } = props
-
+    let { borderColor = tinycolor(backgroundColor).lighten().toString() } = props
     return <Touch {...this.props}>
       <Center flex={0} style={{
         ...styles[theme],
         borderColor: borderColor,
         backgroundColor: backgroundColor,
         flexDirection: 'row',
+        paddingHorizontal: padding * 2,
+        paddingVertical: padding,
         ...style}}>
         <Label style={{
           color: titleColor,
@@ -46,7 +50,7 @@ const styles = StyleSheet.create({
   pill: {
     borderRadius: 30,
     borderWidth: 0.5,
-    padding: 4,
+    // padding: 6,
     paddingHorizontal: 20,
     // backgroundColor: 'white'
     // ...Styles.shadow,

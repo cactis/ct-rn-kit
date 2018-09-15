@@ -18,18 +18,25 @@ export class Screen9 extends Component {
               <CT.Text color='white' theme='H8'>Egg salad is often used as a sandwich filling, typically made of chopped hard-boiled eggs, mayonnaise, mustard, minced celery, onion, salt, pepper, and paprika. </CT.Text>
             </CT.Row>
             <CT.Row yAlign='center'>
-              <CT.Col flex={0}><CT.IconLabel icon={<CT.Icon color='#DFD1D9' name='dollar' />} label={<CT.Label theme='H4' color='#DFD1D9'>10.99</CT.Label>} /></CT.Col>
+              <TheCol name='dollar' text='10.99'/>
               <CT.Space size={20} />
-              <CT.Col flex={0}><CT.IconLabel icon={<CT.Icon color='#DFD1D9' name='heart-o' />} label={<CT.Label theme='H4' color='#DFD1D9'>12 k</CT.Label>} /></CT.Col>
+              <TheCol name='heart-o' text='12K'/>
               <CT.Space size={20} />
-              <CT.Col flex={0}><CT.IconLabel icon={<CT.Icon color='#DFD1D9' name='clock-o' />} label={<CT.Label theme='H4' color='#DFD1D9'>30 min</CT.Label>} /></CT.Col>
+              <TheCol name='clock-o' text='40mins'/>
             </CT.Row>
           </CT.Row>
           <CT.Row xAlign='flex-end'>
-            <CT.Button theme='pill' titleStyle={{fontSize: 20, fontWeight: '300'}} title='Order Now' style={{paddingVertical: 10}} rightIcon={<CT.Icon name='angle-double-right' size={20} />} />
+            <CT.Button
+              theme='pill'
+              titleStyle={{fontSize: 20, fontWeight: '300'}}
+              title='Order Now'
+              rightIcon={<CT.Icon name='angle-double-right' size={20} />}
+            />
           </CT.Row>
         </CT.Row>
       </CT.ImageBackground>
     </BaseScreen>
   }
 }
+
+const TheCol = (props) => <CT.Col flex={0}><CT.IconLabel icon={<CT.Icon color='#DFD1D9' name={props.name} />} label={<CT.Label font='Avenir' theme='H4' color='#DFD1D9'>{props.text}</CT.Label>} /></CT.Col>

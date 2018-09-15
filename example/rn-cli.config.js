@@ -17,6 +17,8 @@ module.exports = {
       'react-native',
       'react',
       "lodash",
+      'tinycolor2',
+      'faker',
       'react-native-typography',
       'prop-types',
       'react-native-vector-icons',

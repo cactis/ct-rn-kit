@@ -19,8 +19,8 @@ export class Screen11 extends Component {
     let { images } = this.state
     return <BaseScreen number={11}>
       <Row flex={1.5} xAlign='flex-end'>
-        <Label theme='H1' size={30} style={{fontFamily: 'TrebuchetMS'}}/>
-        <Label theme='H6' style={{fontFamily: 'TrebuchetMS'}}/>
+        <TheLabel theme='H1' size={30} style={{fontFamily: 'TrebuchetMS'}}/>
+        <TheLabel theme='H6' style={{fontFamily: 'TrebuchetMS'}}/>
       </Row>
       <CT.Row flex={3} layout='row'>
         <Image uri={images[0]}
@@ -54,7 +54,7 @@ export class Screen11 extends Component {
 
 const Tag = (props) => <CT.Col xAlign='center' yAlign='center'>
   <CT.Div  paddingBottom={10} borderColor='rgb(245,200,84)' {...props}>
-    <Label theme='H6' {...props}/>
+    <TheLabel theme='H6' {...props}/>
   </CT.Div>
 </CT.Col>
 
@@ -73,12 +73,12 @@ const Image = (props) => <CT.Col
 
   const Row = (props) => <CT.Row {...props} padding={20}  />
 
-  const Label = (props) => <CT.Label color='rgba(47,117,130,.9)' {...props} />
+  const TheLabel = (props) => <CT.Label color='rgba(30,81,91,.9)' {...props} />
 
   const List = (props) => {
     return <CT.Row layout='row' yAlign='center'>
       <CT.Icon name='star' color='rgb(242,208,61)' size={10} />
       <CT.Space size={20} />
-      <Label theme='H7' />
+      <TheLabel theme='H7' />
     </CT.Row>
   }

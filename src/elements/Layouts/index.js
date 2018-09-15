@@ -75,7 +75,6 @@ export class Footer extends Row {}
 export class Block extends Row {}
 
 export class Div extends View {}
-// export class Screen extends Row {}
 
 class Page extends Screen {}
 
