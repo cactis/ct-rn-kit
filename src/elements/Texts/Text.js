@@ -27,7 +27,7 @@ export class Text extends Component {
       // flex={1}
       style={{
         // alignSelf: 'flex-start',
-        // textAlign: align,
+        textAlign: align,
         fontFamily: font,
         textAlignVertical: 'bottom',
         // borderWidth: 1,

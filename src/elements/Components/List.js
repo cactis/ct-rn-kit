@@ -15,6 +15,8 @@ export class List extends Component {
       isRefreshing: false
     }
     this.onLoad = this.props.onLoad || this.onLoad
+    let { data } = this.props
+    this.setState({data})
     this.fetchData()
   }
 
@@ -33,6 +35,7 @@ export class List extends Component {
 
 
   render() {
+
     return <FlatList ref={(c) => this.flatList = c}
       data={this.state.data}
       onScroll={this._onScroll}
@@ -41,9 +44,18 @@ export class List extends Component {
       onEndReached={this.fetchData}
       onEndThreshold={500}
       keyExtractor={(item, index) => String(index)}
+      // nestedScrollEnabled
+      pagingEnabled
+      // onPanResponderTerminationRequest={() => false}
+      // ListHeaderComponent=<View />
+      // ref={(c) => this.list = c}
+      // url=''
+      // horizontal
+      // numColumns={2}
       // columnWrapperStyle={{justifyContent: 'space-between'}}
-      // contentContainerStyle={{padding: GUTTER}}
-      // ItemSeparatorComponent={() => <GCView height={GUTTER}/>}
+      // contentContainerStyle={{padding: 8}}
+      // ItemSeparatorComponent={() => <CT.Spacee />}
+      // renderItem={({item}) => <CT.Card data={item} navigation={this.props.navigation} />}
       {...this.props}
     />
   }

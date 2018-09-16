@@ -22,7 +22,7 @@ export class Screen12 extends Component {
             <CT.Col>
               <CT.Text theme='H1' size={22} color='white' font='Avenir'>{`Pickle, jam \nand chuntney`}</CT.Text>
             </CT.Col>
-            <CT.Col yAlign='flex-end' xAlign='center'>
+            <CT.Col flex={0} xAlign='center'>
               <CT.Icon size={14} color='white' backgroundColor='rgb(85,108,239)' name='location-arrow'/>
             </CT.Col>
           </CT.Row>

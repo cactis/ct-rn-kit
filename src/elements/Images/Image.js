@@ -3,6 +3,7 @@ import { ScrollView, ImageBackground as RNImageBackground, AsyncStorage, StatusB
 
 import { Setting } from '../Constants'
 import { Library } from '../Library'
+import { Grid } from '../Layouts/Grid'
 
 const SAMPLE_IMAGES = Library.sampleImages()
 export class Image extends Component {
@@ -40,24 +41,30 @@ export class Image extends Component {
     let {
       uri = SAMPLE_IMAGES[0],
       size,
+      width = '100%',
+      height = '100%',
       style,
       circled = false,
       radius = circled ? this.state.radius : 0,
       // height = 50,
       ...props
     } = this.props
-    return <RNImage {...props}
-      onLayout={this._onLayout}
-      style={{
-        width: '100%',
-        height: '100%',
-        ...this.state.size,
-        borderRadius: radius,
-        // height: height,
-        aspectRatio: 1,
-        ...this.props.style
-      }}
-      source={{uri: uri}}
-    />
+    return <Grid overflow='hidden'>
+      <RNImage {...props}
+        onLayout={this._onLayout}
+        flex={1}
+        style={{
+          // width: width,
+          // height: height,
+          ...this.state.size,
+          borderRadius: radius,
+          // height: height,
+          resizeMode: 'cover',
+          aspectRatio: 1,
+          ...this.props.style
+        }}
+        source={{uri: uri}}
+      />
+    </Grid>
   }
 }

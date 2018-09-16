@@ -97,7 +97,7 @@ window._autoRun = (who, run, always = false) => {
 window.delayedTimer = undefined
 window.delayed = (func, wait = 1000, ...args) => {
   clearTimeout(delayedTimer)
-  setTimeout((args) => {
+  delayedTimer = setTimeout((args) => {
     func.apply(null, args)
   }, wait);
 }

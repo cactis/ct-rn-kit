@@ -58,45 +58,61 @@ export class Padding extends Component {
   }
 }
 
-export class Card extends Component {
+export class Float extends Component {
   render() {
     let { style, ...props } = this.props
-    return <Touch activeOpacity={0.8} onPress={this.props.onPress}>
-      <Grid style={[styles.card, ...style]} {...props} />
-    </Touch>
+    return <Center flex={0}
+      style={{position: 'absolute',
+      zIndex: 1000, ...style}} {...props}>
+    </Center>
   }
 }
 
-export const RowLine = (props) => <Row flexDirection='row' alignItems='center' {...props} />
-export class Header extends Row {}
-export class Mid extends Row {}
-export class Body extends Row {}
-export class Footer extends Row {}
-export class Block extends Row {}
-
-export class Div extends View {}
-
-class Page extends Screen {}
-
-export class Page1 extends Component {
-  static navigationOptions = ({ navigation, header }) => {
-    // const params = navigation.state.params || {}
-    return {
-      ...navigation,
-      ...header,
-      headerStyle: Styles.header,
-      headerTitle: "(defalut)",
+export class Card extends Component {
+  render() {
+    let {
+      style = {},
+      ...props
+    } = this.props
+    return <Touch activeOpacity={0.8} onPress={this.props.onPress}>
+      <Grid flex={1}
+        // overflow='hidden'
+        style={{...styles.card, ...style}}
+        {...props} />
+      </Touch>
     }
   }
-  render() {
-    return <SafeArea><ScrollView {...this.props} /></SafeArea>
-  }
-}
 
-// export default Grid
-// export default Col
-// module.exports = {
-//   // RoundButton: RoundButton,
-//   Grid, Col, View, SafeArea
-//
-// };
+  export const RowLine = (props) => <Row flexDirection='row' alignItems='center' {...props} />
+  export class Header extends Row {}
+  export class Mid extends Row {}
+  export class Body extends Row {}
+  export class Footer extends Row {}
+  export class Block extends Row {}
+
+  export class Div extends View {}
+
+  class Page extends Screen {}
+
+  export class Page1 extends Component {
+    static navigationOptions = ({ navigation, header }) => {
+      // const params = navigation.state.params || {}
+      return {
+        ...navigation,
+        ...header,
+        headerStyle: Styles.header,
+        headerTitle: "(defalut)",
+      }
+    }
+    render() {
+      return <SafeArea><ScrollView {...this.props} /></SafeArea>
+    }
+  }
+
+  // export default Grid
+  // export default Col
+  // module.exports = {
+  //   // RoundButton: RoundButton,
+  //   Grid, Col, View, SafeArea
+  //
+  // };

@@ -53,8 +53,19 @@ const styles = StyleSheet.create({
   },
   card: {
     flex: 1,
-    // margin: 8,
-
+    borderRadius: 10,
+    backgroundColor: 'white',
+    ...Platform.select({
+      ios: {
+        shadowColor: 'rgba(0,0,0,.42)',
+        shadowOffset: { height: 3, width: 3 },
+        shadowOpacity: 1,
+        shadowRadius: 5,
+      },
+      android: {
+        elevation: 1,
+      },
+    }),
   },
   photo: {
     flex: 1,
@@ -128,24 +139,24 @@ const styles = StyleSheet.create({
     backgroundColor: '#FFCC00'
   },
   font: {
-      ...Platform.select({
-        ios: {
-          fontFamily: 'AmericanTypewriter-CondensedBold',
-          fontFamily: 'Palatino-Bold',
-          fontFamily: 'GillSans-Bold',
-          fontFamily: 'KohinoorBangla-Semibold',
-          // fontFamily: 'Georgia',
-          // color: 'red'
-        },
-        android: {
-          fontFamily: 'monospace',
-          fontFamily: 'Roboto',
-          fontFamily: 'Pacifico',
-          fontFamily: 'Serif Regular',
-          // fontFamily: 'Noto Sans',
-          // color: 'blue'
-        },
-      }),
-    },
+    ...Platform.select({
+      ios: {
+        fontFamily: 'AmericanTypewriter-CondensedBold',
+        fontFamily: 'Palatino-Bold',
+        fontFamily: 'GillSans-Bold',
+        fontFamily: 'KohinoorBangla-Semibold',
+        // fontFamily: 'Georgia',
+        // color: 'red'
+      },
+      android: {
+        fontFamily: 'monospace',
+        fontFamily: 'Roboto',
+        fontFamily: 'Pacifico',
+        fontFamily: 'Serif Regular',
+        // fontFamily: 'Noto Sans',
+        // color: 'blue'
+      },
+    }),
+  },
 });
 export default styles

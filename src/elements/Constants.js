@@ -7,7 +7,7 @@ let normalSize = screenWidth / (screenWidth > 500 ? 36 : 30)
 let mainColor = 'hsla(261,12%,31%,1)'
 let padding = 8
 
-iOS = () => Platform.OS == 'ios'
+window.iOS = () => Platform.OS == 'ios'
 
 export const size = {
   normalSize: normalSize,

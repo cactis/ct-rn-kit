@@ -41,8 +41,8 @@ export * from './ImageBackground'
     }
   }
 
-  export class Photo extends Component {
-    render() {
-      return <Image {...this.props} />
-    }
-  }
+  // export class Photo extends Component {
+  //   render() {
+  //     return <Image {...this.props} />
+  //   }
+  // }

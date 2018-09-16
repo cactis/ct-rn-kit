@@ -1,6 +1,6 @@
 import React, { PureComponent as Component } from 'react'
 // import { ScrollView, ImageBackground as RNImageBackground, AsyncStorage, StatusBar, SafeAreaView, Image as RNImage} from 'react-native'
-import { View, Center } from '../Layouts'
+import { View, Center, Space } from '../Layouts'
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import Octicons from 'react-native-vector-icons/Octicons'
@@ -27,25 +27,29 @@ export class Icon extends Component {
     // SimpleLine: SimpleLineIcons,
   }
   render() {
-    let ratio = (this.props.backgroundColor || this.props.style?.backgroundColor) ? 3 : 1
     let {
       name = 'plus',
       size = 20,
+      ratio = (this.props.backgroundColor || this.props.style?.backgroundColor) ? 3 : 1,
+      iconSize = size * ratio,
       color = '#333',
-      width = size * ratio,
-      height = size * ratio,
+      width = iconSize,
+      height = iconSize,
       backgroundColor = 'transparent',
       ...props
     } = this.props
 
     const TagName = this.iconSets[this.props.iconSet || 'FontAwesome']
-    return <Center flex={0} backgroundColor={backgroundColor}
-      borderRadius={width / 2} width={width} height={height}>
+    return <Center flex={0}
+      backgroundColor={backgroundColor}
+      borderRadius={width / 2}
+      width={width} height={height}>
       <TagName name={name}
         style={{color: color}}
         size={size}
         {...props}
       />
+      {/* <Space style={{position: 'absolute', backgroundColor: backgroundColor, width: '100%', height: '100%'}} borderRadius={width / 2} flex={1}></Space> */}
     </Center>
   }
 }
