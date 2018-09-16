@@ -37,7 +37,10 @@ export * from './ImageBackground'
       let {
         size
       } = this.props
-      return <View style={{width: size, height: size, borderWidth: 0.5, ...this.props.style}} />
+      return <View style={{
+        width: size,
+        height: size,
+        ...this.props.style}} {...this.props} />
     }
   }
 

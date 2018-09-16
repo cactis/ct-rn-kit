@@ -16,6 +16,7 @@ export class Text extends Component {
       size,
       font = 'Helvetica',
       color,
+      numberOfLines = 2,
       children = faker.commerce.productName(),
       ...props
     } = this.props
@@ -23,12 +24,12 @@ export class Text extends Component {
     color && themeStyle && (themeStyle.color = color)
     size && themeStyle && (themeStyle.fontSize = size)
     return <RNText
-      // numberOfLines={1}
       // flex={1}
       style={{
         // alignSelf: 'flex-start',
         textAlign: align,
         fontFamily: font,
+        numberOfLines: numberOfLines,
         textAlignVertical: 'bottom',
         // borderWidth: 1,
         ...textShadow,
