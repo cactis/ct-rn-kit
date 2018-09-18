@@ -1,8 +1,5 @@
 import React, { PureComponent as Component } from 'react'
 import { Text as RNText, Platform } from 'react-native'
-import { View } from '../Layouts'
-
-import { material } from 'react-native-typography'
 
 import faker from '../../../vendors/faker.min.js'
 
@@ -25,11 +22,11 @@ export class Text extends Component {
     size && themeStyle && (themeStyle.fontSize = size)
     return <RNText
       // flex={1}
+      numberOfLines={numberOfLines}
       style={{
         // alignSelf: 'flex-start',
         textAlign: align,
         fontFamily: font,
-        numberOfLines: numberOfLines,
         textAlignVertical: 'bottom',
         // borderWidth: 1,
         ...textShadow,

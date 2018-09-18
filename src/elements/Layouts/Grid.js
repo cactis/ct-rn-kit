@@ -11,7 +11,11 @@ export class Grid extends Component {
       ...props
     } = this.props
 
-    return <View style={{flex: flex, flexDirection: layout, ...style}} {...props} />
+    return <View style={{
+      flex: flex,
+      flexDirection: layout,
+      ...style
+    }} {...props} />
   }
 
   direction() {

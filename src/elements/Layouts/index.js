@@ -3,6 +3,7 @@ export * from './View'
 export * from './Grid'
 export * from './Col'
 export * from './Space'
+export * from './Cell'
 export * from './Screen'
 
 import { View } from './View'
