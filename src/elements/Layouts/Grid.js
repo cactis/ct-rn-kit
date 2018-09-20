@@ -1,5 +1,6 @@
 import React, { PureComponent as Component } from 'react'
 import { View } from './View'
+import { Touch } from '../Events'
 
 
 export class Grid extends Component {
@@ -10,12 +11,16 @@ export class Grid extends Component {
       style,
       ...props
     } = this.props
-
-    return <View style={{
+    let _style = {
       flex: flex,
       flexDirection: layout,
       ...style
-    }} {...props} />
+    }
+    return (
+      props.onPress ? <Touch onPress={props.onPress} style={_style}>
+        <View style={_style} {...props} />
+      </Touch> : <View style={_style} {...props} />
+    )
   }
 
   direction() {

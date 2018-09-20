@@ -29,7 +29,7 @@ export class Icon extends Component {
   render() {
     let {
       name = 'angle-right',
-      size = 20,
+      size = 16,
       ratio = (this.props.backgroundColor || this.props.style?.backgroundColor) ? 3 : 1,
       iconSize = size * ratio,
       color = '#333',
