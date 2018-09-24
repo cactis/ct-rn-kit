@@ -41,26 +41,28 @@ export class Image extends Component {
     let {
       uri = SAMPLE_IMAGES[0],
       size,
-      width = '100%',
-      height = '100%',
+      width = size || '100%',
+      // height = '100%',
+      aspectRatio = 1,
       style,
       circled = false,
       radius = circled ? this.state.radius : 0,
       // height = 50,
       ...props
     } = this.props
-    return <Grid overflow='hidden'>
+    return <Grid overflow='hidden' width={width} aspectRatio={aspectRatio}>
       <RNImage {...props}
         onLayout={this._onLayout}
         flex={1}
         style={{
-          // width: width,
+          width: width,
+          aspectRatio: aspectRatio,
           // height: height,
-          ...this.state.size,
+          // ...this.state.size,
           borderRadius: radius,
           // height: height,
           resizeMode: 'cover',
-          aspectRatio: 1,
+          // aspectRatio: 1,
           ...this.props.style
         }}
         source={{uri: uri}}

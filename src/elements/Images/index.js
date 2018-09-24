@@ -7,6 +7,7 @@ import { Library } from '../Library'
 
 export * from './Icon'
 export * from './Image'
+export * from './Images'
 export * from './Avatar'
 export * from './ImageBackground'
 
