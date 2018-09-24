@@ -1,5 +1,5 @@
 import React, { Component, PureComponent } from 'react'
-import moment from 'moment'
+// import moment from 'moment'
 
 // import User from './models/user.js'
 // import Dev from '../development.js'
@@ -10,7 +10,6 @@ global.AppConfig = {
   }
 }
 
-console.log(AppConfig, '22222222222222')
 
 // Settings = window.AppConfig.Hosts
 
