@@ -7,7 +7,7 @@ import Styles from '../../../src/elements/Styles'
 import tinycolor from '../../../vendors/tinycolor-min.js'
 
 const PADDING = 15
-const CARDWIDTH = iOS() ? 310 : 300
+const CARDWIDTH = iOS ? 310 : 300
 
 export class Screen13 extends Component {
 

@@ -11,7 +11,7 @@ export class Labels extends Component {
   render() {
     let {
       texts = [faker.commerce.productName(), faker.commerce.productName()],
-      themes =['H6', 'H8'] ,
+      themes =['H5', 'H7'] ,
       ...props
     } = this.props
     let children = texts.map( (text, i) => <Text key={randKey()} theme={themes[i]} {...props}>{text}</Text> )

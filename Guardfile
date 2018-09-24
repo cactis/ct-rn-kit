@@ -18,9 +18,10 @@ guard :shell do
     `#{sync_command}`
 
 
-    ['anypod', 'demo', 'ctnews', 'writus'].each do |app|
+    ['ctnews', 'anypod', 'demo', 'writus'].each do |app|
       target = "/Volumes/RamDisk/#{app}"
       if Dir.exists?(target)
+        # `open #{target}/node_modules/ct-rn-kit/`
         command = copy_commend("#{target}/node_modules/ct-rn-kit/")
         `#{command}`
       end

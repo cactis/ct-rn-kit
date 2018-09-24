@@ -1,15 +1,15 @@
 import React, { PureComponent as Component } from 'react'
 // import { ScrollView, ImageBackground as RNImageBackground, AsyncStorage, StatusBar, SafeAreaView, Image as RNImage} from 'react-native'
-import { View, Center, Space } from '../Layouts'
+import { View, Space } from '../Layouts'
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-import Octicons from 'react-native-vector-icons/Octicons'
+import Oct from 'react-native-vector-icons/Octicons'
 import Feather from 'react-native-vector-icons/Feather'
-import EvilIcons from 'react-native-vector-icons/EvilIcons'
-import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import Evil from 'react-native-vector-icons/EvilIcons'
+import MaterialCommunity from 'react-native-vector-icons/MaterialCommunityIcons'
 import Material from 'react-native-vector-icons/MaterialIcons'
 import Entypo from 'react-native-vector-icons/Entypo'
-import Ionicons from 'react-native-vector-icons/Ionicons'
+import Ion from 'react-native-vector-icons/Ionicons'
 // import SimpleLine from 'react-native-vector-icons/SimpleLineIcons'
 import Zocial from 'react-native-vector-icons/Zocial'
 
@@ -17,12 +17,13 @@ export class Icon extends Component {
 
   iconSets = {
     FontAwesome: FontAwesome,
-    Octicons: Octicons,
+    Oct: Oct,
     Feather: Feather,
-    EvilIcons: EvilIcons,
-    MaterialCommunityIcons: MaterialCommunityIcons,
+    Evil: Evil,
+    Material: Material,
+    MaterialCommunity: MaterialCommunity,
     Entypo: Entypo,
-    Ionicons: Ionicons,
+    Ion: Ion,
     Zocial: Zocial,
     // SimpleLine: SimpleLineIcons,
   }
@@ -39,17 +40,22 @@ export class Icon extends Component {
       ...props
     } = this.props
 
-    const TagName = this.iconSets[this.props.iconSet || 'FontAwesome']
-    return <Center flex={0}
+    let key = (this.props.iconSet || 'FontAwesome').replace(/icons/ig, '')
+    // log(key, 'key')
+    const TagName = this.iconSets[key]
+    return <View flex={0} layout='center'
+
       backgroundColor={backgroundColor}
       borderRadius={width / 2}
-      width={width} height={height}>
+      width={width} height={height}
+      {...props}
+      >
       <TagName name={name}
         style={{color: color}}
         size={size}
         {...props}
       />
       {/* <Space style={{position: 'absolute', backgroundColor: backgroundColor, width: '100%', height: '100%'}} borderRadius={width / 2} flex={1}></Space> */}
-    </Center>
+    </View>
   }
 }

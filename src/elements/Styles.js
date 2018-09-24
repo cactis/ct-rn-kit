@@ -73,8 +73,8 @@ const styles = StyleSheet.create({
     borderStyle: 'solid',
     borderColor: "#CFC9C9",
     // shadowColor: "#000",
-    width: size.screenWidth / 3,
-    height: size.screenWidth / 3,
+    // width: size.screenWidth / 3,
+    // height: size.screenWidth / 3,
     backgroundColor: '#FBFBFA',
     borderRadius: 2,
   },
@@ -160,3 +160,5 @@ const styles = StyleSheet.create({
   },
 });
 export default styles
+
+global.CTStyle = styles

@@ -5,17 +5,19 @@ export * from './Col'
 export * from './Space'
 export * from './Cell'
 export * from './Screen'
+export * from './Float'
+export * from './SafeArea'
 
 import { View } from './View'
 import { Row } from './Row'
 import { Col } from './Col'
 import { Grid } from './Grid'
 import { Screen } from './Screen'
+import { SafeArea } from './SafeArea'
 
-import React, { PureComponent as Component } from 'react';
-import { ScrollView, TouchableOpacity, AsyncStorage, StatusBar, SafeAreaView, View as RNView} from 'react-native';
+import React, { PureComponent as Component } from 'react'
+import { ScrollView, TouchableOpacity, AsyncStorage, StatusBar, SafeAreaView, View as RNView} from 'react-native'
 import {  Text } from '../Texts'
-
 import styles from '../Styles'
 
 import { Touch } from '../Events'
@@ -25,16 +27,6 @@ export class  Scroll extends Component {
     return <ScrollView {...this.props} />
   }
 }
-
-export class SafeArea extends Component {
-  render() {
-    let {
-      backgroundColor = 'transparent'
-    } = this.props
-    return <SafeAreaView style={{flex: 1, backgroundColor: backgroundColor}} flex={1} {...this.props} />
-  }
-}
-
 
 export class Center extends Component {
   render() {

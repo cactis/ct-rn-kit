@@ -75,7 +75,7 @@ export class Text extends Component {
     H5: {
       fontSize: 18,
       // lineHeight: 18 * 1.5,
-      fontWeight: '600',
+      fontWeight: '400',
       color: 'rgba(0,0,0,.80)'
     },
     H6: {
