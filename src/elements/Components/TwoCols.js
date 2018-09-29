@@ -18,10 +18,10 @@ export const TwoCols = (props) => {
   } = props
 
   return <Grid flex={0} {...props}>
-    <Col flex={0}>{props.col1}</Col>
+    <Col align='center' flex={0}>{props.col1}</Col>
     {props.children}
     <Space />
-    <Col flex={0} xAlign='center'>
+    <Col align='center' flex={0} xAlign='center'>
       {props.col2}
     </Col>
   </Grid>

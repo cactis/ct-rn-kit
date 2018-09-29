@@ -13,7 +13,7 @@ import tinycolor from '../../../vendors/tinycolor-min.js'
 export class Button extends Component {
   render() {
     let {
-      theme,
+      theme = 'normal',
       title = 'Button',
       style,
       titleColor = color = '#111',
@@ -21,10 +21,10 @@ export class Button extends Component {
       titleStyle,
       fontSize = titleStyle?.fontSize || 18,
       padding = fontSize * 0.5,
-      backgroundColor = 'white',
+      backgroundColor,
       ...props
     } = this.props
-    let { borderColor = tinycolor(backgroundColor).lighten().toString() } = props
+    let { borderColor = backgroundColor ? tinycolor(backgroundColor).lighten().toString() : 'white' } = props
     return <Touch {...this.props}>
       <Center flex={0} style={{
         ...styles[theme],
@@ -33,10 +33,12 @@ export class Button extends Component {
         flexDirection: 'row',
         paddingHorizontal: padding * 2,
         paddingVertical: padding,
+        ...Styles.shadow,
         ...style}}>
         <Label style={{
           color: titleColor,
           fontSize: fontSize,
+          fontWeight: '500',
           ...titleStyle
         }} {...props}>{title}
         </Label>
@@ -51,8 +53,13 @@ const styles = StyleSheet.create({
     borderRadius: 30,
     borderWidth: 0.5,
     // padding: 6,
+    lineHeight: 1.8,
     paddingHorizontal: 20,
     // backgroundColor: 'white'
     // ...Styles.shadow,
+  },
+  normal: {
+    borderRadius: 5,
+    lineHeight: 2.5
   }
 })

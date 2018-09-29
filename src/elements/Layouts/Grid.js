@@ -7,13 +7,14 @@ export class Grid extends Component {
   render() {
     let {
       layout = this.direction(),
+      flow = layout,
       flex = 1,
       style,
       ...props
     } = this.props
     let _style = {
       flex: flex,
-      flexDirection: layout,
+      flexDirection: flow,
       ...style
     }
     return (

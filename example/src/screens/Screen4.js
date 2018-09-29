@@ -9,7 +9,7 @@ import { material, materialDense } from 'react-native-typography'
 import { human, systemWeights } from "react-native-typography";
 
 
-const TheIcon = (props) =>  <Icon {...props} size={props.size || 26} color={props.color || 'white'} />
+const TIcon = (props) =>  <Icon {...props} size={props.size || 26} color={props.color || 'white'} />
 
 export class Screen4 extends Component {
   state = {
@@ -19,20 +19,20 @@ export class Screen4 extends Component {
     // console.log(this.state.images, 'images')
     return  <BaseScreen scrollable={true}  safeAreaDisabled={true} number='4' backgroundColor='rgba(#F1EFF6,.32)'>
       <Header flexGrow={1} style={style.header}>
-        <Row flex={0} style={{alignItems: 'flex-end'}}>
-          <Button titleColor='white' backgroundColor='transparent' title='Follow' theme='pill' style={style.follow} />
+        <Row flex={0} style={{alignItems: 'flex-end', paddingTop: 50}}>
+          <Button titleColor='white' title='Follow' theme='pill' style={style.follow} />
         </Row>
         <Row flex={0}>
           <Center padding={20}>
-            <Avatar size={80} style={{...style.avatar}}/>
+            <Avatar size={100} style={{...style.avatar}}/>
             <Label theme='H3' color='white' />
             <Label theme='H7' color='white' />
           </Center>
         </Row>
         <Row height={50} style={style.icons}>
-          <TheIcon name='twitter'/>
-          <TheIcon name='phone' />
-          <TheIcon name='facebook'/>
+          <TIcon name='twitter'/>
+          <TIcon name='phone' />
+          <TIcon name='facebook'/>
         </Row>
         <Row height={80}>
           <Col>
@@ -51,8 +51,8 @@ export class Screen4 extends Component {
       </Header>
       <Mid style={{flexDirection: 'row', justifyContent: 'space-evenly', height: 80, alignItems: 'center'}}>
         <Button titleColor='white' title='Boards' theme='pill' backgroundColor={bg} style={style.tButtons} />
-        <Button titleColor='black' title='Pins' theme='pill' style={style.tButtons} />
-        <Button titleColor='black' title='Tried' theme='pill' style={style.tButtons} />
+        <Button titleColor='black' title='Pins' theme='pill' backgroundColor='white' style={style.tButtons} />
+        <Button titleColor='black' title='Tried' backgroundColor='white' theme='pill' style={style.tButtons} />
       </Mid>
       <Body style={style.body}>
         <Section style={style} title='Food & Movies' subTitle='3.hours.ago' />
@@ -63,26 +63,32 @@ export class Screen4 extends Component {
   }
 }
 
-const Section = (props) =>  <Block height={220} marginTop={10}><Row flex={0} paddingVertical={10}>
-  <Col>
-    <Label theme='H5'>{props.title}</Label>
-    <Label theme='H8'>{props.subTitle}</Label>
-  </Col>
-  <Col flex={0} alignItems='flex-end'>
-    <TheIcon iconSet='Entypo' color='white' backgroundColor={bg} size={14} />
-  </Col>
-</Row>
-<Row>
-  <Col justifyContent='center' alignItems='flex-end'>
-    <Image style={{...props.style.listImage, ...props.style.bigImage}} />
-  </Col>
-  <Col flexDirection='row' flexWrap='wrap'>
-    <Image style={props.style.listImage} />
-    <Image style={props.style.listImage} />
-    <Image style={props.style.listImage} />
-    <Image style={props.style.listImage} />
-  </Col>
-</Row></Block>
+const Section = (props) => {
+  let size = (Const.size.screenWidth - 25) / 2
+  return <Row marginTop={10}><Row flex={0} paddingVertical={10}>
+    <Col>
+      <Label theme='H5'>{props.title}</Label>
+      <Label theme='H8'>{props.subTitle}</Label>
+    </Col>
+    <Col flex={0} alignItems='flex-end'>
+      <TIcon iconSet='Entypo' name='calendar' ratio={1.8} color='white' backgroundColor={bg} size={20} />
+    </Col>
+  </Row>
+  <Row>
+    <Col justifyContent='center' alignItems='flex-end' height={size}>
+      <Image style={{...props.style.listImage, ...props.style.bigImage}} />
+    </Col>
+    <Space size={5} />
+    <Col flow='row' flexWrap='wrap'>
+      <Image size={(size - 5) / 2} style={props.style.listImage} marginBottom={5} />
+      <Space />
+      <Image size={(size - 5) / 2} style={props.style.listImage} marginBottom={5} />
+      <Image size={(size - 5) / 2} style={props.style.listImage} />
+      <Space />
+      <Image size={(size - 5) / 2} style={props.style.listImage} />
+    </Col>
+  </Row></Row>
+}
 
 const bg = 'rgb(253,88,114)'
 const style = StyleSheet.create({
@@ -94,10 +100,10 @@ const style = StyleSheet.create({
     height: '99%',
   },
   listImage: {
-    margin: '1.2%',
-    width: '44.7%',
+    // margin: '1.2%',
+    // width: '50.7%',
     // height: '47.62%',
-    aspectRatio: 1,
+    // aspectRatio: 1,
     borderRadius: 10
   },
   icons: {
@@ -112,7 +118,6 @@ const style = StyleSheet.create({
   },
   tButtons: {
     height: 40,
-    ...styles.shadow
   },
   avatar: {
     borderWidth: 1,

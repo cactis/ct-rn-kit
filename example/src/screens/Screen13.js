@@ -34,13 +34,13 @@ export class Screen13 extends Component {
       let index = Math.floor(x / (CARDWIDTH - PADDING))
       log(index, 'i')
       this.scrollTo(index)
-      // this.setState({index: info.changed[0].index})
+      this.setState({index: index})
     }, 300)
   }
 
   scrollTo = (index, animated = true) => {
     let offset = index * CARDWIDTH + ( (index == 0 ? 0 : 1) * PADDING / 5)
-    this.photos?.scrollToOffset({offset: offset, animated: animated})
+    this.photos.flatList?.scrollToOffset({offset: offset, animated: animated})
   }
 
   render() {
@@ -55,17 +55,18 @@ export class Screen13 extends Component {
             </CT.Float>
             <TheText theme='H1' font='HelveticaNeue-Bold'>Des Glaneuses</TheText>
           </CT.Row>
-          <CT.Row flex={9}
+          <CT.Row
+            flex={9}
             onPanResponderTerminationRequest={() => false}
             >
               <CT.List
                 onPanResponderTerminationRequest={() => false}
-                ref={ref => this.photos = ref.flatList}
+                ref={ref => this.photos = ref}
                 data={photos}
                 horizontal
                 pagingEnabled={false}
                 contentContainerStyle={{padding: PADDING, justifyContent: 'center'}}
-                ItemSeparatorComponent={() => <CT.Space size={PADDING}  />}
+                ItemSeparatorComponent={() => <CT.Space size={2 * PADDING}  />}
                 onScroll={this.onScroll}
                 initialScrollIndex={1}
                 getItemLayout={(data, index) => (

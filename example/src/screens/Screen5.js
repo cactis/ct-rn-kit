@@ -18,7 +18,7 @@ export class Screen5 extends Component {
             <CT.Label color='white' theme='H7' />
           </CT.Row>
           <CT.Row>
-            <CT.IconLabel height={50} icon={<CT.Avatar />} label={<CT.Labels
+            <CT.IconLabel height={80} icon={<CT.Avatar />} label={<CT.Labels
               padding={10}
               color='white'
               themes={['H5', 'H8']} />}
@@ -27,7 +27,7 @@ export class Screen5 extends Component {
         </Block>
         <Block backgroundColor='rgba(55,56,57,.97)'>
           <CT.Row>
-            <CT.IconLabel height={50} icon={<CT.Avatar />} label={<CT.Labels
+            <CT.IconLabel height={80} icon={<CT.Avatar />} label={<CT.Labels
               padding={10}
               color='white'
               themes={['H5', 'H8']} />} />

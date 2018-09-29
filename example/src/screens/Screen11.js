@@ -23,14 +23,14 @@ export class Screen11 extends Component {
         <TheLabel theme='H6' style={{fontFamily: 'TrebuchetMS'}}/>
       </Row>
       <CT.Row flex={3} layout='row'>
-        <Image uri={images[0]}
+        <CTImage uri={images[0]}
           borderTopRightRadius={10}
           borderBottomRightRadius={10}
         />
         <CT.Space size={15}/>
-        <Image flex={3} uri={images[1]} borderRadius={10}/>
+        <CTImage flex={3} uri={images[1]} borderRadius={10}/>
         <CT.Space size={15}/>
-        <Image uri={images[2]}
+        <CTImage uri={images[2]}
           borderTopLeftRadius={10}
           borderBottomLeftRadius={10}
         />
@@ -58,7 +58,7 @@ const Tag = (props) => <CT.Col xAlign='center' yAlign='center'>
   </CT.Div>
 </CT.Col>
 
-const Image = (props) => <CT.Col
+const CTImage = (props) => <CT.Col
   style={{overflow: 'hidden', ...Styles.shadow}}
   flex={props.flex || 1}
   {...props}>

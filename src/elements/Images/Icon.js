@@ -43,11 +43,12 @@ export class Icon extends Component {
     let key = (this.props.iconSet || 'FontAwesome').replace(/icons/ig, '')
     // log(key, 'key')
     const TagName = this.iconSets[key]
-    return <View flex={0} layout='center'
-
+    return <View flex={0}
+      align='center'
       backgroundColor={backgroundColor}
       borderRadius={width / 2}
-      width={width} height={height}
+      width={width}
+      height={height}
       {...props}
       >
       <TagName name={name}

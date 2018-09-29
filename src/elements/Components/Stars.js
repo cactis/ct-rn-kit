@@ -18,10 +18,10 @@ export const Stars = (props) => {
   let full = Array(floor).join().split(',').map(i => <Icon key={randKey()} iconSet='FontAwesome' name='star' color='#E8D20C' size={size} />)
   // log(full, 'full')
   let half = value - floor > 0 ? <Icon iconSet='FontAwesome' name='star-half-full' color={iconColor} size={size} /> : null
-  return <RowLine flex={0}>
+  return <Row flow='row' flex={0}>
     {full}
     {half}
     <Space />
     <Label eme='Head7'style={{fontSize: fontSize}} color={fontColor}>{value}</Label>
-  </RowLine>
+  </Row>
 }

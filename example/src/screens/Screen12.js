@@ -28,42 +28,42 @@ export class Screen12 extends Component {
           </CT.Row>
           <CT.Space size={20} />
           <CT.Row flex={2.2}>
-            <CT.P theme='H8' color='white' numberOfLines={5} style={{lineHeight: 18}} />
+            <CT.P theme='H7' color='white' numberOfLines={5} style={{lineHeight: 22}} />
           </CT.Row>
         </CT.Row>
         <CT.Row flex={1.8} layout='row' xAlign='space-evenly'>
-          <TheIconLabel color='rgb(18,224,45)' text='Food' name='film'/>
-          <TheIconLabel color='rgb(237,61,44)' text='Salty'  name='pinterest'/>
-          <TheIconLabel color='rgb(254,206,18)' text='Allergies'  name='desktop'/>
-          <TheIconLabel color='rgb(22,162,235)' text='Notes'  name='legal'/>
+          <TIconLabel color='rgb(18,224,45)' text='Food' name='film'/>
+          <TIconLabel color='rgb(237,61,44)' text='Salty'  name='pinterest'/>
+          <TIconLabel color='rgb(254,206,18)' text='Allergies'  name='desktop'/>
+          <TIconLabel color='rgb(22,162,235)' text='Notes'  name='legal'/>
         </CT.Row>
         <CT.Space size={30} />
         <CT.Row flex={1.5} layout='row' padding={0} borderTopWidth={0.5} borderColor='rgb(67,89,147)'>
           {/* <CT.Col></CT.Col>
             <CT.Col></CT.Col>
             <CT.Col></CT.Col> */}
-            <TheLabeel style={{fontWeight: '900'}} borderTopWidth={3} borderColor='rgba(242,240,234,.79)'>DETAIL</TheLabeel>
-            <TheLabeel>MENU</TheLabeel>
-            <TheLabeel>SERVICE</TheLabeel>
+            <TLabel style={{fontWeight: '900'}} borderTopWidth={3} borderColor='rgba(242,240,234,.79)'>DETAIL</TLabel>
+            <TLabel>MENU</TLabel>
+            <TLabel>SERVICE</TLabel>
           </CT.Row>
         </CT.Row>
       </BaseScreen>
     }
   }
 
-  const TheLabeel = (props) => {
+  const TLabel = (props) => {
     return <CT.Div flex={1} align='center' bordereWidth={1} borderColor='rgba(231,225,226,.65)' {...props}>
       <CT.Text theme='H8' color='rgba(252,252,252,.78)' {...props} />
     </CT.Div>
   }
 
-  const TheIconLabel = (props) =>{
+  const TIconLabel = (props) =>{
     let { color, text, name } = props
     return <CT.IconLabel
       layout='column'
       yAlign='center'
       xAlign='space-between'
-      icon=<CT.Icon color={color} size={14} name={name} backgroundColor='rgb(71,69,88)' />
+      icon=<CT.Icon color={color} size={16} name={name} backgroundColor='rgb(71,69,88)' />
       label=<CT.Label theme='H9' color='white'>{text}</CT.Label> {...props}
     />
   }

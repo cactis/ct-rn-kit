@@ -22,9 +22,9 @@ export class Screen6 extends Component {
             size={45}>{"Out of \nthe Wild Forest"}
           </CT.Text>
           <CT.Row>
-            <CT.Stars value={4.5} size={16} />
+            <CT.Stars value={4.5} size={20} />
           </CT.Row>
-          <CT.Row height={100} justifyContent='space-evenly' layout='row'>
+          <CT.Row height={100} justifyContent='space-evenly' flow='row'>
             <Info key={1} text='2h' label='Tourtime' icon='clock-o' />
             <Info key={2} text='$10' label='Prie' icon='ios-pricetag' iconSet='Ionicons' />
             <Info key={3} text='4' label='Person' icon='md-people' iconSet='Ionicons' />
@@ -39,7 +39,7 @@ export class Screen6 extends Component {
   }
 }
 const Info = (props) => {
-  return <CT.Div alignItems='center' layout='column'>
+  return <CT.Div alignItems='center' flow='column'>
     <CT.Text theme='H1' color='white' style={{textAlign: 'center'}}>{props.text}</CT.Text>
     <CT.IconLabel padding={1}
       icon={<CT.Icon name={props.icon} color='white' size={12} {...props}/>}

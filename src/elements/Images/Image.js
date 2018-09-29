@@ -50,23 +50,29 @@ export class Image extends Component {
       // height = 50,
       ...props
     } = this.props
-    return <Grid overflow='hidden' width={width} aspectRatio={aspectRatio}>
-      <RNImage {...props}
-        onLayout={this._onLayout}
-        flex={1}
-        style={{
-          width: width,
-          aspectRatio: aspectRatio,
-          // height: height,
-          // ...this.state.size,
-          borderRadius: radius,
-          // height: height,
-          resizeMode: 'cover',
-          // aspectRatio: 1,
-          ...this.props.style
-        }}
-        source={{uri: uri}}
-      />
-    </Grid>
+    return (
+      // <Grid
+        // overflow='hidden'
+        // width={width}
+        // borderRadius={radius}
+        // aspectRatio={aspectRatio}>
+        <RNImage {...props}
+          onLayout={this._onLayout}
+          // flex={1}
+          style={{
+            width: width,
+            aspectRatio: aspectRatio,
+            borderRadius: radius,
+            // height: height,
+            // ...this.state.size,
+            // height: height,
+            resizeMode: 'cover',
+            // aspectRatio: 1,
+            ...this.props.style
+          }}
+          source={{uri: uri}}
+        />
+      // </Grid>
+    )
   }
 }

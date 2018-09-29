@@ -79,7 +79,8 @@ export class List extends Component {
 
   render() {
 
-    return <FlatList ref={(c) => this.flatList = c}
+    return <FlatList
+      ref={(c) => this.flatList = c}
       data={this.state.data}
       onScroll={this._onScroll}
       refreshing={this.state.isRefreshing}

@@ -7,6 +7,7 @@ export class View extends Component {
     let {
       align,
       yAlign,
+      flow = 'column',
       xAlign,
       style = {},
       children,
@@ -18,6 +19,7 @@ export class View extends Component {
     let emptyStyle = !children ? EMPTYSTYLE : {}
     return <RNView
       // borderWidth={0.5}
+      flexDirection={flow}
       style={{...emptyStyle, ...style}} {...props}>{drawBorders(this)}
       </RNView>
   }
