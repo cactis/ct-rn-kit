@@ -44,13 +44,16 @@ export class List extends Component {
 
     if (urls.length > 1) {
       url = `${urls[0]}/page/${page}?${urls[1]}`
+      // url = `${urls[0]}/?page=${page}&${urls[1]}`
       if (keyword) url = `${url}&${keywordStr}`
     } else {
       url = `${urls[0]}/page/${page}`
+      // url = `${urls[0]}?page=${page}`
       if (keyword) url = `${url}?${keywordStr}`
     }
 
     let json = await Api.get(url)
+    console.log(json, 'json')
     let data = json.data ? json.data : json
     log(data, 'data')
     let collection = page === 1 ? data : [...this.state.data, ...data]

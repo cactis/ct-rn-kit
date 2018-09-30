@@ -53,7 +53,7 @@ export class Screen13 extends Component {
             <CT.Float left={10}>
               <CT.Labels align='center' themes={['H1', 'H9']} color='white' texts={['22', 'MAY']} />
             </CT.Float>
-            <TheText theme='H1' font='HelveticaNeue-Bold'>Des Glaneuses</TheText>
+            <TText theme='H1' font='HelveticaNeue-Bold'>Des Glaneuses</TText>
           </CT.Row>
           <CT.Row
             flex={9}
@@ -80,11 +80,11 @@ export class Screen13 extends Component {
                   </CT.Float>
                   <CT.Image uri={item} />
                   <CT.Float bottom={10} flex={1} padding={20} alignSelf='center'>
-                    <TheText
+                    <TText
                       font='Palatino-Italic'
-                      align='center'>To be an artist is to believe in life.</TheText>
+                      align='center'>To be an artist is to believe in life.</TText>
                       <CT.Space />
-                      <TheText font='GeezaPro' theme='H8'>- Henry Moore</TheText>
+                      <TText font='GeezaPro' theme='H8'>- Henry Moore</TText>
                     </CT.Float>
                   </CT.Card>
                 }
@@ -92,7 +92,7 @@ export class Screen13 extends Component {
             </CT.Row>
             <CT.Row flex={1} align='center' layout='row' paddingBottom={30}>
               <CT.Div padding={15}>
-                <CT.Avatar uri='https://images.pexels.com/photos/206563/pexels-photo-206563.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' />
+                <CT.Avatar size={40} uri='https://images.pexels.com/photos/206563/pexels-photo-206563.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' />
               </CT.Div>
               <CT.Div  xAlign='center'>
                 <CT.Labels color='white' themes={['H8', 'H6']} texts={['photo by', 'Jasmine Cheng']} />
@@ -103,4 +103,4 @@ export class Screen13 extends Component {
       }
     }
 
-    const TheText = (props) => <CT.Text color='rgba(255,255,255,.95)' {...props} />
+    const TText = (props) => <CT.Text color='rgba(255,255,255,.95)' {...props} />

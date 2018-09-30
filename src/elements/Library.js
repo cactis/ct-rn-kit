@@ -1,6 +1,6 @@
 import React from 'react'
 import _ from 'lodash'
-import { View } from 'react-native'
+import { View, Alert } from 'react-native'
 
 import tinycolor from '../../vendors/tinycolor-min.js'
 
@@ -64,7 +64,8 @@ window.asNumber = function(str) {
 }
 
 window.alert = (message) => {
-  prompt(message)
+  Alert.alert(message)
+  // prompt(message)
 }
 
 // type: success, warn, info, error

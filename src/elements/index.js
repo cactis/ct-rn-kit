@@ -7,7 +7,7 @@ export * from './Components'
 export * from './Layouts'
 export * from './Library'
 export * from './Constants'
-
+export * from './Navigations'
 //
 // module.exports = {
 //   View, SafeArea

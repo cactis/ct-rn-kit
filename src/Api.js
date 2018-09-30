@@ -31,12 +31,19 @@ export class Api {
     let accessTokens = {} //await User.tokens()
     // const _url = Settings.host + url
     // log(_url, "_url")
-    let [key, value] = url.split('@')
-    let _url = key
-    if (value) {
-      _url = `${AppConfig.Hosts[key]}${value}`
+    if (url.includes('@')) {
+      let [key, value] = url.split('@')
+      let _url = key
+      if (value) {
+        _url = `${AppConfig.Hosts[key]}${value}`
+      }
+    } else {
+      let value = url
+      let defaultHost = AppConfig.Hosts['default']
+      log(defaultHost, 'defaufltHost')
+      _url = `${AppConfig.Hosts[defaultHost]}${value}`
     }
-
+    log(_url, '_url')
     console.log(_url)
 
     var response = {}

@@ -42,8 +42,8 @@ export class Image extends Component {
       uri = SAMPLE_IMAGES[0],
       size,
       width = size || '100%',
-      // height = '100%',
-      aspectRatio = 1,
+      height = '100%',
+      // aspectRatio = 1,
       style,
       circled = false,
       radius = circled ? this.state.radius : 0,
@@ -61,9 +61,9 @@ export class Image extends Component {
           // flex={1}
           style={{
             width: width,
-            aspectRatio: aspectRatio,
+            // aspectRatio: aspectRatio,
             borderRadius: radius,
-            // height: height,
+            height: height,
             // ...this.state.size,
             // height: height,
             resizeMode: 'cover',
