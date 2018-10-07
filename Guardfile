@@ -20,7 +20,7 @@ guard :shell do
     `#{sync_command}`
 
     # ['ctnews', 'anypod', 'demo', 'writus'].each do |app|
-      ['writus'].each do |app|
+    ['writus', 'ctnews'].each do |app|
       target = "/Volumes/RamDisk/#{app}"
       if Dir.exists?(target)
         # `open #{target}/node_modules/ct-rn-kit/`
