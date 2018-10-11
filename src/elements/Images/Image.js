@@ -43,7 +43,7 @@ export class Image extends Component {
       size,
       width = size || '100%',
       height = '100%',
-      // aspectRatio = 1,
+      aspectRatio = 1,
       style,
       circled = false,
       radius = circled ? this.state.radius : 0,

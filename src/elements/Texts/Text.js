@@ -14,7 +14,9 @@ export class Text extends Component {
       font = 'Helvetica',
       color,
       numberOfLines = 2,
-      children = faker.commerce.productName(),
+      text,
+      label,
+      children = text || label || faker.commerce.productName(),
       ...props
     } = this.props
     let themeStyle = {...styles[theme]} //!!!
