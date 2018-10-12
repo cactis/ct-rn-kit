@@ -52,7 +52,8 @@ export class Icon extends Component {
       {...props}
       >
       <TagName name={name}
-        style={{color: color}}
+        color={color}
+        // style={{color: color}}
         size={size}
         {...props}
       />
