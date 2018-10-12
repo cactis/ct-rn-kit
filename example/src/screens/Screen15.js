@@ -57,7 +57,7 @@ const IR = (props) => <CT.Row
 const IL = (props) =>  <CT.IconLabel
   layout='column'
   iconSize={40}
-  color='#000'
+  color='rgba(17,19,19,1)'
   labelSize={20}
   numberOfLines={2}
   iconSet='Feather'
