@@ -108,13 +108,13 @@ window.error = (...message) => {
   console.log(message)
 }
 
-window._autoRun = (who, run) => {
-  setTimeout(() => {
-    if (Dev.who == who) {
-      run()
-    }
-  }, 1000);
-}
+// window._autoRun = (who, run) => {
+//   setTimeout(() => {
+//     if (Dev.who == who) {
+//       run()
+//     }
+//   }, 1000);
+// }
 
 window.dummy = () => {
   // log('dummy')

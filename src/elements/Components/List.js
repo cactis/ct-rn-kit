@@ -8,17 +8,24 @@ import { Avatar, Icon } from '../Images'
 import Api from '../../Api'
 
 export class List extends Component {
+
+  state = {
+    data: Array(15).join().split(',').map(_ => 1),
+    url: this.props.url,
+    page: 0,
+    isRefreshing: false
+  }
+
   constructor(props) {
     super(props)
-    this.state = {
-      data: [],
-      url: props.url,
-      page: 0,
-      isRefreshing: false
-    }
-    this.onLoad = this.props.onLoad || this.onLoad
+    this.onLoad = props.onLoad || this.onLoad
+  }
+
+  componentDidMount() {
     let { data } = this.props
-    this.setState({data})
+    if (data) {
+      this.setState({data})
+    }
     this.fetchData()
   }
 
@@ -81,7 +88,6 @@ export class List extends Component {
   renderItem = ({item}) => <ListItem data={item} navigation={this.props.navigation} />
 
   render() {
-
     return <FlatList
       ref={(c) => this.flatList = c}
       data={this.state.data}
@@ -92,7 +98,7 @@ export class List extends Component {
       onEndThreshold={500}
       keyExtractor={(item, index) => String(index)}
       // nestedScrollEnabled
-      pagingEnabled
+      // pagingEnabled
       // onPanResponderTerminationRequest={() => false}
       // ListHeaderComponent=<View />
       // ref={(c) => this.list = c}
@@ -101,11 +107,10 @@ export class List extends Component {
       // numColumns={2}
       // columnWrapperStyle={{justifyContent: 'space-between'}}
       // contentContainerStyle={{padding: 8}}
-      // ItemSeparatorComponent={() => <CT.Spacee />}
+      // ItemSeparatorComponent={() => <CT.Space />}
       renderItem={this.props.renderItem || this.renderItem}
       {...this.props}
     />
-
 
   }
 }

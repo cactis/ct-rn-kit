@@ -89,9 +89,16 @@ window.error = (...message) => {
 }
 
 window._autoRun = (who, run, always = false) => {
-
-  if (global.who == who && (User.isLogin() || always)) {
+  if (global.who == who) {
     delayed(run)
+  }
+}
+
+window._runOnce = (key, run) => {
+  let _runOnce = global._runOnce || {}
+  if (!_runOnce[key]) {
+    global._runOnce[key] = true
+    run()
   }
 }
 

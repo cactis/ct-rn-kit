@@ -42,14 +42,16 @@ export class Image extends Component {
       uri = SAMPLE_IMAGES[0],
       size,
       width = size || '100%',
-      height = '100%',
-      aspectRatio = 1,
+      height,
+      aspectRatio,
       style,
       circled = false,
       radius = circled ? this.state.radius : 0,
       // height = 50,
       ...props
     } = this.props
+    let aspectRatioStyle = height ? {} : {aspectRatio: 1}
+    if (aspectRatio) aspectRatioStyle.aspectRatio = aspectRatio
     return (
       // <Grid
         // overflow='hidden'
@@ -61,15 +63,16 @@ export class Image extends Component {
           // flex={1}
           style={{
             width: width,
-            // aspectRatio: aspectRatio,
             borderRadius: radius,
             height: height,
             // ...this.state.size,
             // height: height,
             resizeMode: 'cover',
             // aspectRatio: 1,
-            ...this.props.style
+            ...aspectRatioStyle,
+            ...style,
           }}
+
           source={{uri: uri}}
         />
       // </Grid>

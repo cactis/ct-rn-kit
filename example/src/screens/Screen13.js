@@ -34,7 +34,7 @@ export class Screen13 extends Component {
       let index = Math.floor(x / (CARDWIDTH - PADDING))
       log(index, 'i')
       this.scrollTo(index)
-      this.setState({index: index})
+      // this.setState({index: index})
     }, 300)
   }
 
@@ -47,7 +47,7 @@ export class Screen13 extends Component {
     let { photos, index } = this.state
     return <BaseScreen number={13}>
       <CT.ImageBackground blurRadius={30}
-        uri={photos[index]}
+        // uri={photos[index]}
         >
           <CT.Row flex={1} align='center' marginTop={40}>
             <CT.Float left={10}>
@@ -73,19 +73,21 @@ export class Screen13 extends Component {
                   {length: CARDWIDTH + 3 * PADDING, offset: -300, index}
                 )}
                 renderItem={({item}) => <CT.Card width={CARDWIDTH}>
-                  <CT.Float style={{right: 10, top: 10}}>
-                    <CT.Icon backgroundColor='rgba(255,255,255,.8)' size={18} name='heart' ratio={2} />
-                    <CT.Space size={10} />
-                    <CT.Icon backgroundColor='rgba(255,255,255,.8)' size={18} name='share' ratio={2} />
-                  </CT.Float>
-                  <CT.Image uri={item} />
-                  <CT.Float bottom={10} flex={1} padding={20} alignSelf='center'>
-                    <TText
-                      font='Palatino-Italic'
-                      align='center'>To be an artist is to believe in life.</TText>
-                      <CT.Space />
-                      <TText font='GeezaPro' theme='H8'>- Henry Moore</TText>
+                  <CT.ImageBackground>
+                    <CT.Float style={{right: 10, top: 10}}>
+                      <CT.Icon backgroundColor='rgba(255,255,255,.8)' size={18} name='heart' ratio={2} />
+                      <CT.Space size={10} />
+                      <CT.Icon backgroundColor='rgba(255,255,255,.8)' size={18} name='share' ratio={2} />
                     </CT.Float>
+                    {/* <CT.Image uri={item} /> */}
+                    <CT.Float bottom={10} flex={1} padding={20} alignSelf='center'>
+                      <TText
+                        font='Palatino-Italic'
+                        align='center'>To be an artist is to believe in life.</TText>
+                        <CT.Space />
+                        <TText font='GeezaPro' theme='H8'>- Henry Moore</TText>
+                      </CT.Float>
+                    </CT.ImageBackground>
                   </CT.Card>
                 }
               />

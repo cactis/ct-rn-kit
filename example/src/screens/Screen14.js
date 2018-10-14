@@ -27,7 +27,7 @@ export class Screen14 extends Component {
             <CT.Text theme='H1' numberOfLines={3} size={30} font='HoeflerText-Black' color='black'>{`DUPLIN\nHATTERAS\nRED`}</CT.Text>
           </CT.Row>
           <CT.Row xAlign='center'>
-            <CT.IconLabel icon=<CT.Icon name='bucket' color='rgb(177,42,19)' iconSet='Entypo' size={30} /> label=<CT.Label theme='H6' text='USA, North Carolina' /> />
+            <CT.IconLabel icon=<CT.Icon name='bucket' color='rgba(177,19,83,.84)' iconSet='Entypo' size={30} /> label=<CT.Label theme='H6' text='USA, North Carolina' /> />
           </CT.Row></CT.Grid>
         </CT.ImageBackground>
       </CT.Row>
@@ -61,8 +61,8 @@ export class Screen14 extends Component {
         </CT.Row>
       </CT.Row>
 
-      <CT.Float style={{right: 0, top: 260}}>
-        <CT.Image width={140} height={220} uri='https://png2.kisspng.com/sh/4d132f8cfd6889a7856680466ecb1140/L0KzQYm3V8IxN6hwiJH0aYP2gLBuTgdqdpYyf95qc4OwgrbrTgdqdpYyj9t3ZT3mf7TylPFqdF53gddtZXywRbO8UsNkPWk5UaQCYkKxRIiBUcY2O2E2TaU7MUG5QIa9Usk6P191htk=/kisspng-wine-glass-red-wine-wine-cocktail-riedel-5b523c584927b2.4781653015321160562997.png' />
+      <CT.Float style={{right: -30, top: 280}}>
+        <CT.Icon iconSet='Ionicons' name='ios-wine' size={220} color='rgb(73,8,101)' />
       </CT.Float>
     </BaseScreen>
   }
