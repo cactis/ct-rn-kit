@@ -4,10 +4,13 @@ import { Touch } from '../Events'
 import { Labels } from '../Texts/Labels.js'
 export class Cell extends Component {
   render() {
-    let { children = <Labels /> } = this.props
+    let {
+      backgroundColor = 'white',
+      children = <Labels />
+    } = this.props
     return <Touch {...this.props}>
       <Row padding={20} {...this.props}
-        backgroundColor='white'
+        backgroundColor={backgroundColor}
         borderBottomWidth={0.5}
         borderColor='rgba(92,103,103,.57)'>{children}</Row>
       </Touch>

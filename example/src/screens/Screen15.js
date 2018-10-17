@@ -49,7 +49,7 @@ const IR = (props) => <CT.Row
   padding={10}
   align='center'
   style={{
-    borderWidth: 0.2,
+    borderWidth: 0.5,
     backgroundColor: 'rgba(236,236,236,.15)'
   }} {...props}
 />

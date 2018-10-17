@@ -7,6 +7,7 @@ export * from './Cell'
 export * from './Screen'
 export * from './Float'
 export * from './SafeArea'
+export * from './Line'
 
 import { View } from './View'
 import { Row } from './Row'
@@ -51,15 +52,15 @@ export class Padding extends Component {
   }
 }
 
-export class Float extends Component {
-  render() {
-    let { style, ...props } = this.props
-    return <Center flex={0}
-      style={{position: 'absolute',
-      zIndex: 1000, ...style}} {...props}>
-    </Center>
-  }
-}
+// export class Float extends Component {
+//   render() {
+//     let { style, ...props } = this.props
+//     return <Center flex={0}
+//       style={{position: 'absolute',
+//       zIndex: 1000, ...style}} {...props}>
+//     </Center>
+//   }
+// }
 
 export class Card extends Component {
   render() {

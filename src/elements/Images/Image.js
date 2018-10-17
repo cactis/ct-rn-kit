@@ -63,8 +63,8 @@ export class Image extends Component {
           // flex={1}
           style={{
             width: width,
-            borderRadius: radius,
             height: height,
+            borderRadius: radius,
             // ...this.state.size,
             // height: height,
             resizeMode: 'cover',
