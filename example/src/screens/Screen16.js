@@ -8,10 +8,9 @@ import tinycolor from '../../../vendors/tinycolor-min.js'
 const BG = 'https://images.pexels.com/photos/207985/pexels-photo-207985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 export class Screen16 extends Component {
   render() {
-    return <BaseScreen safeAreaDisabled={true} number={15}
+    return <BaseScreen safeAreaDisabled={true} number={16}
       backgroundColor='rgb(21,22,20)'
       >
-
         <CT.Row paddingTop={50} align='center'>
           <CT.Div flex={0} flow='row' align='center'>
             <CT.Icon color='rgb(18,151,208)' size={20} name='angle-left'/>

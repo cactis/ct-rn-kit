@@ -3,29 +3,37 @@ import React, { PureComponent as Component } from 'react'
 import { View, Space } from '../Layouts'
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
-import Oct from 'react-native-vector-icons/Octicons'
+// import FontAwesome5 from 'react-native-vector-icons/FontAwesome5Free'
+// import FontAwesome5Meta from 'react-native-vector-icons/FontAwesome5Free_meta'
+import Octicons from 'react-native-vector-icons/Octicons'
 import Feather from 'react-native-vector-icons/Feather'
+import Foundation from 'react-native-vector-icons/Foundation'
 import Evil from 'react-native-vector-icons/EvilIcons'
+import AntDesign from 'react-native-vector-icons/AntDesign'
 import MaterialCommunity from 'react-native-vector-icons/MaterialCommunityIcons'
 import Material from 'react-native-vector-icons/MaterialIcons'
 import Entypo from 'react-native-vector-icons/Entypo'
-import Ion from 'react-native-vector-icons/Ionicons'
-// import SimpleLine from 'react-native-vector-icons/SimpleLineIcons'
+import Ionicons from 'react-native-vector-icons/Ionicons'
+import SimpleLine from 'react-native-vector-icons/SimpleLineIcons'
 import Zocial from 'react-native-vector-icons/Zocial'
 
 export class Icon extends Component {
 
   iconSets = {
     FontAwesome: FontAwesome,
-    Oct: Oct,
+    // FontAwesome5: FontAwesome5,
+    // FontAwesome5Meta: FontAwesome5Meta,
+    Oct: Octicons,
     Feather: Feather,
+    Foundation: Foundation,
     Evil: Evil,
     Material: Material,
+    AntDesign: AntDesign,
     MaterialCommunity: MaterialCommunity,
     Entypo: Entypo,
-    Ion: Ion,
+    Ion: Ionicons,
     Zocial: Zocial,
-    // SimpleLine: SimpleLineIcons,
+    SimpleLine: SimpleLine,
   }
   render() {
     let {

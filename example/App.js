@@ -10,7 +10,8 @@ console.disableYellowBox = true
 export default class App extends Component<Props> {
   render() {
     return <Scroll horizontal pagingEnabled>
-      <Page><Screens.Screen16 /></Page>
+      <Page><Screens.Screen17 /></Page>
+      {/* <Page><Screens.Screen16 /></Page> */}
       {/* <Page><Screens.Screen15 /></Page> */}
       {/* <Page><Screens.Screen14 /></Page> */}
       {/* <Page><Screens.Screen13 /></Page> */}
