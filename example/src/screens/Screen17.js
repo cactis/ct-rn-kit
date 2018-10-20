@@ -5,7 +5,6 @@ import { BaseScreen } from './'
 import Styles from '../../../src/elements/Styles'
 import tinycolor from '../../../vendors/tinycolor-min.js'
 
-const BG = 'https://images.pexels.com/photos/207985/pexels-photo-207985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 export class Screen17 extends Component {
   render() {
     return <BaseScreen
@@ -37,7 +36,7 @@ export class Screen17 extends Component {
         <CT.Label color='rgb(195,109,90)' theme='H5' style={{alignSelf: 'center'}}>Username already in use.</CT.Label>
       </CT.Row>
       <CT.Row>
-        <CT.Button theme='pill' title='Next' fontSize={30} titleColor='white' backgroundColor='rgb(19,14,19)'/>
+        <CT.Button theme='pill' title='Next' fontSize={30} titleColor='white' backgroundColor='rgb(19,14,19)' style={{...CT.Setting.styles.shadow}} />
         <CT.Space size={20} />
         <CT.Label color='rgb(230,246,236)' theme='H6' style={{alignSelf: 'center'}}>Not the first time here? <CT.Label theme='H6' style={{fontWeight: '900'}} color='rgb(139,144,171)'>Log In</CT.Label></CT.Label>
       </CT.Row>
