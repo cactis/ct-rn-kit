@@ -1,14 +1,14 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import {Dimensions } from 'react-native'
-import * as CT from '../../..'
+import * as CT from 'ct-rn-kit'
 
 import { BaseScreen } from './'
-import Styles from '../../../src/elements/Styles'
-import tinycolor from '../../../vendors/tinycolor-min.js'
+import Styles from 'ct-rn-kit/src/elements/Styles'
+import tinycolor from 'ct-rn-kit/vendors/tinycolor-min.js'
 
 let bg = 'https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
 
-export class Screen12 extends Component {
+export class Screen12 extends React.Component {
 
   render() {
     return <BaseScreen number={12}>

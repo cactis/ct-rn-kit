@@ -1,10 +1,10 @@
-import React, { PureComponent as Component } from 'react'
-import { Grid, Col, Row, Header, Body, Footer, Screen, Page, Square, Padding,  ImageBackground,  View, SafeArea, Scroll, Center, Photo, Text, Label, Setting, Avatar, Circle, Card } from '../../..'
+import React from 'react'
+import { Grid, Col, Row, Header, Body, Footer, Screen, Page, Square, Padding,  ImageBackground,  View, SafeArea, Scroll, Center, Photo, Text, Label, Setting, Avatar, Circle, Card } from 'ct-rn-kit'
 import { BaseScreen } from './index'
 
 const styles = Setting.styles
 
-export class Screen3 extends Component {
+export class Screen3 extends React.Component {
   render() {
     return <BaseScreen number='3'>
       <ImageBackground>

@@ -1,12 +1,12 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import {Dimensions, FlatList, Image } from 'react-native'
-import * as CT from '../../..'
+import * as CT from 'ct-rn-kit'
 import { BaseScreen } from './'
-import Styles from '../../../src/elements/Styles'
-import tinycolor from '../../../vendors/tinycolor-min.js'
+import Styles from 'ct-rn-kit/src/elements/Styles'
+import tinycolor from 'ct-rn-kit/vendors/tinycolor-min.js'
 
 const BG = 'https://images.pexels.com/photos/207985/pexels-photo-207985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-export class Screen16 extends Component {
+export class Screen16 extends React.Component {
   render() {
     return <BaseScreen safeAreaDisabled={true} number={16}
       backgroundColor='rgb(21,22,20)'

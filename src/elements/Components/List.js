@@ -1,4 +1,4 @@
-import React, { PureComponent as Component } from 'react';
+import React from 'react';
 import { FlatList, View} from 'react-native';
 
 import { Name, Label } from '../Texts'
@@ -7,7 +7,7 @@ import { Avatar, Icon } from '../Images'
 
 import Api from '../../Api'
 
-export class List extends Component {
+export class List extends React.Component {
 
   state = {
     data: Array(15).join().split(',').map(_ => 1),
@@ -116,7 +116,7 @@ export class List extends Component {
 }
 
 import { Cell } from '../Layouts/Cell'
-class ListItem extends Component {
+class ListItem extends React.Component {
   render() {
     return <Cell />
   }

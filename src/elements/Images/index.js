@@ -1,4 +1,4 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { ScrollView, ImageBackground as RNImageBackground, AsyncStorage, StatusBar, SafeAreaView, Image as RNImage} from 'react-native'
 import { View, Center } from '../Layouts'
 
@@ -12,7 +12,7 @@ export * from './Avatar'
 export * from './ImageBackground'
 
 
-  export class ImageBackground extends Component {
+  export class ImageBackground extends React.Component {
     render() {
       let {
         uri = 'https://picsum.photos/1000/1400/?random',
@@ -23,7 +23,7 @@ export * from './ImageBackground'
     }
   }
 
-  export class Circle extends Component {
+  export class Circle extends React.Component {
     render() {
       let {
         size,
@@ -33,7 +33,7 @@ export * from './ImageBackground'
     }
   }
 
-  export class Square extends Component {
+  export class Square extends React.Component {
     render() {
       let {
         size
@@ -45,7 +45,7 @@ export * from './ImageBackground'
     }
   }
 
-  // export class Photo extends Component {
+  // export class Photo extends React.Component {
   //   render() {
   //     return <Image {...this.props} />
   //   }

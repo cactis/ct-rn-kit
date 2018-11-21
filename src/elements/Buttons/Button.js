@@ -1,4 +1,4 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { StyleSheet } from 'react-native'
 
 import { Touch } from '../Events'
@@ -10,7 +10,7 @@ import Styles from '../Styles'
 
 import tinycolor from '../../../vendors/tinycolor-min.js'
 
-export class Button extends Component {
+export class Button extends React.Component {
   render() {
     let {
       theme = 'normal',

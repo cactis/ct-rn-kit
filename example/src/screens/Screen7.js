@@ -1,10 +1,10 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { Text } from 'react-native'
-import * as CT from '../../..'
+import * as CT from 'ct-rn-kit'
 import { BaseScreen } from './'
 
 const uri = 'https://images.pexels.com/photos/3791/sea-sunset-surfer-orange.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-export class Screen7 extends Component {
+export class Screen7 extends React.Component {
   render() {
     return <BaseScreen number={7}>
       <CT.ImageBackground uri={uri}>

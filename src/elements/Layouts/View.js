@@ -1,8 +1,8 @@
-import React, { PureComponent as Component } from 'react';
+import React, { Component } from 'react';
 import { View as RNView} from 'react-native';
 // import { Example } from './'
 
-export class View extends Component {
+export class View extends React.Component {
   render() {
     let {
       align,

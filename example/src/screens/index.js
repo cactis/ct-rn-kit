@@ -1,9 +1,9 @@
-import React, { PureComponent as Component } from 'react'
-import { Screen, Setting, View, Text, Grid, Div } from '../../..'
+import React from 'react'
+import { Screen, Setting, View, Text, Grid, Div } from 'ct-rn-kit'
 
 let styles = Setting.styles
 
-export class BaseScreen extends Component {
+export class BaseScreen extends React.Component {
   render() {
 
     let {
@@ -55,4 +55,5 @@ export * from './Screen14'
 export * from './Screen15'
 export * from './Screen16'
 export * from './Screen17'
+export * from './Screen18'
 export * from './Doc'

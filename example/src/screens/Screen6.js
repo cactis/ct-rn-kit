@@ -1,9 +1,9 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { StyleSheet, StatusBar, Platform } from 'react-native'
-import * as CT from '../../..'
+import * as CT from 'ct-rn-kit'
 import { BaseScreen } from './'
 
-export class Screen6 extends Component {
+export class Screen6 extends React.Component {
   state = {
     uri: 'https://images.pexels.com/photos/775199/pexels-photo-775199.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
   }

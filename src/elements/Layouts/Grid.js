@@ -1,9 +1,8 @@
-import React, { PureComponent as Component } from 'react'
+import React, { Component } from 'react'
 import { View } from './View'
 import { Touch } from '../Events'
 
-
-export class Grid extends Component {
+export class Grid extends React.Component {
   render() {
     let {
       layout = this.direction(),

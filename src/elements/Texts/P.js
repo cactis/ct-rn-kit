@@ -1,4 +1,4 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 // import { View } from '../Layouts'
 
 // import { material } from 'react-native-typography'
@@ -9,7 +9,7 @@ import faker from '../../../vendors/faker.min'
 
 import { Text } from './Text'
 
-export class P extends Component {
+export class P extends React.Component {
 
   render() {
     let {

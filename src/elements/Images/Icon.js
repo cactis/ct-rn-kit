@@ -1,4 +1,4 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 // import { ScrollView, ImageBackground as RNImageBackground, AsyncStorage, StatusBar, SafeAreaView, Image as RNImage} from 'react-native'
 import { View, Space } from '../Layouts'
 
@@ -17,7 +17,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons'
 import SimpleLine from 'react-native-vector-icons/SimpleLineIcons'
 import Zocial from 'react-native-vector-icons/Zocial'
 
-export class Icon extends Component {
+export class Icon extends React.Component {
 
   iconSets = {
     FontAwesome: FontAwesome,

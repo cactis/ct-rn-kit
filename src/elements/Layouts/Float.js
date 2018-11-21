@@ -1,8 +1,8 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 
 import { Space } from './Space'
 
-// export class Float extends Component {
+// export class Float extends React.Component {
 //
 //   render() {
 //     let {
@@ -22,7 +22,7 @@ import { Space } from './Space'
 //
 // }
 
-export class Float extends Component {
+export class Float extends React.Component {
   render() {
     let { style, ...props } = this.props
     return <Space flex={0}

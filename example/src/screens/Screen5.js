@@ -1,11 +1,11 @@
-import React, { PureComponent as Component } from 'react'
-import * as CT from '../../..'
+import React from 'react'
+import * as CT from 'ct-rn-kit'
 import { BaseScreen } from './'
 
 // const Name = (props) => <CTName {...props} color='white' />
 const Block = (props) =>  <CT.Row {...props} padding={30}/>
 
-export class Screen5 extends Component {
+export class Screen5 extends React.Component {
   render() {
     return <BaseScreen scrollable={false} number='5'>
       <CT.ImageBackground blurRadius={2} uri='https://images.pexels.com/photos/291732/pexels-photo-291732.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'>

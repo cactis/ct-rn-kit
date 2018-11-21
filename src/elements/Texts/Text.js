@@ -1,9 +1,9 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { Text as RNText, Platform } from 'react-native'
 
 import faker from '../../../vendors/faker.min.js'
 
-export class Text extends Component {
+export class Text extends React.Component {
 
   render() {
     let {

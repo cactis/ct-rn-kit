@@ -1,4 +1,4 @@
-import React, { PureComponent as Component } from 'react';
+import React from 'react';
 import { FlatList, View} from 'react-native';
 
 import { Name, Label } from '../Texts'

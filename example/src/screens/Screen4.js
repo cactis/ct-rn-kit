@@ -1,6 +1,6 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { StyleSheet } from 'react-native'
-import { Grid, Col, Row, Header, Body, Mid, Block, Footer, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Icon, Text, Label, Setting, Avatar, Circle, Card, P, Button, List, Library, Image, Space, Const } from '../../..'
+import { Grid, Col, Row, Header, Body, Mid, Block, Footer, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Icon, Text, Label, Setting, Avatar, Circle, Card, P, Button, List, Library, Image, Space, Const } from 'ct-rn-kit'
 import { BaseScreen } from './index'
 
 const styles = Setting.styles
@@ -11,7 +11,7 @@ import { human, systemWeights } from "react-native-typography";
 
 const TIcon = (props) =>  <Icon {...props} size={props.size || 26} color={props.color || 'white'} />
 
-export class Screen4 extends Component {
+export class Screen4 extends React.Component {
   state = {
     // images: Library.sampleImages(4)
   }

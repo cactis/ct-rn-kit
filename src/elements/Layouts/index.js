@@ -16,20 +16,20 @@ import { Grid } from './Grid'
 import { Screen } from './Screen'
 import { SafeArea } from './SafeArea'
 
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { ScrollView, TouchableOpacity, AsyncStorage, StatusBar, SafeAreaView, View as RNView} from 'react-native'
 import {  Text } from '../Texts'
 import styles from '../Styles'
 
 import { Touch } from '../Events'
 
-export class  Scroll extends Component {
+export class Scroll extends React.Component {
   render() {
     return <ScrollView {...this.props} />
   }
 }
 
-export class Center extends Component {
+export class Center extends React.Component {
   render() {
     let {
       flex = 1,
@@ -40,19 +40,19 @@ export class Center extends Component {
   }
 }
 
-export class Example extends Component {
+export class Example extends React.Component {
   render() {
     return <Center padding={20}><Text/></Center>
   }
 }
 
-export class Padding extends Component {
+export class Padding extends React.Component {
   render() {
     return <View {...this.props} padding={10}/>
   }
 }
 
-// export class Float extends Component {
+// export class Float extends React.Component {
 //   render() {
 //     let { style, ...props } = this.props
 //     return <Center flex={0}
@@ -62,7 +62,7 @@ export class Padding extends Component {
 //   }
 // }
 
-export class Card extends Component {
+export class Card extends React.Component {
   render() {
     let {
       style = {},
@@ -88,7 +88,7 @@ export class Card extends Component {
 
   class Page extends Screen {}
 
-  export class Page1 extends Component {
+  export class Page1 extends React.Component {
     static navigationOptions = ({ navigation, header }) => {
       // const params = navigation.state.params || {}
       return {

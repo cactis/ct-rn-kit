@@ -1,15 +1,15 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import {Dimensions, FlatList, Image } from 'react-native'
-import * as CT from '../../..'
+import * as CT from 'ct-rn-kit'
 
 import { BaseScreen } from './'
-import Styles from '../../../src/elements/Styles'
-import tinycolor from '../../../vendors/tinycolor-min.js'
+import Styles from 'ct-rn-kit/src/elements/Styles'
+import tinycolor from 'ct-rn-kit/vendors/tinycolor-min.js'
 
 const PADDING = 15
 const CARDWIDTH = iOS ? 310 : 300
 
-export class Screen13 extends Component {
+export class Screen13 extends React.Component {
 
   state = {
     photos: [

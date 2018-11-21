@@ -1,4 +1,4 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { Div } from '../Layouts'
 import { Text } from './Text'
 
@@ -6,7 +6,7 @@ import { Text } from './Text'
 
 import faker from "../../../vendors/faker.min.js"
 
-export class Labels extends Component {
+export class Labels extends React.Component {
 
   render() {
     let {

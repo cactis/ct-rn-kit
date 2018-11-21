@@ -1,9 +1,9 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { Animated, ImageBackground } from 'react-native'
 import { Page, Row, Touch, Icon, Text, Float} from '../..'
 
 import Styles from '../Styles'
-export class Popup extends Component {
+export class Popup extends React.Component {
 
   state = {
     show: false,

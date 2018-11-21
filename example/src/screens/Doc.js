@@ -1,14 +1,14 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { StyleSheet, StatusBar, Platform, Text as RNText, View as RNView } from 'react-native'
-import { Stars, Grid, Col, Row, Div, Header, Body, Mid, Block as CTBlock, Footer, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Icon, Text, Label, Setting, Avatar, Circle, Card, Head1, Head2, Head3, Head4, Head5, Head6, Head7, Head8, Head9, P, Button, List, Library, Image, Space, Const, Time, Name as CTName, ImageBackground, FontList, Texts, Names, Author, IconLabel, RowLine } from '../../..'
+import { Stars, Grid, Col, Row, Div, Header, Body, Mid, Block as CTBlock, Footer, Screen, Page, Square, Padding,  View, SafeArea, Scroll, Center, Photo, Icon, Text, Label, Setting, Avatar, Circle, Card, Head1, Head2, Head3, Head4, Head5, Head6, Head7, Head8, Head9, P, Button, List, Library, Image, Space, Const, Time, Name as CTName, ImageBackground, FontList, Texts, Names, Author, IconLabel, RowLine } from 'ct-rn-kit'
 
-import * as components from '../../..'
+import * as components from 'ct-rn-kit'
 
 import { BaseScreen } from './index'
 
 const styles = Setting.styles
 
-export class DocScreen extends Component {
+export class DocScreen extends React.Component {
 
   render() {
     log(FontList, 'FontList')
@@ -51,7 +51,7 @@ const Unit = (props) =>  {
 }
 
 
-// export class DocScreen1 extends Component {
+// export class DocScreen1 extends React.Component {
 //   render() {
 //     log(Object.keys(components).map(item => typeof item), 'components')
 //     let skips = ['Card', 'Page', 'Setting', 'Const', 'Library']

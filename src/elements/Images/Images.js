@@ -1,4 +1,4 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 
 import { StyleSheet, Animated, FlatList, ScrollView } from 'react-native'
 
@@ -6,7 +6,7 @@ import { List, Image, View }from '../..'
 
 import _ from 'lodash'
 
-export class Images extends Component {
+export class Images extends React.Component {
 
   render() {
     return (

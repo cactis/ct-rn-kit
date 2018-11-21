@@ -1,7 +1,7 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { Scroll, Grid, SafeArea } from './'
 
-export class Screen extends Component {
+export class Screen extends React.Component {
   render() {
     let {
       safeAreaDisabled = false,

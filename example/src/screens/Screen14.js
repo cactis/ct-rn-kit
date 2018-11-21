@@ -1,21 +1,21 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import {Dimensions, FlatList, Image } from 'react-native'
-import * as CT from '../../..'
+import * as CT from 'ct-rn-kit'
 
 import HTMLView from 'react-native-htmlview'
 
 
 import { BaseScreen } from './'
-import Styles from '../../../src/elements/Styles'
-import tinycolor from '../../../vendors/tinycolor-min.js'
+import Styles from 'ct-rn-kit/src/elements/Styles'
+import tinycolor from 'ct-rn-kit/vendors/tinycolor-min.js'
 
 const PADDING = 15
 const CARDWIDTH = iOS ? 310 : 300
-import faker from '../../../vendors/faker.min.js'
+import faker from 'ct-rn-kit/vendors/faker.min.js'
 
 const map = 'https://images.pexels.com/photos/616412/pexels-photo-616412.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
 
-export class Screen14 extends Component {
+export class Screen14 extends React.Component {
 
   render() {
     return <BaseScreen number={14}>

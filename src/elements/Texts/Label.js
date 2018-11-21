@@ -1,4 +1,4 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { Text as RNText } from 'react-native'
 import { View } from '../Layouts'
 

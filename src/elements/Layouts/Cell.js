@@ -1,8 +1,8 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { Row } from './Row'
 import { Touch } from '../Events'
 import { Labels } from '../Texts/Labels.js'
-export class Cell extends Component {
+export class Cell extends React.Component {
   render() {
     let {
       backgroundColor = 'white',

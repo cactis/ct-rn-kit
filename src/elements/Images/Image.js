@@ -1,4 +1,4 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { ScrollView, ImageBackground as RNImageBackground, AsyncStorage, StatusBar, SafeAreaView, Image as RNImage} from 'react-native'
 
 import { Setting } from '../Constants'
@@ -6,7 +6,7 @@ import { Library } from '../Library'
 import { Grid } from '../Layouts/Grid'
 
 const SAMPLE_IMAGES = Library.sampleImages()
-export class Image extends Component {
+export class Image extends React.Component {
 
   state = {
     size: null,

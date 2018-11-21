@@ -1,7 +1,7 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { Row, Space } from '.'
 
-export class Line extends Component {
+export class Line extends React.Component {
   render() {
     let {
       flex = 0,

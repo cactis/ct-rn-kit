@@ -1,13 +1,13 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { Text, Platform, Dimensions } from 'react-native'
-import * as CT from '../../..'
+import * as CT from 'ct-rn-kit'
 import { BaseScreen } from './'
-import Styles from '../../../src/elements/Styles.js'
+import Styles from 'ct-rn-kit/src/elements/Styles.js'
 
 const uri = 'https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 const doctor = 'https://images.pexels.com/photos/355934/pexels-photo-355934.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 // let uri = 'https://images.pexels.com/photos/2326/fashion-person-woman-taking-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-export class Screen11 extends Component {
+export class Screen11 extends React.Component {
   state = {
     images: [
       'https://images.pexels.com/photos/373888/pexels-photo-373888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',

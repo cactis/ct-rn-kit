@@ -1,12 +1,12 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { Text } from 'react-native'
-import * as CT from '../../..'
+import * as CT from 'ct-rn-kit'
 import { BaseScreen } from './'
-import Styles from '../../../src/elements/Styles.js'
+import Styles from 'ct-rn-kit/src/elements/Styles.js'
 
 const uri = 'https://images.pexels.com/photos/1051076/pexels-photo-1051076.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 // let uri = 'https://images.pexels.com/photos/2326/fashion-person-woman-taking-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
-export class Screen8 extends Component {
+export class Screen8 extends React.Component {
   render() {
     return <BaseScreen number={8} _>
       <CT.ImageBackground uri={uri}>

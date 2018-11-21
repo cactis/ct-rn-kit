@@ -1,4 +1,4 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { Text as RNText, WebView, StyleSheet } from 'react-native'
 // import WebView from 'react-native-htmlview'
 import { View } from '../Layouts'
@@ -10,7 +10,7 @@ import faker from "../../../vendors/faker.min.js"
 // import styles from '../Styles.js'
 
 import  {Text}   from './Text'
-export class Html extends Component {
+export class Html extends React.Component {
   render() {
     let { html = '<h1> h1 Heading Tag</h1>' +
     '<p> Sample Paragraph Tag </p>' +

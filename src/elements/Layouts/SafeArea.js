@@ -1,7 +1,7 @@
-import React, { PureComponent as Component } from 'react'
+import React from 'react'
 import { StatusBar, SafeAreaView} from 'react-native'
 
-export class SafeArea extends Component {
+export class SafeArea extends React.Component {
   render() {
     let {
       backgroundColor = 'transparent'
