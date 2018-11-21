@@ -1,4 +1,4 @@
-import React, { Component, PureComponent } from 'react'
+import React, { Component } from 'react'
 // import moment from 'moment'
 
 // import User from './models/user.js'

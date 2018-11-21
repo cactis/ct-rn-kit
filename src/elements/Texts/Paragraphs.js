@@ -3,7 +3,7 @@ import { Paragraph } from './Paragraph'
 
 import faker from '../../../vendors/faker.min.js'
 
-export class Paragraphs extends React.PureComponent {
+export class Paragraphs extends React.Component {
   render() {
     let {
       numberOfLines = 30,

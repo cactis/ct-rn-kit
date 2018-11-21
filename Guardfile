@@ -29,7 +29,7 @@ guard :shell do
 
 
     # ['ctnews', 'anypod', 'demo', 'writus'].each do |app|
-    ['writus', 'ctnews', 'ct-rn-kit/example'].each do |app|
+    ['writus', 'ctnews', 'ct-rn-kit/example', 'coffus'].each do |app|
       # ['writus', 'ctnews'].each do |app|
       target = "/Volumes/RamDisk/#{app}"
       if Dir.exists?(target)
