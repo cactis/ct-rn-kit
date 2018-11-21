@@ -1,3 +1,7 @@
+import Dev from './Dev.js'
+window.Dev = Dev
+log(Dev, 'Dev')
+
 export * from './Setting'
 export * from './Images'
 export * from './Events'

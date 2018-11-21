@@ -87,26 +87,27 @@ export class Api {
   }
 }
 
-function objToQueryString(obj) {
-  const keyValuePairs = [];
-  for (const key in obj) {
-    keyValuePairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));
-  }
-  return keyValuePairs.join('&');
-}
+// function objToQueryString(obj) {
+//   const keyValuePairs = [];
+//   for (const key in obj) {
+//     keyValuePairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));
+//   }
+//   return keyValuePairs.join('&');
+// }
 
-window.prompt = (message) => {
-  alert(message)
-}
+// window.prompt = (message) => {
+//   alert(message)
+// }
 
-window.log = (...message) => {
-  console.log(message)
-  // console.log(console.trace())
-}
+// window.log = (...message) => {
+//   console.log('log in Api..............')
+//   console.log(message)
+//   // console.log(console.trace())
+// }
 
-window.error = (...message) => {
-  console.log(message)
-}
+// window.error = (...message) => {
+//   console.log(message)
+// }
 
 // window._autoRun = (who, run) => {
 //   setTimeout(() => {
@@ -116,12 +117,12 @@ window.error = (...message) => {
 //   }, 1000);
 // }
 
-window.dummy = () => {
-  // log('dummy')
-}
+// window.dummy = () => {
+//   // log('dummy')
+// }
 
-window.shortDate = (date) => {
-  return moment(date).format('YYYY-MM-DD')
-}
+// window.shortDate = (date) => {
+//   return moment(date).format('YYYY-MM-DD')
+// }
 
 export default Api

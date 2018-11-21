@@ -79,6 +79,7 @@ window.__warning__ = (message) => {
 
 window.log = (...message) => {
   console.log(message)
+  _trace()
   // if (console.trace()) {
   //   console.log(console.trace())
   // }
@@ -86,6 +87,12 @@ window.log = (...message) => {
 
 window.error = (...message) => {
   console.table(new Error(message))
+}
+
+window._trace = (key = randId()) => {
+  _runOnce(key, () => {
+    if (Dev.logTrace || Dev.componentTrace) console.log(new Error().stack)
+  })
 }
 
 window._autoRun = (who, run, always = false) => {
