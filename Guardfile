@@ -8,10 +8,12 @@ def copy_commend(target)
   #{target}"
 end
 
+
 sync_command = copy_commend(target)
 
 `#{sync_command}`
 
+# `cd ~/ramdisk/ct-rn-kit/example; react-native run-ios --simulator='Example (12.1)'`
 
 guard :shell do
 
@@ -24,12 +26,12 @@ guard :shell do
       print "nothing\n"
     else
       print "run simulator\n"
-      `cd ~/ramdisk/ct-rn-kit/example; react-native run-ios`
+      # `cd ~/ramdisk/ct-rn-kit/example; react-native run-ios --simulator='Example (12.1)'`
     end
-
 
     # ['ctnews', 'anypod', 'demo', 'writus'].each do |app|
     ['writus', 'ctnews', 'ct-rn-kit/example', 'coffus'].each do |app|
+      p app
       # ['writus', 'ctnews'].each do |app|
       target = "/Volumes/RamDisk/#{app}"
       if Dir.exists?(target)

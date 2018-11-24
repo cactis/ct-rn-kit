@@ -3,8 +3,8 @@ import {Dimensions } from 'react-native'
 import * as CT from 'ct-rn-kit'
 
 import { BaseScreen } from './'
-import Styles from 'ct-rn-kit/src/elements/Styles'
-import tinycolor from 'ct-rn-kit/vendors/tinycolor-min.js'
+import Styles from 'ct-rn-kit/src/Components/Styles'
+import tinycolor from 'tinycolor2'
 
 let bg = 'https://images.pexels.com/photos/704971/pexels-photo-704971.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
 

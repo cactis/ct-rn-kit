@@ -10,13 +10,11 @@ global.AppConfig = {
   }
 }
 
-
 // Settings = window.AppConfig.Hosts
 
 export class Api {
-
   static get = async (url, params = {}) => {
-    const queryString = objToQueryString(params);
+    const queryString = objToQueryString(params)
     const _url = url //+ "?" + queryString
     let result = await Api.request('GET', _url, params)
     return result
@@ -35,7 +33,6 @@ export class Api {
     if (url.includes('http')) {
       _url = url
     } else {
-
       if (url.includes('@')) {
         let [key, value] = url.split('@')
         let _url = key
@@ -54,25 +51,25 @@ export class Api {
 
     var response = {}
     const headers = {
-      'Accept':       'application/json',
+      Accept: 'application/json',
       'Content-Type': 'application/json',
-      'Accesstokens':  accessTokens
+      Accesstokens: accessTokens
     }
     // alert(_url)
     switch (method) {
       case 'GET':
-      response = await fetch(_url, {
-        headers: headers
-      })
-      break;
+        response = await fetch(_url, {
+          headers: headers
+        })
+        break
       case 'PUT':
       case 'POST':
-      response = await fetch(_url, {
-        method: method,
-        headers: headers,
-        body: JSON.stringify(params),
-      })
-      break;
+        response = await fetch(_url, {
+          method: method,
+          headers: headers,
+          body: JSON.stringify(params)
+        })
+        break
       default:
     }
     // log(response, 'response in Api.js')

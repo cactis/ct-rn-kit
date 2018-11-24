@@ -8,15 +8,22 @@
     "test": "jest"
   },
   "dependencies": {
-    "lodash": "^4.17.11",
     "prop-types": "^15.6.2",
+    "react-native-camera": "^1.4.3",
+    "react-native-device-info": "^0.24.3",
+    "react-native-dropdownalert": "^3.7.0",
+    "react-native-fast-image": "^5.1.1",
+    "react-native-image-crop-picker": "^0.21.3",
+    "react-native-keyboard-aware-scroll-view": "^0.7.4",
+    "react-native-picker": "^4.3.7",
+    "react-native-push-notification": "^3.1.2",
+    "react-native-qrcode-svg": "^5.1.1",
     "react-native-simple-animators": "^2.2.4",
+    "react-native-svg": "^8.0.8",
     "react-native-typography": "^1.4.0",
     "react-native-vector-icons": "latest"
   },
   "devDependencies": {
-    "tinycolor2": "^1.4.1",
-    "faker": "^4.1.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
     "babel-preset-react-native": "^5",
@@ -26,12 +33,15 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "eslint-plugin-react-native": "^3.5.0",
+    "faker": "^4.1.0",
     "jest": "23.6.0",
     "jest-react-native": "^18.0.0",
+    "lodash": "^4.17.11",
+    "merge": ">=1.2.1",
     "react": "^16.6.3",
     "react-native": "0.57.5",
     "react-test-renderer": "^16.6.3",
-    "merge": ">=1.2.1"
+    "tinycolor2": "^1.4.1"
   },
   "jest": {
     "preset": "jest-react-native",

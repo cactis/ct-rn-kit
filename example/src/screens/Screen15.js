@@ -2,8 +2,8 @@ import React from 'react'
 import {Dimensions, FlatList, Image } from 'react-native'
 import * as CT from 'ct-rn-kit'
 import { BaseScreen } from './'
-import Styles from 'ct-rn-kit/src/elements/Styles'
-import tinycolor from 'ct-rn-kit/vendors/tinycolor-min.js'
+import Styles from 'ct-rn-kit/src/Components/Styles'
+import tinycolor from 'tinycolor2'
 
 const BG = 'https://images.pexels.com/photos/207985/pexels-photo-207985.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'
 export class Screen15 extends React.Component {

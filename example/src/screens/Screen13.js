@@ -3,8 +3,8 @@ import {Dimensions, FlatList, Image } from 'react-native'
 import * as CT from 'ct-rn-kit'
 
 import { BaseScreen } from './'
-import Styles from 'ct-rn-kit/src/elements/Styles'
-import tinycolor from 'ct-rn-kit/vendors/tinycolor-min.js'
+import Styles from 'ct-rn-kit/src/Components/Styles'
+import tinycolor from 'tinycolor2'
 
 const PADDING = 15
 const CARDWIDTH = iOS ? 310 : 300

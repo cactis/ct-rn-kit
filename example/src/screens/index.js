@@ -5,36 +5,39 @@ let styles = Setting.styles
 
 export class BaseScreen extends React.Component {
   render() {
+    let { safeAreaDisabled = true, scrollable = false } = this.props
 
-    let {
-      safeAreaDisabled = true,
-      scrollable = false
-    } = this.props
-
-    return <Screen
-      scrollable={scrollable}
-      safeAreaDisabled={safeAreaDisabled}
-      {...this.props}>
-      {this.props.children}
-      <Div
-        style={{
-          backgroundColor: 'rgba(255,255,255,.67)',
-          padding: 3,
-          paddingHorizontal: 10,
-          borderRadius: 30,
-          position: 'absolute',
-          borderWidth: 0.5,
-          right: 10,
-          bottom: 5,
-          zIndex: 10000
-        }}>
-        <Text style={{
-          color: '#333',
-          fontSize: 10}} >
-          #CT-tutorial {this.props.number}
-        </Text>
-      </Div>
-    </Screen>
+    return (
+      <Screen
+        scrollable={scrollable}
+        safeAreaDisabled={safeAreaDisabled}
+        {...this.props}
+      >
+        {this.props.children}
+        <Div
+          style={{
+            backgroundColor: 'rgba(255,255,255,.67)',
+            padding: 3,
+            paddingHorizontal: 10,
+            borderRadius: 30,
+            position: 'absolute',
+            borderWidth: 0.5,
+            right: 10,
+            bottom: 5,
+            zIndex: 10000
+          }}
+        >
+          <Text
+            style={{
+              color: '#333',
+              fontSize: 10
+            }}
+          >
+            #CT-tutorial {this.props.number}
+          </Text>
+        </Div>
+      </Screen>
+    )
   }
 }
 
