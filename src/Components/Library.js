@@ -83,8 +83,7 @@ window.__warning__ = message => {
 
 window._trace = (key = randId()) => {
   _runOnce(key, () => {
-    if (Development.logTrace || Development.componentTrace)
-      console.log(new Error().stack)
+    if (Dev.logTrace || Dev.componentTrace) console.log(new Error().stack)
   })
 }
 
