@@ -6,7 +6,8 @@ import * as Inputs from './Inputs'
 
 import * as T from '../../'
 
-import faker from 'faker'
+// var faker = require('faker')
+var faker = require('faker')
 
 export class Field extends Component {
   render() {

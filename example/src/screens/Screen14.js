@@ -10,7 +10,7 @@ import tinycolor from 'tinycolor2'
 
 const PADDING = 15
 const CARDWIDTH = iOS ? 310 : 300
-import faker from 'faker'
+var faker = require('faker')
 
 const map =
   'https://images.pexels.com/photos/616412/pexels-photo-616412.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'

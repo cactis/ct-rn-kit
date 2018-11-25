@@ -1,3 +1,3 @@
 export * from './Components'
-export * from './screens'
+export * from './Screens'
 export * from './Api'

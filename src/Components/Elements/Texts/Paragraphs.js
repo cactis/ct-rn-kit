@@ -1,7 +1,7 @@
 import React from 'react'
 import { Paragraph } from './Paragraph'
 
-import faker from 'faker'
+var faker = require('faker')
 
 export class Paragraphs extends React.Component {
   render() {

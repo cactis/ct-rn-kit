@@ -4,7 +4,7 @@ import { Text } from './Text'
 
 // import { material } from 'react-native-typography'
 
-import faker from 'faker'
+var faker = require('faker')
 
 export class Labels extends React.Component {
   render() {

@@ -9,9 +9,6 @@
   },
   "dependencies": {
     "prop-types": "^15.6.2",
-    "faker": "^4.1.0",
-    "lodash": "^4.17.11",
-    "tinycolor2": "^1.4.1",
     "react-native-camera": "^1.4.3",
     "react-native-device-info": "^0.24.3",
     "react-native-dropdownalert": "^3.7.0",
@@ -27,6 +24,9 @@
     "react-native-vector-icons": "latest"
   },
   "devDependencies": {
+    "faker": "^4.1.0",
+    "lodash": "^4.17.11",
+    "tinycolor2": "^1.4.1",
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
     "babel-preset-react-native": "^5",

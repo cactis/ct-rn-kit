@@ -1,7 +1,7 @@
 import React from 'react'
 import { Text as RNText, Platform } from 'react-native'
 
-import faker from 'faker'
+var faker = require('faker')
 
 export class Text extends React.Component {
   render() {

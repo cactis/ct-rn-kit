@@ -43,6 +43,7 @@ window.randKey = () => {
 }
 
 window.navigateTo = (navigation, route, params = {}) => {
+  log(route, params)
   navigation.navigate(route, params)
 }
 
@@ -72,6 +73,11 @@ window.alert = message => {
   // prompt(message)
 }
 
+import DeviceInfo from 'react-native-device-info'
+window.isSimulator = () => {
+  return DeviceInfo.isEmulator()
+}
+
 // type: success, warn, info, error
 window.prompt = (message = 'HI!') => {
   Alert.alert(message)
@@ -99,19 +105,13 @@ window.error = (...message) => {
   console.table(new Error(message))
 }
 
-window._trace = (key = randId()) => {
-  _runOnce(key, () => {
-    if (Dev.logTrace || Dev.componentTrace) console.log(new Error().stack)
-  })
-}
-
 window._autoRun = (who, run, always = false) => {
   if (Dev.logAutorun) log(Dev.doIndex, who, Dev.do, 'doIndex, who, Dev.do')
   let DevWho = Dev.do
     .split('-')
     .slice(0, (Dev.doIndex || 99) + 1)
     .join('-')
-  if (DevWho.includes(who) || always) {
+  if (DevWho?.includes(who) || always) {
     _runOnce(who + run, () => {
       delayed(run)
     })

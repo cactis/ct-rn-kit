@@ -5,7 +5,7 @@ import { View } from '../Layouts'
 
 import { material } from 'react-native-typography'
 
-import faker from 'faker'
+var faker = require('faker')
 
 // import styles from '../Styles.js'
 
