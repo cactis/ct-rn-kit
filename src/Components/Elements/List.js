@@ -61,9 +61,9 @@ export class List extends React.Component {
     }
 
     let json = await Api.get(url)
-    console.log(json, 'json')
+    // console.log(json, 'json')
     let data = json.data ? json.data : json
-    log(data, 'data')
+    // log(data, 'data')
     let collection = page === 1 ? data : [...this.state.data, ...data]
 
     let rest = []

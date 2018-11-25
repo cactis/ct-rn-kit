@@ -68,7 +68,7 @@ const styles = Setting.styles
 
 export class DocScreen extends React.Component {
   render() {
-    log(FontList, 'FontList')
+    // log(FontList, 'FontList')
     return (
       <BaseScreen scrollable={true} safeAreaDisabled={false}>
         {Object.values(FontList).map((font, i) => (

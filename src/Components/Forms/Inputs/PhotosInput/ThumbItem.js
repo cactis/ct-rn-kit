@@ -23,7 +23,7 @@ export class ThumbItem extends React.PureComponent {
   }
 
   onPress = (item, index) => {
-    log(item, index, 'item, index in ThumbItem.js#onPress')
+    // log(item, index, 'item, index in ThumbItem.js#onPress')
   }
 
   onCheck = (item, index) => {

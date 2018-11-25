@@ -2,6 +2,7 @@ import React from 'react'
 import _ from 'lodash'
 import { View, Alert } from 'react-native'
 
+// import tinycolor from 'tinycolor2'
 import tinycolor from 'tinycolor2'
 
 import { AsyncStorage } from 'react-native'

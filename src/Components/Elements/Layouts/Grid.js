@@ -30,8 +30,8 @@ export class Grid extends React.Component {
     var row = true
     React.Children.forEach(this.props.children, function(child) {
       if (debug) {
-        console.log(child)
-        console.log(child?.type.name)
+        // console.log(child)
+        // console.log(child?.type.name)
       }
       if (child?.type?.name?.includes('Col')) row = false
       if (child?.type?.name?.includes('Row')) row = true

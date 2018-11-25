@@ -8,6 +8,9 @@ import * as Screens from './src/screens'
 // global._debug = true
 
 // console.reportErrorsAsExceptions = false;
+// <Page>
+//   <T.CameraScreen />
+// </Page>
 
 export default class App extends React.Component {
   render() {

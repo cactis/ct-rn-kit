@@ -3,10 +3,11 @@ target = "/Volumes/RamDisk/ct-rn-kit"
 `mkdir #{target}` if !Dir.exists?(target)
 
 def copy_commend(target)
-  "rsync -avzhPR --delete * \
-  --exclude={.git,ios/build,android/app/build,node_modules,yarn.lock,package-lock.json} \
-  #{target}"
+  excludeString =  ENV['excludeString']
+  p excludeString
+  "rsync -avzhPR --delete * --exclude={#{excludeString}} #{target}"
 end
+# --exclude={.git,ios/build,android/app/build,ios/Pods,ios/Podfile.lock,node_modules,yarn.lock,package-lock.json} \
 
 
 sync_command = copy_commend(target)

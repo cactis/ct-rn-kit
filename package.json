@@ -20,13 +20,13 @@
     "react-native-qrcode-svg": "^5.1.1",
     "react-native-simple-animators": "^2.2.4",
     "react-native-svg": "^8.0.8",
+    "tinycolor2": "^1.4.1",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.11",
     "react-native-typography": "^1.4.0",
     "react-native-vector-icons": "latest"
   },
   "devDependencies": {
-    "faker": "^4.1.0",
-    "lodash": "^4.17.11",
-    "tinycolor2": "^1.4.1",
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
     "babel-preset-react-native": "^5",

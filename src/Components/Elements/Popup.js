@@ -29,7 +29,7 @@ export class Popup extends React.Component {
   }
 
   hide = () => {
-    log()
+    // log()
     this.setState({ show: false })
     this.onClose()
   }
