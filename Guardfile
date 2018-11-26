@@ -4,7 +4,7 @@ target = "/Volumes/RamDisk/ct-rn-kit"
 
 def copy_commend(target)
   excludeString =  ENV['excludeString']
-  p excludeString
+  # p excludeString
   "rsync -avzhPR --delete * --exclude={#{excludeString}} #{target}"
 end
 # --exclude={.git,ios/build,android/app/build,ios/Pods,ios/Podfile.lock,node_modules,yarn.lock,package-lock.json} \

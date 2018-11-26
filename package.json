@@ -27,6 +27,9 @@
     "react-native-vector-icons": "latest"
   },
   "devDependencies": {
+    "tinycolor2": "^1.4.1",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.11",
     "babel-eslint": "^10.0.1",
     "babel-jest": "23.6.0",
     "babel-preset-react-native": "^5",
