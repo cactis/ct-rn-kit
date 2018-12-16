@@ -6,8 +6,8 @@ import React, { Component } from 'react'
 
 global.AppConfig = {
   Hosts: {
-    example: 'http://example.com'
-  }
+    example: 'http://example.com',
+  },
 }
 
 // Settings = window.AppConfig.Hosts
@@ -28,7 +28,6 @@ export class Api {
   static request = async (method, url, params) => {
     let accessTokens = {} //await User.tokens()
     // const _url = Settings.host + url
-    // log(_url, "_url")
     let _url
     if (url.includes('http')) {
       _url = url
@@ -45,21 +44,20 @@ export class Api {
         log(defaultHost, 'defaufltHost')
         _url = `${AppConfig.Hosts[defaultHost]}${value}`
       }
-      log(_url, '_url')
-      console.log(_url)
     }
+    _log(_url, '_url')
 
     var response = {}
     const headers = {
       Accept: 'application/json',
       'Content-Type': 'application/json',
-      Accesstokens: accessTokens
+      Accesstokens: accessTokens,
     }
     // alert(_url)
     switch (method) {
       case 'GET':
         response = await fetch(_url, {
-          headers: headers
+          headers: headers,
         })
         break
       case 'PUT':
@@ -67,7 +65,7 @@ export class Api {
         response = await fetch(_url, {
           method: method,
           headers: headers,
-          body: JSON.stringify(params)
+          body: JSON.stringify(params),
         })
         break
       default:
@@ -84,13 +82,15 @@ export class Api {
   }
 }
 
-// function objToQueryString(obj) {
-//   const keyValuePairs = [];
-//   for (const key in obj) {
-//     keyValuePairs.push(encodeURIComponent(key) + '=' + encodeURIComponent(obj[key]));
-//   }
-//   return keyValuePairs.join('&');
-// }
+function objToQueryString(obj) {
+  const keyValuePairs = []
+  for (const key in obj) {
+    keyValuePairs.push(
+      encodeURIComponent(key) + '=' + encodeURIComponent(obj[key])
+    )
+  }
+  return keyValuePairs.join('&')
+}
 
 // window.prompt = (message) => {
 //   alert(message)

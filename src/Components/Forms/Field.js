@@ -28,7 +28,7 @@ export class Field extends Component {
         style={{
           padding: padding,
           ...styles.field,
-          backgroundColor: backgroundColor
+          backgroundColor: backgroundColor,
         }}
         {...props}
         onFocus={(event: Event) => {
@@ -37,7 +37,9 @@ export class Field extends Component {
       >
         {title ? (
           <T.Row flex={0}>
-            <T.Label style={styles.label}>{title}</T.Label>
+            <T.Label theme="H6" style={styles.label}>
+              {title}
+            </T.Label>
             <T.Space size={2} />
           </T.Row>
         ) : null}
@@ -60,14 +62,13 @@ export class Field extends Component {
 const styles = StyleSheet.create({
   field: {
     // borderWidth: 1
-    paddingVertical: 16,
-    marginBottom: 16,
+    paddingVertical: 10,
+    marginBottom: 0,
     // ...G.styles.shadow,
     // ...G.styles.card,
-    borderRadius: 5
+    borderRadius: 5,
   },
   label: {
-    // fontSize: 16,
-    color: '#333'
-  }
+    color: '#333',
+  },
 })

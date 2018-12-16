@@ -31,8 +31,8 @@ export class Form extends Component {
       <KeyboardAwareScrollView
         flex={1}
         backgroundColor={backgroundColor}
-        {...this.props}
         ref={ref => (this.scroll = ref)}
+        {...this.props}
       >
         <T.Grid padding={padding} {...props}>
           {children}

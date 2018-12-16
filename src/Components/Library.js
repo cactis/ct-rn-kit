@@ -94,8 +94,13 @@ window._trace = (key = randId()) => {
   })
 }
 
+window._log = (...message) => {
+  console.log(...message)
+}
+
 window.log = (...message) => {
-  console.log(message)
+  message.forEach(m => console.log(m))
+  // console.log(message)
   _trace()
   // if (console.trace()) {
   //   console.log(console.trace())
@@ -107,6 +112,7 @@ window.error = (...message) => {
 }
 
 window._autoRun = (who, run, always = false) => {
+  log('_autoRun')
   if (Dev.logAutorun) log(Dev.doIndex, who, Dev.do, 'doIndex, who, Dev.do')
   let DevWho = Dev.do
     .split('-')
@@ -140,7 +146,7 @@ window.dummy = () => {}
 global.debugStyle = {
   // borderColor: '#E20707',
   // margin: 1,
-  borderWidth: 0.2 * 10
+  borderWidth: 0.2 * 10,
 }
 
 window.drawBorders = component => {
