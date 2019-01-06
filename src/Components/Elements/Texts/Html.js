@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   p: {
     fontSize: 17,
     // fontFamily: 'Avenir',
-    // lineHeight: 30,
+    lineHeight: 23,
     marginVertical: 10,
     fontWeight: '300',
   },
