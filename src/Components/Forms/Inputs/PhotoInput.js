@@ -1,8 +1,8 @@
 import React, { PureComponent as Component } from 'react'
 import { StyleSheet } from 'react-native'
 
-import { RNCamera } from 'react-native-camera'
-import ImagePicker from 'react-native-image-crop-picker'
+// import { RNCamera } from 'react-native-camera'
+// import ImagePicker from 'react-native-image-crop-picker'
 
 import { Row, IconLabel, Label, Space, Float } from '../../'
 import { Image, Icon } from '../../Elements/Images'
@@ -11,7 +11,7 @@ import { Touch } from '../../Elements/Events/Touch'
 export class PhotoInput extends Component {
   state = {
     navigation: undefined,
-    photos: []
+    photos: [],
   }
 
   componentDidMount() {
@@ -19,7 +19,7 @@ export class PhotoInput extends Component {
       navigation,
       onChangePhoto,
       photos = [],
-      beforeOpenCamera
+      beforeOpenCamera,
     } = this.props
 
     if (!navigation) __warning__('PhotoInput 需要提供 navigation 屬性')
@@ -45,7 +45,7 @@ export class PhotoInput extends Component {
       onComplete: photos => {
         this.setState({ photos })
         this.onChangePhoto(photos)
-      }
+      },
     })
   }
 
@@ -73,7 +73,7 @@ export class PhotoInput extends Component {
               width: iconSize,
               height: iconSize,
               borderRadius: iconSize / 2,
-              overflow: 'hidden'
+              overflow: 'hidden',
             }}
           >
             {placeholderImage}
@@ -89,7 +89,7 @@ export class PhotoInput extends Component {
           iconStyle={{
             // padding: 10,
             backgroundColor: 'white',
-            borderWidth: 0.5
+            borderWidth: 0.5,
           }}
           text={text}
         />
@@ -105,7 +105,7 @@ export class PhotoInput extends Component {
             width: iconSize,
             overflow: 'hidden',
             height: iconSize,
-            borderRadius: iconSize / 2
+            borderRadius: iconSize / 2,
           }}
         >
           <Image
@@ -126,6 +126,6 @@ const style = StyleSheet.create({
     padding: 0,
     // borderWidth: 1,
     fontSize: 15,
-    lineHeight: 20
-  }
+    lineHeight: 20,
+  },
 })

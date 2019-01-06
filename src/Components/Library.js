@@ -107,6 +107,10 @@ window.log = (...message) => {
   // }
 }
 
+String.prototype.stripTags = function() {
+  return this.replace(/<\/?[^>]+(>|$)/g, '')
+}
+
 window.error = (...message) => {
   console.table(new Error(message))
 }
@@ -115,7 +119,7 @@ window._autoRun = (who, run, always = false) => {
   log('_autoRun')
   if (Dev.logAutorun) log(Dev.doIndex, who, Dev.do, 'doIndex, who, Dev.do')
   let DevWho = Dev.do
-    .split('-')
+    ?.split('-')
     .slice(0, (Dev.doIndex || 99) + 1)
     .join('-')
   if (DevWho?.includes(who) || always) {
@@ -123,6 +127,14 @@ window._autoRun = (who, run, always = false) => {
       delayed(run)
     })
   }
+}
+
+window._runLast = undefined
+window.runLast = (func, wait = 1000, ...args) => {
+  clearTimeout(_runLast)
+  _runLast = setTimeout(args => {
+    func.apply(null, args)
+  }, wait)
 }
 
 window._runOnce = (key, run) => {

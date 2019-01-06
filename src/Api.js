@@ -13,19 +13,25 @@ global.AppConfig = {
 // Settings = window.AppConfig.Hosts
 
 export class Api {
-  static get = async (url, params = {}) => {
+  static get = async (url, params = {}, onSuccess, onError) => {
     const queryString = objToQueryString(params)
     const _url = url //+ "?" + queryString
-    let result = await Api.request('GET', _url, params)
+    let result = await Api.request('GET', _url, params, onSuccess, onError)
     return result
   }
 
-  static post = async (url, params = {}) => {
-    return await Api.request('POST', url, params)
+  static put = async (url, params = {}, onSuccess, onError) => {
+    const result = await Api.request('PUT', url, params, onSuccess, onError)
+    // log(result, 'result')
+    return result
+  }
+
+  static post = async (url, params = {}, onSuccess, onError) => {
+    return await Api.request('POST', url, params, onSuccess, onError)
     // log('post end')
   }
 
-  static request = async (method, url, params) => {
+  static request = async (method, url, params = {}, onSuccess, onError) => {
     let accessTokens = {} //await User.tokens()
     // const _url = Settings.host + url
     let _url
@@ -45,6 +51,7 @@ export class Api {
         _url = `${AppConfig.Hosts[defaultHost]}${value}`
       }
     }
+    _url = encodeURI(_url)
     _log(_url, '_url')
 
     var response = {}
@@ -70,14 +77,30 @@ export class Api {
         break
       default:
     }
-    // log(response, 'response in Api.js')
-    const json = await response.json()
-    // log(json, 'json in Api.js')
-    if (json.alert !== undefined) {
-      // alert(json.alert)
-      return
+    log(response, 'response in Api.js')
+    const contentType = response.headers.get('content-type')
+    // log(contentType, 'contentType')
+
+    if (contentType && contentType.indexOf('application/json') !== -1) {
+      const json = await response.json()
+      // log(json, 'json in Api.js')
+      if (json.alert !== undefined) {
+        // alert(json.alert)
+        return
+      } else {
+        if (onSuccess) {
+          onSuccess(json)
+        } else {
+          return json
+        }
+      }
     } else {
-      return await json
+      let text = await response.text()
+      if (onSuccess) {
+        onSuccess(text)
+      } else {
+        return text
+      }
     }
   }
 }

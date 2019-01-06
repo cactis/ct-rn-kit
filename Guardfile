@@ -31,7 +31,7 @@ guard :shell do
     end
 
     # ['ctnews', 'anypod', 'demo', 'writus'].each do |app|
-    ['writus', 'ctnews', 'ct-rn-kit/example', 'coffus'].each do |app|
+    ['writus', 'ctnews', 'ct-rn-kit/example', 'coffus', 'readus'].each do |app|
       p app
       # ['writus', 'ctnews'].each do |app|
       target = "/Volumes/RamDisk/#{app}/node_modules/ct-rn-kit"
@@ -45,11 +45,13 @@ guard :shell do
     target = "/Users/cactis/_devs/_react/ct-rn-kit/example/node_modules/ct-rn-kit/"
     `#{copy_commend("#{target}")}` if Dir.exists?(target)
 
-    target = "/Users/cactis/www/writus/apps/coffus/node_modules/ct-rn-kit/"
-    `#{copy_commend("#{target}")}` if Dir.exists?(target)
+    ['coffus', 'readus', 'writus'].each do |t|
+      p "copy to #{t}"
+      target = "/Users/cactis/www/writus/apps/#{t}/node_modules/ct-rn-kit/"
+      `#{copy_commend("#{target}")}` if Dir.exists?(target)
+    end
 
-    target = "/Users/cactis/www/writus/apps/writus/node_modules/ct-rn-kit/"
-    `#{copy_commend("#{target}")}` if Dir.exists?(target)
+
   }
 
 end

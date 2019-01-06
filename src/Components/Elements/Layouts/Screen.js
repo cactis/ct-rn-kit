@@ -3,13 +3,17 @@ import { Scroll, Grid, SafeArea } from './'
 
 export class Screen extends React.Component {
   render() {
-    let { safeAreaDisabled = false, scrollable = false } = this.props
+    let {
+      padding = 10,
+      safeAreaDisabled = false,
+      scrollable = false,
+    } = this.props
     const content = scrollable ? (
       <Scroll>
-        <Grid {...this.props} />
+        <Grid padding={padding} {...this.props} />
       </Scroll>
     ) : (
-      <Grid {...this.props} />
+      <Grid padding={padding} {...this.props} />
     )
     const body = safeAreaDisabled ? (
       content

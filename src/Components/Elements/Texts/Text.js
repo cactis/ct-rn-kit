@@ -7,7 +7,7 @@ export class Text extends React.Component {
   render() {
     let {
       style,
-      theme = 'H3',
+      theme = 'H6',
       align = 'left',
       size,
       font = 'Helvetica',
@@ -33,7 +33,7 @@ export class Text extends React.Component {
           // borderWidth: 1,
           ...textShadow,
           ...themeStyle,
-          ...style
+          ...style,
         }}
         {...props}
       >
@@ -46,7 +46,7 @@ export class Text extends React.Component {
 const textShadow = {
   textShadowColor: 'rgba(0, 0, 0, 0.5)',
   textShadowOffset: { width: -0.2, height: 0.2 },
-  textShadowRadius: 0.1
+  textShadowRadius: 0.1,
 }
 
 const styles = {
@@ -54,56 +54,56 @@ const styles = {
     fontSize: 26,
     // lineHeight: 36 * 1.5,
     fontWeight: 'bold',
-    color: 'rgba(0,0,0,.93)'
+    color: 'rgba(0,0,0,.93)',
   },
   H2: {
     fontSize: 24,
     // lineHeight: 24 * 1.5,
     fontWeight: '900',
-    color: 'rgba(0,0,0,.9)'
+    color: 'rgba(0,0,0,.9)',
   },
   H3: {
     fontSize: 22,
     // lineHeight: 22 * 1.5,
     fontWeight: '800',
-    color: 'rgba(0,0,0,.85)'
+    color: 'rgba(0,0,0,.85)',
   },
   H4: {
     fontSize: 20,
     // lineHeight: 20 * 1.5,
     fontWeight: '700',
-    color: 'rgba(0,0,0,.80)'
+    color: 'rgba(0,0,0,.80)',
   },
   H5: {
     fontSize: 18,
     // lineHeight: 18 * 1.5,
     fontWeight: '400',
-    color: 'rgba(0,0,0,.80)'
+    color: 'rgba(0,0,0,.80)',
   },
   H6: {
     fontSize: 16,
     // lineHeight: 16 * 1.5,
     fontWeight: '200',
-    color: 'rgba(0,0,0,.75)'
+    color: 'rgba(0,0,0,.75)',
   },
   H7: {
     fontSize: 14,
     // lineHeight: 14 * 1.5,
     fontWeight: '200',
-    color: 'rgba(0,0,0,.70)'
+    color: 'rgba(0,0,0,.70)',
   },
   H8: {
     fontSize: 12,
     // lineHeight: 12 * 1.5,
     fontWeight: '100',
-    color: 'rgba(0,0,0,.70)'
+    color: 'rgba(0,0,0,.70)',
   },
   H9: {
     fontSize: 10,
     // lineHeight: 10 * 1.5,
     fontWeight: '100',
-    color: 'rgba(0,0,0,.70)'
-  }
+    color: 'rgba(0,0,0,.70)',
+  },
 }
 
 const IOS_FONTS = [
@@ -167,7 +167,7 @@ const IOS_FONTS = [
   'TrebuchetMS',
   'Verdana',
   'ZapfDingbatsITC',
-  'Zapfino'
+  'Zapfino',
 ]
 
 const ANDROID_FONTS = [
@@ -188,7 +188,7 @@ const ANDROID_FONTS = [
   'Coming Soon',
   'Dancing Script',
   'Dancing Script Bold',
-  'Carrois Gothic SC'
+  'Carrois Gothic SC',
 ]
 
 export const FontList = Platform.select({
@@ -196,5 +196,5 @@ export const FontList = Platform.select({
   // ['Palatino-Bold', 'GillSans-Bold', 'AmericanTypewriter-CondensedBold', 'KohinoorBangla-Semibold', 'Didot', 'Georgia', 'HelveticaNeue', 'Kailasa', 'Zapfino', 'GillSans']
   // color: 'red'
   // android: ANDROID_FONTS
-  android: ['Roboto', 'Serif Regular', 'Pacifico', 'monospace', , 'Noto Sans']
+  android: ['Roboto', 'Serif Regular', 'Pacifico', 'monospace', , 'Noto Sans'],
 })

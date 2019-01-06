@@ -9,10 +9,14 @@ import { TwoCols } from './'
 
 export const IconLabel = props => {
   let {
+    icon,
     iconSize = 18,
     labelSize = iconSize * 0.8,
-    icon = <Icon color="#111" size={iconSize} {...props} />,
-    label = <Label theme="Head8" color="#333" size={labelSize} {...props} />
+    _icon = icon ? (
+      <Icon color="#111" name={icon} size={iconSize} {...props} />
+    ) : null,
+
+    label = <Label theme="H8" color="#333" size={labelSize} {...props} />,
   } = props
-  return <TwoCols col1={icon} col2={label} {...props} />
+  return <TwoCols col1={_icon} col2={label} {...props} />
 }
